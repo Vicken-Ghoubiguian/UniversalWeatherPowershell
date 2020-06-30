@@ -28,7 +28,7 @@
        [int]$uvIndex
        [int]$uvRisk
 
-       universalWeatherPowershell() 
+       universalWeatherPowershell([string] $city, [string] $apiKey) 
        {
 
        }
