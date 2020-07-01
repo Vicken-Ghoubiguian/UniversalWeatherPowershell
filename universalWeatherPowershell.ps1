@@ -42,8 +42,13 @@
 
             } catch [System.Net.WebException] {
 
-               [System.Windows.MessageBox]::Show("Sorry but an error occured when . There is the error message: ", "Error occured", "Ok", "Error")
+               $errorType = $_.Exception.GetType().Name
 
+               $errorMessage = $_.Exception.Message
+
+               $errorStackTrace = $_.Exception.StackTrace
+
+               [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
 
             }
        }
