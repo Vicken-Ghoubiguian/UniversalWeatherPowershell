@@ -32,6 +32,14 @@
        {
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
-            $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method "Get"
+            try {
+
+               $weatherRequest = Invoke-WebRequest $weatherURL
+
+            } catch [System.Net.WebException] {
+
+                
+
+            }
        }
 }
