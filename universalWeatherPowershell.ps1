@@ -36,10 +36,11 @@
 
                $weatherRequest = Invoke-WebRequest $weatherURL
 
+               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: ", "Success...", "Ok", "Info")
+
             } catch [System.Net.WebException] {
 
-               [System.Windows.MessageBox]::Show('Hello')
-
+               [System.Windows.MessageBox]::Show("Sorry but an error occured when . There is the error message: ", "Error occured", "Ok", "Error")
             }
        }
 }
