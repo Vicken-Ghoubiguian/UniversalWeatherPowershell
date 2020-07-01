@@ -30,6 +30,8 @@
 
        universalWeatherPowershell([string] $city, [string] $apiKey) 
        {
+            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
+            $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method "Get"
        }
 }
