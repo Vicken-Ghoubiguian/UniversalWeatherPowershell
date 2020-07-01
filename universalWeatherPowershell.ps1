@@ -34,13 +34,17 @@
 
             try {
 
-               $weatherRequest = Invoke-WebRequest $weatherURL
+               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
 
-               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: ", "Success...", "Ok", "Info")
+               $weatherRequestsJSONContent = $weatherRequest.Content
+
+               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
 
             } catch [System.Net.WebException] {
 
                [System.Windows.MessageBox]::Show("Sorry but an error occured when . There is the error message: ", "Error occured", "Ok", "Error")
+
+
             }
        }
 }
