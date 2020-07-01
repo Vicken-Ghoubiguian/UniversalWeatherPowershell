@@ -38,7 +38,7 @@
 
             } catch [System.Net.WebException] {
 
-                
+               [System.Windows.MessageBox]::Show('Hello')
 
             }
        }
