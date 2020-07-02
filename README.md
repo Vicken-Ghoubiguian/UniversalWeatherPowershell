@@ -1,2 +1,2 @@
 # UniversalWeatherPowershell
-Powershell package to current weather in a wished city
+Powershell package to return current weather in a wished city
