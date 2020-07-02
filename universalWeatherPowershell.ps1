@@ -42,7 +42,7 @@
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
-            #
+            # Bloc we wish execute
             try {
 
                $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
@@ -51,6 +51,7 @@
 
                [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
 
+               # Bloc to execute if an System.Net.WebException is encountered
             } catch [System.Net.WebException] {
 
                $errorType = $_.Exception.GetType().Name
