@@ -49,7 +49,9 @@
 
                $weatherRequestsJSONContent = $weatherRequest.Content
 
-               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
+               $weatherRequestsHashTable = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+
+               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsHashTable.name, "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered
             } catch [System.Net.WebException] {
