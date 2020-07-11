@@ -62,7 +62,31 @@
 
                     $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
 
+                    # Allocating the value of the UV index in the attribute uvIndex
                     $this.uvIndex = [int][convert]::ToDouble($uviRequestsHashTable.value)
+
+                    # Allocating the corresponding value of the UV risk in the attribute uvRisk
+                    If($this.uvIndex -le 2) {
+
+                        $this.uvRisk = "Low"
+
+                    } ElseIf($this.uvIndex -ge 3 -And $this.uvIndex -le 5) {
+
+                        $this.uvRisk = "Moderate"
+
+                    } ElseIf($this.uvIndex -ge 6 -And $this.uvIndex -le 7) {
+
+                        $this.uvRisk = "High"
+
+                    } ElseIf($this.uvIndex -ge 8 -And $this.uvIndex -le 10) {
+
+                        $this.uvRisk = "Very high"
+
+                    } Else {
+
+                        $this.uvRisk = "Extreme"
+
+                    }
 
                     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
 
