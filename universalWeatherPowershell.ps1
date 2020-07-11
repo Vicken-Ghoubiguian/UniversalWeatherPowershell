@@ -42,18 +42,42 @@
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
-            # Bloc we wish execute
+            # Bloc we wish execute to get all informations about general weather datas
             try {
 
                $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
 
                $weatherRequestsJSONContent = $weatherRequest.Content
 
-               $weatherRequestsHashTable = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+               #$weatherRequestsHashTable = ConvertFrom-Json $weatherRequestsJSONContent
 
-               [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsHashTable.name, "Success...", "Ok", "Info")
+               # Bloc we wish execute to get all informations about uv index
+               try {
+
+                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=48.866667&lon=2.333333"
+
+                    $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
+
+                    $uviRequestsJSONContent = $uviRequest.Content
+
+                    $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
+
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $uviRequestsHashTable.value , "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered
+               } catch [System.Net.WebException] {
+
+                  $errorType = $_.Exception.GetType().Name
+
+                  $errorMessage = $_.Exception.Message
+
+                  $errorStackTrace = $_.Exception.StackTrace
+
+                  [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
+
+               }
+
+            # Bloc to execute if an System.Net.WebException is encountered
             } catch [System.Net.WebException] {
 
                $errorType = $_.Exception.GetType().Name
