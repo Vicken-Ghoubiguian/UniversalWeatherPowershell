@@ -62,7 +62,9 @@
 
                     $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
 
-                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $uviRequestsHashTable.value , "Success...", "Ok", "Info")
+                    $this.uvIndex = [int][convert]::ToDouble($uviRequestsHashTable.value)
+
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered
                } catch [System.Net.WebException] {
