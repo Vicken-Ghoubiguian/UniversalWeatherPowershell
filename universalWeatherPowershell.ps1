@@ -42,7 +42,7 @@
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
-            # Bloc we wish execute to get all informations about general weather datas
+            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
             try {
 
                $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
@@ -51,7 +51,7 @@
 
                #$weatherRequestsHashTable = ConvertFrom-Json $weatherRequestsJSONContent
 
-               # Bloc we wish execute to get all informations about uv index
+               # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
 
                     $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=48.866667&lon=2.333333"
@@ -90,7 +90,7 @@
 
                     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
 
-               # Bloc to execute if an System.Net.WebException is encountered
+               # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
 
                   $errorType = $_.Exception.GetType().Name
@@ -103,7 +103,7 @@
 
                }
 
-            # Bloc to execute if an System.Net.WebException is encountered
+            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
             } catch [System.Net.WebException] {
 
                $errorType = $_.Exception.GetType().Name
