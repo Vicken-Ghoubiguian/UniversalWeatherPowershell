@@ -34,7 +34,7 @@
 
        # Attributes for all datas concerning UV
        [int]$uvIndex
-       [int]$uvRisk
+       [string]$uvRisk
 
        # universalWeatherPowershell class constructor
        universalWeatherPowershell([string] $city, [string] $apiKey) 
