@@ -2,8 +2,8 @@
 {
 
        # Attributes for respectively longitude and latitude
-       [int]$longitude
-       [int]$latitude
+       [float]$longitude
+       [float]$latitude
 
        # Attributes for respectively main description and description with more precisions
        [string]$mainDescription
@@ -60,7 +60,11 @@ $weatherRequestsContent
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
 
-                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=48.866667&lon=2.333333"
+                    $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
+
+                    $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
+
+                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.latitude + "&lon=" + $this.longitude
 
                     $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
 
@@ -94,7 +98,7 @@ $weatherRequestsContent
 
                     }
 
-                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsResults.coord, "Success...", "Ok", "Info")
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsResults.coord.lat, "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
