@@ -39,6 +39,11 @@
        # universalWeatherPowershell class constructor
        universalWeatherPowershell([string] $city, [string] $apiKey) 
        {
+
+            ###########################################################################
+            # Extracting the UV index value and determine the UV risk...              #
+            ###########################################################################
+
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
 
@@ -60,10 +65,15 @@ $weatherRequestsContent
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
 
+                    # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
                     $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
-
                     $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
 
+                    ###########################################################################
+                    # Extracting the UV index value and determine the UV risk...              #
+                    ###########################################################################
+
+                    #
                     $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.latitude + "&lon=" + $this.longitude
 
                     $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
