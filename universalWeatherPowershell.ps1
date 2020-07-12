@@ -73,7 +73,7 @@ $weatherRequestsContent
                     $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
 
                     # Allocating the value of the UV index in the attribute uvIndex
-                    $this.uvIndex = [int][convert]::ToDouble($uviRequestsHashTable.value)
+                    $this.uvIndex = [System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value))
 
                     # Allocating the corresponding value of the UV risk in the attribute uvRisk
                     If($this.uvIndex -le 2) {
