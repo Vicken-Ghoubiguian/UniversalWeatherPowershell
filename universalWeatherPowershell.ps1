@@ -47,9 +47,15 @@
 
                $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
 
-               $weatherRequestsJSONContent = $weatherRequest.Content
+               $weatherRequestsContent = $weatherRequest.Content
 
-               #$weatherRequestsHashTable = ConvertFrom-Json $weatherRequestsJSONContent
+               $weatherRequestsJSONContent = @"
+               
+$weatherRequestsContent
+
+"@
+
+               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
 
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
@@ -88,7 +94,7 @@
 
                     }
 
-                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsJSONContent, "Success...", "Ok", "Info")
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsResults.coord, "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
