@@ -89,10 +89,14 @@ $weatherRequestsContent
                     $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
                     $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
 
-                    # Allocating the value of the choosen temperature measurement unit in the temperatureMeasurementUnitId class attribute
+                    # Allocating the value of sunrise time and sunset time to the respectives class attributes
+                    $this.sunrise = $weatherRequestsResults.sys.sunrise
+                    $this.sunset = $weatherRequestsResults.sys.sunset
+
+                    # Allocating the value of the choosen temperature measurement unit to the temperatureMeasurementUnitId class attribute
                     $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
 
-                    # Allocating all datas about the choosen temperature measurement unit in the respectives class attributes
+                    # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
                     If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
 
                         $this.temperatureMeasurementUnitName = "Celsius"
