@@ -15,6 +15,11 @@
        [float]$minTemperature
        [float]$maxTemperature
 
+       # Attributes for temperature measurement unit
+       [int]$temperatureMeasurementUnitId
+       [string]$temperatureMeasurementUnitName
+       [string]$temperatureMeasurementUnitSymbol
+
        # Attributes for respectively pressure and humidity
        [float]$pressure
        [float]$humidity
