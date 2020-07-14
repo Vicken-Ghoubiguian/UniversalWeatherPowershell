@@ -14,17 +14,17 @@ Powershell package to return current weather in a wished city.
 
 5. [Conclusion](#conclusion)
 
-<a name="presentation"/>
+<a name="presentation"/></a>
 ## What is this project ?
   
-<a name="structure"/>  
+<a name="structure"/></a>
 ## How is it structured ?
 
-<a name="how_use"/>
+<a name="how_use"/></a>
 ## How use it ?
 
-<a name="what_used"/>
+<a name="what_used"/></a>
 ## What is used in this project ?
 
-<a name="conclusion"/>
+<a name="conclusion"/></a>
 ## Conclusion
