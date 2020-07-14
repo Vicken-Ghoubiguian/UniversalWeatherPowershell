@@ -89,11 +89,32 @@ $weatherRequestsContent
                     $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
                     $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
 
+                    # 
+                    $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
+
+                    #
+                    If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
+
+                        $this.temperatureMeasurementUnitName = "Celsius"
+                        $this.temperatureMeasurementUnitSymbol = " °C"
+
+                    } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
+
+                        $this.temperatureMeasurementUnitName = "Fahrenheit"
+                        $this.temperatureMeasurementUnitSymbol = " °F"
+
+                    } Else {
+                        
+                        $this.temperatureMeasurementUnitName = "Kelvin"
+                        $this.temperatureMeasurementUnitSymbol = " K"
+
+                    }
+
                     ###########################################################################
                     # Extracting the UV index value and determine the UV risk...              #
                     ###########################################################################
 
-                    #
+                    # 
                     $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.latitude + "&lon=" + $this.longitude
 
                     $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
