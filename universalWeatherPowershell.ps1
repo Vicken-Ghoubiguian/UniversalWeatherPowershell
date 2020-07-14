@@ -89,10 +89,10 @@ $weatherRequestsContent
                     $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
                     $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
 
-                    # 
+                    # Allocating the value of the choosen temperature measurement unit in the temperatureMeasurementUnitId class attribute
                     $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
 
-                    #
+                    # Allocating all datas about the choosen temperature measurement unit in the respectives class attributes
                     If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
 
                         $this.temperatureMeasurementUnitName = "Celsius"
