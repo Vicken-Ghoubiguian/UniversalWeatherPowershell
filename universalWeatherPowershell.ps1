@@ -1,10 +1,12 @@
-﻿Enum temperatureMeasurementUnit {
+﻿# Definition of the temperatureMeasurementUnit Powershell enum to get the wished temperature measurement unit
+Enum temperatureMeasurementUnit {
     
     Kelvin = 0
     Celsius = 1
     Fahrenheit = 2
 }
 
+# Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
 {
 
