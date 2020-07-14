@@ -6,6 +6,11 @@ Enum temperatureMeasurementUnit {
     Fahrenheit = 2
 }
 
+# Definition of the dateAndTimeFormat Powershell enum to get the wished date and time format
+Enum dateAndTimeFormat {
+    TimestampFormat = 0
+}
+
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
 {
@@ -38,7 +43,10 @@ class universalWeatherPowershell
        [int]$windDeg
        [float]$windGust
 
-       # Attributes for respectively sunrise and sunset times as timestamp
+       # Attribute for date and time format
+       [dateAndTimeFormat]$dateAndTimeFormatId
+
+       # Attributes for respectively sunrise and sunset dates and times
        [long]$sunrise
        [long]$sunset
 
@@ -51,7 +59,7 @@ class universalWeatherPowershell
        [string]$uvRisk
 
        # universalWeatherPowershell class constructor
-       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit]$choosenTemperatureMeasurementUnit, [string] $apiKey) 
+       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat, [string] $apiKey) 
        {
 
             ###########################################################################
@@ -113,6 +121,9 @@ $weatherRequestsContent
                         $this.temperatureMeasurementUnitSymbol = " K"
 
                     }
+
+                    # Allocating the value of the choosen date and time format to the dateAndTimeFormatId class attribute
+                    $this.dateAndTimeFormatId = $choosenDateAndTimeFormat
 
                     ###########################################################################
                     # Extracting the UV index value and determine the UV risk...              #
