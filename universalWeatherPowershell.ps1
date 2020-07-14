@@ -1,4 +1,11 @@
-﻿class universalWeatherPowershell 
+﻿Enum temperatureMeasurementUnit {
+    
+    Kelvin = 0
+    Celsius = 1
+    Fahrenheit = 2
+}
+
+class universalWeatherPowershell 
 {
 
        # Attributes for respectively longitude and latitude
@@ -16,7 +23,7 @@
        [float]$maxTemperature
 
        # Attributes for temperature measurement unit
-       [int]$temperatureMeasurementUnitId
+       [temperatureMeasurementUnit]$temperatureMeasurementUnitId
        [string]$temperatureMeasurementUnitName
        [string]$temperatureMeasurementUnitSymbol
 
@@ -42,7 +49,7 @@
        [string]$uvRisk
 
        # universalWeatherPowershell class constructor
-       universalWeatherPowershell([string] $city, [string] $apiKey) 
+       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit]$choosenTemperatureMeasurementUnit, [string] $apiKey) 
        {
 
             ###########################################################################
