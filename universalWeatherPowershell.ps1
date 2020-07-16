@@ -95,9 +95,16 @@ $weatherRequestsContent
                     $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
                     $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
 
-                    # Allocating the value of sunrise time and sunset time to the respectives class attributes
-                    $this.sunrise = $weatherRequestsResults.sys.sunrise
-                    $this.sunset = $weatherRequestsResults.sys.sunset
+                    # Allocating the value of the choosen date and time format to the dateAndTimeFormatId class attribute
+                    $this.dateAndTimeFormatId = $choosenDateAndTimeFormat
+
+                    If($this.dateAndTimeFormatId -eq [dateAndTimeFormat]::TimestampFormat) {
+
+                        # Allocating the value of sunrise time and sunset time to the respectives class attributes
+                        $this.sunrise = $weatherRequestsResults.sys.sunrise
+                        $this.sunset = $weatherRequestsResults.sys.sunset
+
+                    }
 
                     # Allocating the value of the choosen temperature measurement unit to the temperatureMeasurementUnitId class attribute
                     $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
