@@ -8,7 +8,11 @@ Enum temperatureMeasurementUnit {
 
 # Definition of the dateAndTimeFormat Powershell enum to get the wished date and time format
 Enum dateAndTimeFormat {
+
     TimestampFormat = 0
+    DMYFormat = 1
+    YMDFormat = 2
+    MDYFormat = 3
 }
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
