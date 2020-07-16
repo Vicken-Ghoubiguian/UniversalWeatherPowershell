@@ -98,13 +98,13 @@ $weatherRequestsContent
                     # Allocating the value of the choosen temperature measurement unit to the temperatureMeasurementUnitId class attribute
                     $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
 
-                    # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
                     If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
 
+                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
                         $this.temperatureMeasurementUnitName = "Celsius"
                         $this.temperatureMeasurementUnitSymbol = " °C"
 
-                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        # Allocating all the values relative to temperature datas in their respectives values
                         $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) - 273.15
                         $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) - 273.15
                         $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) - 273.15
@@ -112,10 +112,11 @@ $weatherRequestsContent
 
                     } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
 
+                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
                         $this.temperatureMeasurementUnitName = "Fahrenheit"
                         $this.temperatureMeasurementUnitSymbol = " °F"
 
-                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        # Allocating all the values relative to temperature datas in their respectives values 
                         $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) * 1.8 - 459.67
                         $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) * 1.8 - 459.67
                         $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) * 1.8 - 459.67
@@ -123,10 +124,11 @@ $weatherRequestsContent
 
                     } Else {
                         
+                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
                         $this.temperatureMeasurementUnitName = "Kelvin"
                         $this.temperatureMeasurementUnitSymbol = " K"
 
-                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        # Allocating all the values relative to temperature datas in their respectives values
                         $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp)
                         $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like)
                         $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
