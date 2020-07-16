@@ -10,9 +10,9 @@ Enum temperatureMeasurementUnit {
 Enum dateAndTimeFormat {
 
     TimestampFormat = 0
-    DMYFormat = 1
-    YMDFormat = 2
-    MDYFormat = 3
+    DMYHMSFormat = 1
+    YMDHMSFormat = 2
+    MDYHMSFormat = 3
 }
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
