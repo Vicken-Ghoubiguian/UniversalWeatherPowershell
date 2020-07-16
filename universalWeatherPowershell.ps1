@@ -91,12 +91,6 @@ $weatherRequestsContent
                     $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
                     $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
 
-                    # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
-                    $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp)
-                    $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like)
-                    $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
-                    $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
-
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = $weatherRequestsResults.sys.sunrise
                     $this.sunset = $weatherRequestsResults.sys.sunset
@@ -110,16 +104,33 @@ $weatherRequestsContent
                         $this.temperatureMeasurementUnitName = "Celsius"
                         $this.temperatureMeasurementUnitSymbol = " °C"
 
+                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) - 273.15
+                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) - 273.15
+                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) - 273.15
+                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max) - 273.15
+
                     } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
 
                         $this.temperatureMeasurementUnitName = "Fahrenheit"
                         $this.temperatureMeasurementUnitSymbol = " °F"
+
+                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) * 1.8 - 459.67
+                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) * 1.8 - 459.67
+                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) * 1.8 - 459.67
+                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max) * 1.8 - 459.67
 
                     } Else {
                         
                         $this.temperatureMeasurementUnitName = "Kelvin"
                         $this.temperatureMeasurementUnitSymbol = " K"
 
+                        # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp)
+                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like)
+                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
+                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
                     }
 
                     # Allocating the value of the choosen date and time format to the dateAndTimeFormatId class attribute
