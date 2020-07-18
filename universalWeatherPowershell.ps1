@@ -101,8 +101,32 @@ $weatherRequestsContent
 
                $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
 
+               # Bloc we wish execute to get all informations about uv index (UV BLOC)
+               try {
+
+               # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
+               } catch [System.Net.WebException] {
+
+                  $errorType = $_.Exception.GetType().Name
+
+                  $errorMessage = $_.Exception.Message
+
+                  $errorStackTrace = $_.Exception.StackTrace
+
+                  [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
+
+               }
+
             # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
             } catch [System.Net.WebException] {
+
+               $errorType = $_.Exception.GetType().Name
+
+               $errorMessage = $_.Exception.Message
+
+               $errorStackTrace = $_.Exception.StackTrace
+
+               [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
 
             }
        }
