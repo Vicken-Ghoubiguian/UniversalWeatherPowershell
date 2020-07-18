@@ -15,6 +15,15 @@ Enum dateAndTimeFormat {
     MDYHMSFormat = 3
 }
 
+# Definition of the languageCode Powershell enum to get the wished language
+Enum languageCode {
+
+    EN = 0
+    FR = 1
+    DE = 2
+    DA = 3
+}
+
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
 {
@@ -58,12 +67,16 @@ class universalWeatherPowershell
        [string]$countryCode
        [string]$cityName
 
+       # Attributes for all datas concerning wished language
+       [languageCode]$languageCodeId
+       [string]$languageName
+
        # Attributes for all datas concerning UV
        [int]$uvIndex
        [string]$uvRisk
 
        # universalWeatherPowershell class constructor
-       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat, [string] $apiKey) 
+       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat, [string] $apiKey, [languageCode] $choosenLanguageCode) 
        {
 
             ###########################################################################
