@@ -79,18 +79,96 @@ class universalWeatherPowershell
        universalWeatherPowershell([string] $city, [string] $apiKey)
        {
 
+            ###########################################################################
+            # Extracting the UV index value and determine the UV risk...              #
+            ###########################################################################
+
+            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
+            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
+
+            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
+            try {
+
+               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
+
+               $weatherRequestsContent = $weatherRequest.Content
+
+               $weatherRequestsJSONContent = @"
+               
+$weatherRequestsContent
+
+"@
+
+               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+
+            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
+            } catch [System.Net.WebException] {
+
+            }
        }
 
        # universalWeatherPowershell class minimal constructor with the language choice in more
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode)
        {
 
+            ###########################################################################
+            # Extracting the UV index value and determine the UV risk...              #
+            ###########################################################################
+
+            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
+            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
+
+            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
+            try {
+
+               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
+
+               $weatherRequestsContent = $weatherRequest.Content
+
+               $weatherRequestsJSONContent = @"
+               
+$weatherRequestsContent
+
+"@
+
+               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+
+            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
+            } catch [System.Net.WebException] {
+
+            }
        }
 
        # universalWeatherPowershell class detailled constructor
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit)
        {
 
+            ###########################################################################
+            # Extracting the UV index value and determine the UV risk...              #
+            ###########################################################################
+
+            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
+            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
+
+            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
+            try {
+
+               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
+
+               $weatherRequestsContent = $weatherRequest.Content
+
+               $weatherRequestsJSONContent = @"
+               
+$weatherRequestsContent
+
+"@
+
+               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+
+            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
+            } catch [System.Net.WebException] {
+
+            }
        }
 
        # universalWeatherPowershell class constructor with all needed parameters
