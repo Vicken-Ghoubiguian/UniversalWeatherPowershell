@@ -80,7 +80,7 @@ class universalWeatherPowershell
        {
 
             ###########################################################################
-            # Extracting the UV index value and determine the UV risk...              #
+            # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
 
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
@@ -112,7 +112,7 @@ $weatherRequestsContent
        {
 
             ###########################################################################
-            # Extracting the UV index value and determine the UV risk...              #
+            # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
 
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
@@ -144,7 +144,7 @@ $weatherRequestsContent
        {
 
             ###########################################################################
-            # Extracting the UV index value and determine the UV risk...              #
+            # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
 
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
@@ -176,7 +176,7 @@ $weatherRequestsContent
        {
 
             ###########################################################################
-            # Extracting the UV index value and determine the UV risk...              #
+            # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
 
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
