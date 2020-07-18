@@ -75,8 +75,26 @@ class universalWeatherPowershell
        [int]$uvIndex
        [string]$uvRisk
 
+       # 
+       universalWeatherPowershell([string] $city, [string] $apiKey)
+       {
+
+       }
+
+       #
+       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode)
+       {
+
+       }
+
+       #
+       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit)
+       {
+
+       }
+
        # universalWeatherPowershell class constructor
-       universalWeatherPowershell([string] $city, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat, [string] $apiKey, [languageCode] $choosenLanguageCode) 
+       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat) 
        {
 
             ###########################################################################
