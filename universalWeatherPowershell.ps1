@@ -75,25 +75,25 @@ class universalWeatherPowershell
        [int]$uvIndex
        [string]$uvRisk
 
-       # 
+       # universalWeatherPowershell class minimal constructor
        universalWeatherPowershell([string] $city, [string] $apiKey)
        {
 
        }
 
-       #
+       # universalWeatherPowershell class minimal constructor with the language choice in more
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode)
        {
 
        }
 
-       #
+       # universalWeatherPowershell class detailled constructor
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit)
        {
 
        }
 
-       # universalWeatherPowershell class constructor
+       # universalWeatherPowershell class constructor with all needed parameters
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat) 
        {
 
