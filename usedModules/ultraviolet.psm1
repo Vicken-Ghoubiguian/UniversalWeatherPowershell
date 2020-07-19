@@ -1,8 +1,8 @@
 ﻿# Definition of the ultraviolet Powershell class to encapsulate uv datas
 class ultraviolet {
 
-    [int]$index
-    [string]$risk
+    hidden [int]$index
+    hidden [string]$risk
 
     # ultraviolet class constructor
     ultraviolet([int] $indexValue)
@@ -31,5 +31,17 @@ class ultraviolet {
             $this.risk = "Extreme"
 
         }
+    }
+
+    # 'index' attribute getter
+    [int] GetIndex()
+    {
+        return $this.index
+    }
+
+    # 'risk' attribute setter
+    [string] GetRisk()
+    {
+        return $this.risk
     }
 }
