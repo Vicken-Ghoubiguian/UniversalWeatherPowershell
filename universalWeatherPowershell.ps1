@@ -104,6 +104,51 @@ $weatherRequestsContent
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
 
+                   # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                   $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
+                   $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
+
+                    ###########################################################################
+                    # Extracting the UV index value and determine the UV risk...              #
+                    ###########################################################################
+
+                    # 
+                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.latitude + "&lon=" + $this.longitude
+
+                    $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
+
+                    $uviRequestsJSONContent = $uviRequest.Content
+
+                    $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
+
+                    # Allocating the value of the UV index in the attribute uvIndex
+                    $this.uvIndex = [System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value))
+
+                    # Allocating the corresponding value of the UV risk in the attribute uvRisk
+                    If($this.uvIndex -le 2) {
+
+                        $this.uvRisk = "Low"
+
+                    } ElseIf($this.uvIndex -ge 3 -And $this.uvIndex -le 5) {
+
+                        $this.uvRisk = "Moderate"
+
+                    } ElseIf($this.uvIndex -ge 6 -And $this.uvIndex -le 7) {
+
+                        $this.uvRisk = "High"
+
+                    } ElseIf($this.uvIndex -ge 8 -And $this.uvIndex -le 10) {
+
+                        $this.uvRisk = "Very high"
+
+                    } Else {
+
+                        $this.uvRisk = "Extreme"
+
+                    }
+
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsContent, "Success...", "Ok", "Info")
+
                # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
 
