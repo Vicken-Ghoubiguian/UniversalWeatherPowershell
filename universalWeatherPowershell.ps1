@@ -1,4 +1,6 @@
-﻿# Definition of the temperatureMeasurementUnit Powershell enum to get the wished temperature measurement unit
+﻿Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\ultraviolet.psm1
+
+# Definition of the temperatureMeasurementUnit Powershell enum to get the wished temperature measurement unit
 Enum temperatureMeasurementUnit {
     
     Kelvin = 0
@@ -72,8 +74,7 @@ class universalWeatherPowershell
        [string]$languageName
 
        # Attributes for all datas concerning UV
-       [int]$uvIndex
-       [string]$uvRisk
+       [ultraviolet]$uv
 
        # universalWeatherPowershell class minimal constructor
        universalWeatherPowershell([string] $city, [string] $apiKey)
@@ -122,30 +123,7 @@ $weatherRequestsContent
                     $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
 
                     # Allocating the value of the UV index in the attribute uvIndex
-                    $this.uvIndex = [System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value))
-
-                    # Allocating the corresponding value of the UV risk in the attribute uvRisk
-                    If($this.uvIndex -le 2) {
-
-                        $this.uvRisk = "Low"
-
-                    } ElseIf($this.uvIndex -ge 3 -And $this.uvIndex -le 5) {
-
-                        $this.uvRisk = "Moderate"
-
-                    } ElseIf($this.uvIndex -ge 6 -And $this.uvIndex -le 7) {
-
-                        $this.uvRisk = "High"
-
-                    } ElseIf($this.uvIndex -ge 8 -And $this.uvIndex -le 10) {
-
-                        $this.uvRisk = "Very high"
-
-                    } Else {
-
-                        $this.uvRisk = "Extreme"
-
-                    }
+                    $this.uv = [ultraviolet]::new([System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value)))
 
                     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsContent, "Success...", "Ok", "Info")
 
@@ -340,31 +318,8 @@ $weatherRequestsContent
 
                     $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
 
-                    # Allocating the value of the UV index in the attribute uvIndex
-                    $this.uvIndex = [System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value))
-
-                    # Allocating the corresponding value of the UV risk in the attribute uvRisk
-                    If($this.uvIndex -le 2) {
-
-                        $this.uvRisk = "Low"
-
-                    } ElseIf($this.uvIndex -ge 3 -And $this.uvIndex -le 5) {
-
-                        $this.uvRisk = "Moderate"
-
-                    } ElseIf($this.uvIndex -ge 6 -And $this.uvIndex -le 7) {
-
-                        $this.uvRisk = "High"
-
-                    } ElseIf($this.uvIndex -ge 8 -And $this.uvIndex -le 10) {
-
-                        $this.uvRisk = "Very high"
-
-                    } Else {
-
-                        $this.uvRisk = "Extreme"
-
-                    }
+                    # Allocating all ultraviolet datas in the attribute uv
+                    $this.uv = [ultraviolet]::new([System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value)))
 
                     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsContent, "Success...", "Ok", "Info")
 
