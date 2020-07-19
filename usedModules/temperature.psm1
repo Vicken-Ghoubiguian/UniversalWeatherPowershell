@@ -23,19 +23,52 @@ class temperature {
     # set temperature to Kelvin
     [void] setTemperatureAsKelvin()
     {
-    
+        If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
+
+            [System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
+
+        } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
+
+            [System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
+
+        } Else {
+
+            [System.Windows.MessageBox]::Show("Temperature already in Kelvin (K).", "Warning", "Ok", "Warning")
+        }
     }
 
     # set temperature to Celsius
     [void] setTemperatureAsCelsius()
     {
+        If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Kelvin) {
 
+            [System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
+
+        } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
+
+            [System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
+
+        } Else {
+
+            [System.Windows.MessageBox]::Show("Temperature already in Celsius (°C).", "Warning", "Ok", "Warning")
+        }
     }
 
     # set temperature to Fahrenheit
     [void] setTemperatureAsFahrenheit()
     {
+        If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Kelvin) {
 
+            [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
+
+        } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
+
+            [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
+         
+        } Else {
+
+            [System.Windows.MessageBox]::Show("Temperature already in Fahrenheit (°F).", "Warning", "Ok", "Warning")
+        }
     }
 
     # 'temperatureValue' attribute getter
