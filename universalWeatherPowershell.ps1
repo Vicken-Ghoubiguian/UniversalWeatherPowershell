@@ -1,4 +1,4 @@
-﻿Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\ultraviolet.psm1
+﻿Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\ultraviolet.psm1
 
 # Definition of the temperatureMeasurementUnit Powershell enum to get the wished temperature measurement unit
 Enum temperatureMeasurementUnit {
