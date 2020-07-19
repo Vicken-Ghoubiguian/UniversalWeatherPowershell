@@ -1,14 +1,6 @@
 ﻿Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\ultraviolet.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\temperature.psm1
 
-# Definition of the temperatureMeasurementUnit Powershell enum to get the wished temperature measurement unit
-Enum temperatureMeasurementUnit {
-    
-    Kelvin = 0
-    Celsius = 1
-    Fahrenheit = 2
-}
-
 # Definition of the dateAndTimeFormat Powershell enum to get the wished date and time format
 Enum dateAndTimeFormat {
 
@@ -150,72 +142,8 @@ $weatherRequestsContent
             }
        }
 
-       # universalWeatherPowershell class minimal constructor with the language choice in more
-       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode)
-       {
-
-            ###########################################################################
-            # Recovering all the weather datas values and extracting them all...      #
-            ###########################################################################
-
-            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
-            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
-
-            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
-            try {
-
-               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
-
-               $weatherRequestsContent = $weatherRequest.Content
-
-               $weatherRequestsJSONContent = @"
-               
-$weatherRequestsContent
-
-"@
-
-               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
-
-            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
-            } catch [System.Net.WebException] {
-
-            }
-       }
-
-       # universalWeatherPowershell class detailled constructor
-       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit)
-       {
-
-            ###########################################################################
-            # Recovering all the weather datas values and extracting them all...      #
-            ###########################################################################
-
-            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
-            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
-
-            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
-            try {
-
-               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
-
-               $weatherRequestsContent = $weatherRequest.Content
-
-               $weatherRequestsJSONContent = @"
-               
-$weatherRequestsContent
-
-"@
-
-               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
-
-            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
-            } catch [System.Net.WebException] {
-
-            }
-       }
-
        # universalWeatherPowershell class constructor with all needed parameters
-       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [temperatureMeasurementUnit] $choosenTemperatureMeasurementUnit, [dateAndTimeFormat] $choosenDateAndTimeFormat) 
+       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode, [dateAndTimeFormat] $choosenDateAndTimeFormat) 
        {
 
             ###########################################################################
