@@ -40,15 +40,10 @@ class universalWeatherPowershell
        [string]$precisedDescription
 
        # Attributes for all datas concerning temperature
-       [float]$temperature
-       [float]$feelingLikeTemperature
-       [float]$minTemperature
-       [float]$maxTemperature
-
-       # Attributes for temperature measurement unit
-       [temperatureMeasurementUnit]$temperatureMeasurementUnitId
-       [string]$temperatureMeasurementUnitName
-       [string]$temperatureMeasurementUnitSymbol
+       [temperature]$temperature
+       [temperature]$feelingLikeTemperature
+       [temperature]$minTemperature
+       [temperature]$maxTemperature
 
        # Attributes for respectively pressure and humidity
        [float]$pressure
@@ -263,45 +258,11 @@ $weatherRequestsContent
 
                     }
 
-                    # Allocating the value of the choosen temperature measurement unit to the temperatureMeasurementUnitId class attribute
-                    $this.temperatureMeasurementUnitId = $choosenTemperatureMeasurementUnit
-
-                    If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
-
-                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
-                        $this.temperatureMeasurementUnitName = "Celsius"
-                        $this.temperatureMeasurementUnitSymbol = " °C"
-
-                        # Allocating all the values relative to temperature datas in their respectives values
-                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) - 273.15
-                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) - 273.15
-                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) - 273.15
-                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max) - 273.15
-
-                    } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
-
-                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
-                        $this.temperatureMeasurementUnitName = "Fahrenheit"
-                        $this.temperatureMeasurementUnitSymbol = " °F"
-
-                        # Allocating all the values relative to temperature datas in their respectives values 
-                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp) * 1.8 - 459.67
-                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like) * 1.8 - 459.67
-                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min) * 1.8 - 459.67
-                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max) * 1.8 - 459.67
-
-                    } Else {
-                        
-                        # Allocating all datas about the choosen temperature measurement unit to the respectives class attributes
-                        $this.temperatureMeasurementUnitName = "Kelvin"
-                        $this.temperatureMeasurementUnitSymbol = " K"
-
-                        # Allocating all the values relative to temperature datas in their respectives values
-                        $this.temperature = [convert]::ToDouble($weatherRequestsResults.main.temp)
-                        $this.feelingLikeTemperature = [convert]::ToDouble($weatherRequestsResults.main.feels_like)
-                        $this.minTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_min)
-                        $this.maxTemperature = [convert]::ToDouble($weatherRequestsResults.main.temp_max)
-                    }
+                    # Allocating all temperatures to their respectives objects
+                    $this.temperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp))
+                    $this.feelingLikeTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.feels_like))
+                    $this.minTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp_min))
+                    $this.maxTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp_max))
 
                     # Allocating the value of the choosen date and time format to the dateAndTimeFormatId class attribute
                     $this.dateAndTimeFormatId = $choosenDateAndTimeFormat

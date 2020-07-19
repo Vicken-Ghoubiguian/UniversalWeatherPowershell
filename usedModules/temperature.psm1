@@ -13,6 +13,13 @@ class temperature {
     hidden [temperatureMeasurementUnit]$temperatureMeasurementUnitId
     hidden [string]$temperatureMeasurementUnitSymbol
 
+    temperature([float] $definedValue)
+    {
+        $this.temperatureValue = $definedValue
+        $this.temperatureMeasurementUnitId = [temperatureMeasurementUnit]::Kelvin
+        $this.temperatureMeasurementUnitSymbol = " K"
+    }
+
     # set temperature to Kelvin
     [void] setTemperatureAsKelvin()
     {
