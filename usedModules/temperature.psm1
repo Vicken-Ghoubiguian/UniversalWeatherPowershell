@@ -17,13 +17,13 @@ class temperature {
     {
         $this.temperatureValue = $definedValue
         $this.temperatureMeasurementUnitId = [temperatureMeasurementUnit]::Kelvin
-        $this.temperatureMeasurementUnitSymbol = " K"
+        $this.temperatureMeasurementUnitSymbol = "K"
     }
 
     # set temperature to Kelvin
     [void] setTemperatureAsKelvin()
     {
-
+    
     }
 
     # set temperature to Celsius
@@ -47,7 +47,23 @@ class temperature {
     # 'temperatureMeasurementUnitId' attribute getter as string
     [string] getTemperatureMeasurementUnit()
     {
-        return ""
+        $usedTemperatureMeasurementUnit = ""
+
+        If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
+
+            $usedTemperatureMeasurementUnit = "Celsius"
+
+        } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
+
+            $usedTemperatureMeasurementUnit = "Fahrenheit"
+
+        } Else {
+            
+            $usedTemperatureMeasurementUnit = "Kelvin"
+
+        }
+
+        return $usedTemperatureMeasurementUnit
     }
 
     # 'temperatureMeasurementUnitSymbol' attribute getter
