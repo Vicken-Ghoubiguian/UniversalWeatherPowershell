@@ -2,9 +2,9 @@
 class pressure
 {
     # Attribute concerning the pressure value
-    [float]$pressureValue
+    hidden [float]$pressureValue
 
     # Attribute concerning the pressure measurement unit
-    [string]$pressureUnit
+    hidden [string]$pressureUnit
 
 }
