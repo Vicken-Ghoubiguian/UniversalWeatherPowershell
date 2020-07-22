@@ -44,7 +44,7 @@ class temperature {
 
             $this.temperatureMeasurementUnitId = [temperatureMeasurementUnit]::Celsius
             $this.temperatureMeasurementUnitSymbol = "°C"
-            $this.temperatureValue = $this.temperatureValue - 273,15
+            $this.temperatureValue = $this.temperatureValue - 273.15
 
             [System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
 

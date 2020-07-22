@@ -57,6 +57,8 @@ class universalWeatherPowershell
        universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode) 
        {
 
+            $p = 89 - 7
+
             ###########################################################################
             # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
