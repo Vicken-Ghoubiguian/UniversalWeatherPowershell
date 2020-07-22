@@ -75,9 +75,17 @@ class temperature {
     {
         If($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Kelvin) {
 
+            $this.temperatureMeasurementUnitId = [temperatureMeasurementUnit]::Fahrenheit
+            $this.temperatureMeasurementUnitSymbol = "°F"
+            $this.temperatureValue = ($this.temperatureValue - 273.15) * (9/5) + 32
+
             [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
 
         } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
+
+            $this.temperatureMeasurementUnitId = [temperatureMeasurementUnit]::Fahrenheit
+            $this.temperatureMeasurementUnitSymbol = "°F"
+            $this.temperatureValue = ($this.temperatureValue * (9/5)) + 32
 
             [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
          
