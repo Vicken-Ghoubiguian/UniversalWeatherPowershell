@@ -3,14 +3,14 @@ Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\tempe
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\dateandtime.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\language.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\pressure.psm1
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\coordinates.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
 {
 
        # Attributes for respectively longitude and latitude
-       [float]$longitude
-       [float]$latitude
+       [coordinates]$coordinates
 
        # Attributes for respectively main description and description with more precisions
        [string]$mainDescription
@@ -77,8 +77,7 @@ $weatherRequestsContent
                try {
 
                     # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
-                    $this.longitude = [convert]::ToDouble($weatherRequestsResults.coord.lon)
-                    $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
+                    $this.coordinates = [coordinates]::new([convert]::ToDouble($weatherRequestsResults.coord.lat),[convert]::ToDouble($weatherRequestsResults.coord.lon))
 
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
@@ -95,7 +94,7 @@ $weatherRequestsContent
                     ###########################################################################
 
                     # 
-                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.latitude + "&lon=" + $this.longitude
+                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.coordinates.getLatitude() + "&lon=" + $this.coordinates.getLongitude()
 
                     $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
 

@@ -6,7 +6,7 @@ Enum temperatureMeasurementUnit {
     Fahrenheit = 2
 }
 
-# Definition of the temperature Powershell class to encapsulate temperature datas
+# Definition of the temperature Powershell class to encapsulate and manage temperature datas
 class temperature {
 
     hidden [float]$temperatureValue
