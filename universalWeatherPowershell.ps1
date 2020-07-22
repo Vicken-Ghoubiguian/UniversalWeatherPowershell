@@ -34,8 +34,8 @@ class universalWeatherPowershell
        [float]$windGust
 
        # Attributes for respectively sunrise and sunset dates and times
-       [long]$sunrise
-       [long]$sunset
+       [dateAndTime]$sunrise
+       [dateAndTime]$sunset
 
        # Attributes for all datas concerning wished location
        [string]$countryCode
@@ -81,8 +81,8 @@ $weatherRequestsContent
                     $this.latitude = [convert]::ToDouble($weatherRequestsResults.coord.lat)
 
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
-                    $this.sunrise = $weatherRequestsResults.sys.sunrise
-                    $this.sunset = $weatherRequestsResults.sys.sunset
+                    $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
+                    $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
 
                     # Allocating all temperatures to their respectives objects
                     $this.temperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp))
