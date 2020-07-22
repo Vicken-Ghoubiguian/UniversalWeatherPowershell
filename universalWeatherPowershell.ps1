@@ -2,6 +2,7 @@
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\temperature.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\dateandtime.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\language.psm1
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\pressure.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
@@ -21,8 +22,10 @@ class universalWeatherPowershell
        [temperature]$minTemperature
        [temperature]$maxTemperature
 
-       # Attributes for respectively pressure and humidity
-       [float]$pressure
+       # Attribute for pressure
+       [pressure]$pressure
+
+       # Attribute for humidity
        [float]$humidity
 
        # Attributes for all datas concerning wind
