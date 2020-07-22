@@ -1,15 +1,7 @@
 ﻿Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\ultraviolet.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\temperature.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\dateandtime.psm1
-
-# Definition of the languageCode Powershell enum to get the wished language
-Enum languageCode {
-
-    EN = 0
-    FR = 1
-    DE = 2
-    DA = 3
-}
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\language.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
@@ -46,15 +38,14 @@ class universalWeatherPowershell
        [string]$countryCode
        [string]$cityName
 
-       # Attributes for all datas concerning wished language
-       [languageCode]$languageCodeId
-       [string]$languageName
+       # Attributes for all datas concerning the current language
+       [language]$currentLanguage
 
        # Attributes for all datas concerning UV
        [ultraviolet]$uv
 
        # universalWeatherPowershell class constructor with all needed parameters
-       universalWeatherPowershell([string] $city, [string] $apiKey, [languageCode] $choosenLanguageCode) 
+       universalWeatherPowershell([string] $city, [string] $apiKey) 
        {
 
             ###########################################################################
