@@ -37,7 +37,7 @@ class universalWeatherPowershell
        [dateAndTime]$sunrise
        [dateAndTime]$sunset
 
-       # Attributes for all datas concerning wished location
+       # Attributes for all datas concerning the wished location
        [string]$countryCode
        [string]$cityName
 
@@ -81,6 +81,10 @@ $weatherRequestsContent
 
                     # Allocating the value of main description, precised description and icon to the weatherDescription attribute
                     $this.weatherDescription = [weatherDescription]::new($weatherRequestsResults.weather[0].main, $weatherRequestsResults.weather[0].description, $weatherRequestsResults.weather[0].icon)
+
+                    #
+                    $this.countryCode = $weatherRequestsResults.sys.country
+                    $this.cityName = $weatherRequestsResults.name
 
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
