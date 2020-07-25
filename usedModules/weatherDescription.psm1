@@ -1,4 +1,4 @@
-﻿# Definition of the weatherDescription Powershell class to manage weather datas
+﻿# Definition of the weatherDescription Powershell class to encapsulate and manage weather datas
 class weatherDescription {
 
     hidden [string]$mainDescription
@@ -11,5 +11,23 @@ class weatherDescription {
         $this.mainDescription = $mainDescription
         $this.precisedDescription = $precisedDescription
         $this.weatherURLIcon = "https://openweathermap.org/img/wn/" + $weatherIcon + ".png"
+    }
+
+    # 'mainDescription' attribute getter
+    [string] getMainDescription()
+    {
+        return $this.mainDescription
+    }
+
+    # 'precisedDescription' attribute getter
+    [string] getPrecisedDescription()
+    {
+        return $this.precisedDescription
+    }
+
+    # 'weatherURLIcon' attribute getter
+    [string] getWeatherURLIcon()
+    {
+        return $this.weatherURLIcon
     }
 }

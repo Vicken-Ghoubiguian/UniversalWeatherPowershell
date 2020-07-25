@@ -6,6 +6,7 @@ class coordinates
     hidden [float]$longitude
     hidden [float]$latitude
 
+    # coordinates class constructor with all needed parameters
     coordinates([float]$latitude, [float]$longitude)
     {
         # Allocating the values of latitude in its specific class attribute
