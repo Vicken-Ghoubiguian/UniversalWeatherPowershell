@@ -7,13 +7,14 @@ Enum dateAndTimeFormat {
     MDYHMSFormat = 3
 }
 
-# Definition of the pressure Powershell class to manage dates and times together
+# Definition of the dateAndTime Powershell class to manage dates and times together
 class dateAndTime
 {
     
     hidden [long]$asTimestamp
     hidden [dateAndTimeFormat]$currentFormat
 
+    # dateAndTime class constructor with all needed parameters
     dateAndTime([long]$dateAndTimeAsTimestamp)
     {
         # Allocating the others fundamentals attributes

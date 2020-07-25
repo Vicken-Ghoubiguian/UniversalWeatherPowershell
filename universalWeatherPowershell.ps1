@@ -4,6 +4,7 @@ Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\datea
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\language.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\pressure.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\coordinates.psm1
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherDescription.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
