@@ -12,9 +12,10 @@ class universalWeatherPowershell
        # Attributes for respectively longitude and latitude
        [coordinates]$coordinates
 
-       # Attributes for respectively main description and description with more precisions
+       # Attributes for respectively main description, description with more precisions and weather icon
        [string]$mainDescription
        [string]$precisedDescription
+       [string]$weatherIcon
 
        # Attributes for all datas concerning temperature
        [temperature]$temperature
@@ -78,6 +79,11 @@ $weatherRequestsContent
 
                     # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
                     $this.coordinates = [coordinates]::new([convert]::ToDouble($weatherRequestsResults.coord.lat),[convert]::ToDouble($weatherRequestsResults.coord.lon))
+
+                    # Allocating the values of main description, description with precisions and weather icon to the respectives class attributes
+                    $this.mainDescription = $weatherRequestsResults.weather[0].main
+                    $this.precisedDescription = $weatherRequestsResults.weather[0].description
+                    $this.weatherIcon = $weatherRequestsResults.weather[0].icon + ".png"
 
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
