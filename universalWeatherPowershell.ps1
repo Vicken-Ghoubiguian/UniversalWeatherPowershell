@@ -105,7 +105,7 @@ $weatherRequestsContent
                     # Allocating all ultraviolet datas in the attribute uv
                     $this.uv = [ultraviolet]::new([System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value)))
 
-                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsContent, "Success...", "Ok", "Info")
+                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsResults.weather[0], "Success...", "Ok", "Info")
 
                # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
