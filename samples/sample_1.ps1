@@ -1,3 +1,11 @@
-﻿Import-Module C:\Users\ericg\Desktop\UniversalWeatherPowershell
+﻿#
+param (
+    [string]$city,
+    [string]$apiKey
+)
 
-$a = [universalWeatherPowershell]::new("Paris", "YOUR API KEY")
+#
+Import-Module C:\Users\ericg\Desktop\UniversalWeatherPowershell
+
+#
+$a = [universalWeatherPowershell]::new($city, $apiKey)
