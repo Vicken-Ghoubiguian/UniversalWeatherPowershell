@@ -1,3 +1,3 @@
-﻿Import-Module $PSScriptRoot\..\universalWeatherPowershell.ps1
+﻿Import-Module C:\Users\ericg\Desktop\UniversalWeatherPowershell
 
-$a = [universalWeatherPowershell]::new("Paris", [temperatureMeasurementUnit]::Kelvin, [dateAndTimeFormat]::TimestampFormat, "YOUR API KEY")
+$a = [universalWeatherPowershell]::new("Paris", "YOUR API KEY")
