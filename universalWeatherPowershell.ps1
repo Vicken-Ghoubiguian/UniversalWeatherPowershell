@@ -5,6 +5,7 @@ Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\langu
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\pressure.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\coordinates.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherDescription.psm1
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\wind.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
@@ -29,9 +30,7 @@ class universalWeatherPowershell
        [float]$humidity
 
        # Attributes for all datas concerning wind
-       [float]$windSpeed
-       [int]$windDeg
-       [float]$windGust
+       [wind]$currentWind
 
        # Attributes for respectively sunrise and sunset dates and times
        [dateAndTime]$sunrise

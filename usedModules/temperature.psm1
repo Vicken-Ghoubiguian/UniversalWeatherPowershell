@@ -13,6 +13,7 @@ class temperature {
     hidden [temperatureMeasurementUnit]$temperatureMeasurementUnitId
     hidden [string]$temperatureMeasurementUnitSymbol
 
+    # temperature class constructor
     temperature([float] $definedValue)
     {
         $this.temperatureValue = $definedValue
