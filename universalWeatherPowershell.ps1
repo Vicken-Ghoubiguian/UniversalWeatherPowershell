@@ -89,6 +89,9 @@ $weatherRequestsContent
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
                     $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
 
+                    #
+                    $this.currentWind = [wind]::new($weatherRequestsResults.wind.speed, $weatherRequestsResults.wind.deg, $weatherRequestsResults.wind.gust)
+
                     # Allocating the value of pressure to the pressure attribute
                     $this.pressure = [pressure]::new($weatherRequestsResults.main.pressure)
 
