@@ -1,14 +1,11 @@
 ﻿#
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\UniversalWeatherPowershell.psm1
+
+#
 param (
     [string]$city,
     [string]$apiKey
 )
 
-#
-Add-Type -AssemblyName PresentationFramework
-
-#
-Import-Module C:\Users\ericg\Desktop\UniversalWeatherPowershell\UniversalWeatherPowershell.ps1
-
-#
-$a = [universalWeatherPowershell]::new($city, $apiKey)
+# 
+$a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
