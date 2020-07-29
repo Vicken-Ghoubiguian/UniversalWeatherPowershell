@@ -14,13 +14,13 @@ try
     # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
     $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
 
-    ########
-    # Displaying temperatures
-    ########
-
     # New lines...
     echo ""
     echo ""
+
+    ########
+    # Displaying city and country
+    ########
 
     # Displaying the wished city name...
     Write-Host -NoNewline "City : ", $a.cityName, ""
@@ -35,12 +35,20 @@ try
     echo ""
     echo ""
 
+    ########
+    # Displaying geographic coordinates
+    ########
+
     # Displaying geographic coordinates of the wished city...
     Write-Host -NoNewline "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")"
 
     # New lines...
     echo ""
     echo ""
+
+    ########
+    # Displaying temperatures
+    ########
 
     # Displaying current temperature in kelvin
     Write-Host -NoNewLine "Temperature: ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
