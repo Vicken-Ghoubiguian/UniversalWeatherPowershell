@@ -133,6 +133,8 @@ $weatherRequestsContent
 
                   [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
 
+                  exit(1)
+
                }
 
             # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
@@ -145,6 +147,8 @@ $weatherRequestsContent
                $errorStackTrace = $_.Exception.StackTrace
 
                [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
+
+               exit(1)
 
             }
        }
