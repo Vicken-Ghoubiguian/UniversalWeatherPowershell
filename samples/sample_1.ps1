@@ -11,31 +11,18 @@ param (
 Add-Type -AssemblyName PresentationFramework
 
 #
-try 
-{
 
     # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
     $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
 
     #
-    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info")
+    #[System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info")
 
-    # New lines...
-    echo ""
-    echo ""
-
-    ########
-    # Displaying city and country
-    ########
-
-    # Displaying the wished city name...
-    Write-Host -NoNewline "City : ", $a.cityName, ""
-
-    # New line...
-    echo ""
-
-    # Displaying the country where is located the wished city as its specific code...
-    Write-Host -NoNewline "Country : ", $a.countryCode, ""
+    #
+    if($a.weatherError)
+    {
+        Write-Host "Null"
+    } else {
 
     # New lines...
     echo ""
@@ -81,8 +68,7 @@ try
     echo ""
     echo ""
 
-} catch {
-
-    #
-    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error")
+#} catch {
 }
+    #
+    #[System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error")
