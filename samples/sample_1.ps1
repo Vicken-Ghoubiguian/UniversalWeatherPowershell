@@ -84,5 +84,5 @@ try
 } catch {
 
     #
-    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. ", "Error occured", "Ok", "Error")
+    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error")
 }

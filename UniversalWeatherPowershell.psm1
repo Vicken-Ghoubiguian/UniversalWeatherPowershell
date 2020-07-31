@@ -9,6 +9,7 @@ Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\press
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\coordinates.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherDescription.psm1
 Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\wind.psm1
+Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherError.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
@@ -48,6 +49,9 @@ class universalWeatherPowershell
 
        # Attributes for all datas concerning UV
        [ultraviolet]$uv
+
+       # 
+       [weatherError]$weatherError
 
        # universalWeatherPowershell class constructor with all needed parameters
        universalWeatherPowershell([string] $city, [string] $apiKey) 
@@ -128,6 +132,8 @@ $weatherRequestsContent
                   $errorMessage = $_.Exception.Message
 
                   $errorStackTrace = $_.Exception.StackTrace
+
+                  $this.weatherError = [weatherError]::new($errorType, $errorMessage, $errorStackTrace)
                }
 
             # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
@@ -138,6 +144,8 @@ $weatherRequestsContent
                $errorMessage = $_.Exception.Message
 
                $errorStackTrace = $_.Exception.StackTrace
+
+               $this.weatherError = [weatherError]::new($errorType, $errorMessage, $errorStackTrace)
             }
        }
 }
