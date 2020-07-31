@@ -30,7 +30,7 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "K"
             $this.temperatureValue = $this.temperatureValue + 273.15
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
 
         } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
 
@@ -38,11 +38,11 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "K"
             $this.temperatureValue = ($this.temperatureValue - 32) * (5/9) + 273.15
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Kelvin (K) successfully.", "Success...", "Ok", "Info")
 
         } Else {
 
-            [System.Windows.MessageBox]::Show("Temperature already in Kelvin (K).", "Warning", "Ok", "Warning")
+            //[System.Windows.MessageBox]::Show("Temperature already in Kelvin (K).", "Warning", "Ok", "Warning")
         }
     }
 
@@ -55,7 +55,7 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "°C"
             $this.temperatureValue = $this.temperatureValue - 273.15
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
 
         } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Fahrenheit) {
 
@@ -63,11 +63,11 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "°C"
             $this.temperatureValue = ($this.temperatureValue - 32) * (5/9)
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Celsius (°C) successfully.", "Success...", "Ok", "Info")
 
         } Else {
 
-            [System.Windows.MessageBox]::Show("Temperature already in Celsius (°C).", "Warning", "Ok", "Warning")
+            //[System.Windows.MessageBox]::Show("Temperature already in Celsius (°C).", "Warning", "Ok", "Warning")
         }
     }
 
@@ -80,7 +80,7 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "°F"
             $this.temperatureValue = ($this.temperatureValue - 273.15) * (9/5) + 32
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
 
         } ElseIf($this.temperatureMeasurementUnitId -eq [temperatureMeasurementUnit]::Celsius) {
 
@@ -88,11 +88,11 @@ class temperature {
             $this.temperatureMeasurementUnitSymbol = "°F"
             $this.temperatureValue = ($this.temperatureValue * (9/5)) + 32
 
-            [System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
+            //[System.Windows.MessageBox]::Show("Temperature converted to Fahrenheit (°F) successfully.", "Success...", "Ok", "Info")
          
         } Else {
 
-            [System.Windows.MessageBox]::Show("Temperature already in Fahrenheit (°F).", "Warning", "Ok", "Warning")
+            //[System.Windows.MessageBox]::Show("Temperature already in Fahrenheit (°F).", "Warning", "Ok", "Warning")
         }
     }
 

@@ -120,8 +120,6 @@ $weatherRequestsContent
                     # Allocating all ultraviolet datas in the attribute uv
                     $this.uv = [ultraviolet]::new([System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value)))
 
-                    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather: " + $weatherRequestsContent, "Success...", "Ok", "Info")
-
                # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
                } catch [System.Net.WebException] {
 
@@ -130,11 +128,6 @@ $weatherRequestsContent
                   $errorMessage = $_.Exception.Message
 
                   $errorStackTrace = $_.Exception.StackTrace
-
-                  [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
-
-                  exit(1)
-
                }
 
             # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
@@ -145,11 +138,6 @@ $weatherRequestsContent
                $errorMessage = $_.Exception.Message
 
                $errorStackTrace = $_.Exception.StackTrace
-
-               [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request. " + $errorMessage, "Error occured", "Ok", "Error")
-
-               exit(1)
-
             }
        }
 }
