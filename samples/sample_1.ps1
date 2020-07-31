@@ -11,9 +11,9 @@ param (
 Add-Type -AssemblyName PresentationFramework
 
 # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
-    $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
+$a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
 
-    #
+#
     if($a.weatherError)
     {
         #
@@ -23,6 +23,23 @@ Add-Type -AssemblyName PresentationFramework
 
         #
         [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info")
+
+        # New lines...
+        echo ""
+        echo ""
+
+        ########
+        # Displaying country code and wished city name
+        ########
+
+        # Displaying wished city name
+        Write-Host -NoNewline "City: ", $a.cityName
+
+        # New line...
+        echo ""
+
+        # Displaying the country code where the wished city is localized
+        Write-Host -NoNewline "Country code: ", $a.countryCode
 
         # New lines...
         echo ""
