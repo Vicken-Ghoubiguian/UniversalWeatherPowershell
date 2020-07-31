@@ -10,65 +10,61 @@ param (
 #
 Add-Type -AssemblyName PresentationFramework
 
-#
-
-    # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
+# Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
     $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
-
-    #
-    #[System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info")
 
     #
     if($a.weatherError)
     {
-        Write-Host "Null"
+        #
+        [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error")
+
     } else {
 
-    # New lines...
-    echo ""
-    echo ""
+        #
+        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info")
 
-    ########
-    # Displaying geographic coordinates
-    ########
+        # New lines...
+        echo ""
+        echo ""
 
-    # Displaying geographic coordinates of the wished city...
-    Write-Host -NoNewline "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")"
+        ########
+        # Displaying geographic coordinates
+        ########
 
-    # New lines...
-    echo ""
-    echo ""
+        # Displaying geographic coordinates of the wished city...
+        Write-Host -NoNewline "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")"
 
-    ########
-    # Displaying temperatures
-    ########
+        # New lines...
+        echo ""
+        echo ""
 
-    # Displaying current temperature in kelvin
-    Write-Host -NoNewLine "Temperature: ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
+        ########
+        # Displaying temperatures
+        ########
 
-    # New line...
-    echo ""
+        # Displaying current temperature in kelvin
+        Write-Host -NoNewLine "Temperature: ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
 
-    # Displaying feeling like temperature in kelvin
-    Write-Host -NoNewLine "Feeling temperature: ", $a.feelingLikeTemperature.getTemperatureValue() $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.feelingLikeTemperature.getTemperatureMeasurementUnit() ")"
+        # New line...
+        echo ""
 
-    # New line...
-    echo ""
+        # Displaying feeling like temperature in kelvin
+        Write-Host -NoNewLine "Feeling temperature: ", $a.feelingLikeTemperature.getTemperatureValue() $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.feelingLikeTemperature.getTemperatureMeasurementUnit() ")"
 
-    # Displaying wished maximum temperature in kelvin
-    Write-Host -NoNewLine "Maximum temperature: ", $a.maxTemperature.getTemperatureValue() $a.maxTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.maxTemperature.getTemperatureMeasurementUnit() ")"
+        # New line...
+        echo ""
 
-    # New line...
-    echo ""
+        # Displaying wished maximum temperature in kelvin
+        Write-Host -NoNewLine "Maximum temperature: ", $a.maxTemperature.getTemperatureValue() $a.maxTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.maxTemperature.getTemperatureMeasurementUnit() ")"
 
-    # Displaying wished minimum temperature in kelvin
-    Write-Host -NoNewLine "Maximum temperature: ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
+        # New line...
+        echo ""
 
-    # New lines...
-    echo ""
-    echo ""
+        # Displaying wished minimum temperature in kelvin
+        Write-Host -NoNewLine "Maximum temperature: ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
 
-#} catch {
-}
-    #
-    #[System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error")
+        # New lines...
+        echo ""
+        echo ""
+    }
