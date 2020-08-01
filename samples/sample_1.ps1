@@ -57,6 +57,29 @@ if($a.weatherError)
     echo ""
 
     ########
+    # Displaying weather
+    ########
+
+    # Displaying current main weather
+    Write-Host -NoNewLine "Main weather: ", $a.weatherDescription.getMainDescription()
+
+    # New line...
+    echo ""
+
+    # Displaying current describe weather
+    Write-Host -NoNewLine "Describe weather: ", $a.weatherDescription.getPrecisedDescription()
+
+    # New line...
+    echo ""
+
+    # Displaying current weather icon URL
+    Write-Host -NoNewLine "Weather icon URL: ", $a.weatherDescription.getWeatherURLIcon()
+
+    # New lines...
+    echo ""
+    echo ""
+
+    ########
     # Displaying temperatures
     ########
 
