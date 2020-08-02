@@ -32,7 +32,26 @@ class dateAndTime
     # 'currentFormat' attribute getter
     [string] getCurrentFormat()
     {
-        return "timestamp"
+        $usedFormat = ""
+
+        if($this.currentFormat -eq 0)
+        {
+            $usedFormat = "timestamp"
+        }
+        elseif($this.currentFormat -eq 1)
+        {
+            $usedFormat = "D/M/Y - H:M:S"
+        }
+        elseif($this.currentFormat -eq 2)
+        {
+            $usedFormat = "Y/M/D - H:M:S"
+        }
+        else
+        {
+            $usedFormat = "M/D/Y - H:M:S"
+        }
+
+        return $usedFormat
     }
 
     # 'asTimestamp' attribute getter
