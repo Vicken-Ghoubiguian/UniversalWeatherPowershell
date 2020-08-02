@@ -108,6 +108,23 @@ if($a.weatherError)
     echo ""
     echo ""
 
+    ########
+    # Displaying uv
+    ########
+
+    # Displaying uv index
+    Write-Host -NoNewline "UV index: ", $a.uv.GetIndex()
+
+    # New line...
+    echo ""
+
+    # Displaying uv risk
+    Write-Host -NoNewline "UV risk: ", $a.uv.GetRisk()
+
+    # New lines...
+    echo ""
+    echo ""    
+
     ########################################
     # Displaying sunrise and sunset times
     ########################################

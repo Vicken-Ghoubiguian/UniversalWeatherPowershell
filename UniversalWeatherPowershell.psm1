@@ -33,7 +33,7 @@ class universalWeatherPowershell
        # Attribute for humidity
        [float]$humidity
 
-       # Attributes for all datas concerning wind
+       # Attribute for all datas concerning wind
        [wind]$currentWind
 
        # Attributes for respectively sunrise and sunset dates and times
@@ -44,13 +44,13 @@ class universalWeatherPowershell
        [string]$countryCode
        [string]$cityName
 
-       # Attributes for all datas concerning the current language
+       # Attribute for all datas concerning the current language
        [language]$currentLanguage
 
-       # Attributes for all datas concerning UV
+       # Attribute for all datas concerning UV
        [ultraviolet]$uv
 
-       # 
+       # Attribute for occured error (in case) 
        [weatherError]$weatherError
 
        # universalWeatherPowershell class constructor with all needed parameters
