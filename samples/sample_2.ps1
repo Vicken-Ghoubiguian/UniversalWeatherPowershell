@@ -21,8 +21,10 @@ $form.Size = New-Object System.Drawing.Size(1000,1000)
 
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(800,800)
+$okButton.Location = New-Object System.Drawing.Point(600,800)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
+$okButton.BackColor = "green"
+$okButton.ForeColor = "white"
 $okButton.Text = 'OK'
 $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
 $form.AcceptButton = $okButton
@@ -30,8 +32,10 @@ $form.Controls.Add($okButton)
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(900,800)
+$cancelButton.Location = New-Object System.Drawing.Point(700,800)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
+$cancelButton.BackColor = "red"
+$cancelButton.ForeColor = "white"
 $cancelButton.Text = 'Cancel'
 $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
 $form.CancelButton = $cancelButton
