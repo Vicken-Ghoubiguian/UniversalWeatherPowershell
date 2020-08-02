@@ -9,17 +9,30 @@ Enum dateAndTimeFormat {
 
 # Definition of the dateAndTime Powershell class to manage dates and times together
 class dateAndTime
-{
-    
-    hidden [long]$asTimestamp
+{    
+    hidden [string]$sunTimeInCurrentFormat
     hidden [dateAndTimeFormat]$currentFormat
+    hidden [long]$asTimestamp
 
     # dateAndTime class constructor with all needed parameters
     dateAndTime([long]$dateAndTimeAsTimestamp)
     {
         # Allocating the others fundamentals attributes
-        $this.asTimestamp = $dateAndTimeAsTimestamp
+        $this.sunTimeInCurrentFormat = $dateAndTimeAsTimestamp
         $this.currentFormat = [dateAndTimeFormat]::TimestampFormat
+        $this.asTimestamp = $dateAndTimeAsTimestamp
+    }
+
+    # 'inCurrentFormat' attribute getter
+    [string] getSunTimeInCurrentFormat()
+    {
+        return $this.sunTimeInCurrentFormat
+    }
+
+    # 'currentFormat' attribute getter
+    [string] getCurrentFormat()
+    {
+        return "timestamp"
     }
 
     # 'asTimestamp' attribute getter
