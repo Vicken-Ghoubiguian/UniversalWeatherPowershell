@@ -107,4 +107,21 @@ if($a.weatherError)
     # New lines...
     echo ""
     echo ""
+
+    ########################################
+    # Displaying sunrise and sunset times
+    ########################################
+
+    # Displaying sunrise time as timestamp
+    Write-Host -NoNewLine "Sunrise time (as timestamp): ", $a.sunrise.getTimestamp()
+
+    # New line...
+    echo ""
+
+    # Displaying sunset time as timestamp
+    Write-Host -NoNewLine "Sunset time (as timestamp): ", $a.sunset.getTimestamp()
+
+    # New lines...
+    echo ""
+    echo ""
 }
