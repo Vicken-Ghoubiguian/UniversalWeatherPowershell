@@ -9,7 +9,7 @@ Add-Type -AssemblyName PresentationFramework
 $form = New-Object Windows.Forms.Form
 
 # Blocking the resizing of the form and remove the Minimize and Maximize icons
-$form.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::FixedDialog
+$form.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::Fixed3D
 $form.MaximizeBox = $False
 $form.MinimizeBox = $False
 
@@ -17,7 +17,7 @@ $form.MinimizeBox = $False
 $form.Text = "Weather form"
 
 # Setting form size
-$form.Size = New-Object System.Drawing.Size(400,370)
+$form.Size = New-Object System.Drawing.Size(1000,1000)
 
 # Displaying form
 $form.ShowDialog() | Out-Null
