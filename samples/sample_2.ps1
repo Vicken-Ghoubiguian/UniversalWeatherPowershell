@@ -26,9 +26,11 @@ $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.BackColor = "green"
 $okButton.ForeColor = "white"
 $okButton.Text = 'OK'
-$okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
 $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
+
+#
+$okButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null })
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
@@ -37,9 +39,11 @@ $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.BackColor = "red"
 $cancelButton.ForeColor = "white"
 $cancelButton.Text = 'Cancel'
-$cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
 $form.CancelButton = $cancelButton
 $form.Controls.Add($cancelButton)
+
+#
+$cancelButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null })
 
 # Displaying form
 $form.ShowDialog() | Out-Null
