@@ -29,7 +29,7 @@ $okButton.Text = 'OK'
 $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 
-#
+# Handler click of the 'ok' button
 $okButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null })
 
 # Adding 'cancel' button
@@ -42,7 +42,7 @@ $cancelButton.Text = 'Cancel'
 $form.CancelButton = $cancelButton
 $form.Controls.Add($cancelButton)
 
-#
+# Handler click of the 'cancel' button
 $cancelButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null })
 
 # Displaying form
