@@ -22,16 +22,30 @@ $form.Size = New-Object System.Drawing.Size(1000,1000)
 # Adding 'cityTextBox' to inquire wished city
 $cityTextBox = New-Object System.Windows.Forms.TextBox
 $cityTextBox.Text = "Wished city, please"
-$cityTextBox.Location = New-Object System.Drawing.Point(395,50)
+$cityTextBox.Location = New-Object System.Drawing.Point(350,50)
 $cityTextBox.Size = New-Object System.Drawing.Size(550,100)
 $form.Controls.Add($cityTextBox)
+
+# Adding 'cityLabel' label to indicate the 'cityTextBox' textbox
+$cityLabel = New-Object System.Windows.Forms.Label
+$cityLabel.Location = New-Object System.Drawing.Point(200,50)
+$cityLabel.Size = New-Object System.Drawing.Size(280,20)
+$cityLabel.Text = 'Wished city:'
+$form.Controls.Add($cityLabel)
 
 # Adding 'apiKeyTextBox' to inquire OpenweatherMap api key
 $apiKeyTextBox = New-Object System.Windows.Forms.TextBox
 $apiKeyTextBox.Text = "OpenweatherMap API Key, please"
-$apiKeyTextBox.Location = New-Object System.Drawing.Point(395,120)
-$apiKeyTextBox.Size = New-Object System.Drawing.Size(550,100)
+$apiKeyTextBox.Location = New-Object System.Drawing.Point(350,120)
+$apiKeyTextBox.Size = New-Object System.Drawing.Size(550,120)
 $form.Controls.Add($apiKeyTextBox)
+
+# Adding 'cityLabel' label to indicate the 'cityTextBox' textbox
+$apiKeyLabel = New-Object System.Windows.Forms.Label
+$apiKeyLabel.Location = New-Object System.Drawing.Point(200,120)
+$apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
+$apiKeyLabel.Text = 'Api key:'
+$form.Controls.Add($apiKeyLabel)
 
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
