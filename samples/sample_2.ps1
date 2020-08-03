@@ -47,6 +47,17 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
+# Adding 'weatherDisplayerBox' to display returned weather datas
+$weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
+$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,250) 
+$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,700)
+$weatherDisplayerBox.Font = New-Object System.Drawing.Font("Consolas", 8 ,[System.Drawing.FontStyle]::Regular)
+$weatherDisplayerBox.MultiLine = $True
+$weatherDisplayerBox.Enabled = $False
+$weatherDisplayerBox.ScrollBars = "Vertical"
+$weatherDisplayerBox.Text = "Welcome to your first Powershell GUI Tool - Type Domain Controller name and press one of the available buttons."
+$form.Controls.Add($weatherDisplayerBox)
+
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
 $okButton.Location = New-Object System.Drawing.Point(600,200)
@@ -58,7 +69,12 @@ $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 
 # Handler click of the 'ok' button
-$okButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null })
+$okButton.Add_Click({ 
+
+    $weatherDisplayerBox.Text = "hy"
+    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null 
+
+})
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
@@ -70,19 +86,14 @@ $cancelButton.Text = 'Cancel'
 $form.CancelButton = $cancelButton
 $form.Controls.Add($cancelButton)
 
-# 
-$weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
-$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,250) 
-$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,700)
-$weatherDisplayerBox.Font = New-Object System.Drawing.Font("Consolas", 8 ,[System.Drawing.FontStyle]::Regular)
-$weatherDisplayerBox.MultiLine = $True
-$weatherDisplayerBox.Enabled = $False
-$weatherDisplayerBox.ScrollBars = "Vertical"
-$weatherDisplayerBox.Text = "Welcome to your first Powershell GUI Tool - Type Domain Controller name and press one of the available buttons."
-$form.Controls.Add($weatherDisplayerBox)
-
 # Handler click of the 'cancel' button
-$cancelButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null })
+$cancelButton.Add_Click({ 
+
+    $cityTextBox.Text = ""
+    $apiKeyTextBox.Text = ""
+    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null 
+    
+})
 
 # Displaying form
 $form.ShowDialog() | Out-Null
