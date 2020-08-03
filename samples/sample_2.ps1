@@ -70,6 +70,16 @@ $cancelButton.Text = 'Cancel'
 $form.CancelButton = $cancelButton
 $form.Controls.Add($cancelButton)
 
+# 
+$weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
+$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,250) 
+$weatherDisplayerBox.Size = New-Object System.Drawing.Size(950,800)
+$weatherDisplayerBox.Font = New-Object System.Drawing.Font("Consolas", 8 ,[System.Drawing.FontStyle]::Regular)
+$weatherDisplayerBox.MultiLine = $True
+$weatherDisplayerBox.ScrollBars = "Vertical"
+$weatherDisplayerBox.Text = "Welcome to your first Powershell GUI Tool - Type Domain Controller name and press one of the available buttons."
+$form.Controls.Add($weatherDisplayerBox)
+
 # Handler click of the 'cancel' button
 $cancelButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null })
 
