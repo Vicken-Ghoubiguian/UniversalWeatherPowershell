@@ -19,9 +19,23 @@ $form.Text = "Weather form"
 # Setting form size
 $form.Size = New-Object System.Drawing.Size(1000,1000)
 
+# Adding 'cityTextBox' to inquire wished city
+$cityTextBox = New-Object System.Windows.Forms.TextBox
+$cityTextBox.Text = "Wished city, please"
+$cityTextBox.Location = New-Object System.Drawing.Point(395,50)
+$cityTextBox.Size = New-Object System.Drawing.Size(550,100)
+$form.Controls.Add($cityTextBox)
+
+# Adding 'apiKeyTextBox' to inquire OpenweatherMap api key
+$apiKeyTextBox = New-Object System.Windows.Forms.TextBox
+$apiKeyTextBox.Text = "OpenweatherMap API Key, please"
+$apiKeyTextBox.Location = New-Object System.Drawing.Point(395,120)
+$apiKeyTextBox.Size = New-Object System.Drawing.Size(550,100)
+$form.Controls.Add($apiKeyTextBox)
+
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(600,800)
+$okButton.Location = New-Object System.Drawing.Point(600,200)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.BackColor = "green"
 $okButton.ForeColor = "white"
@@ -34,7 +48,7 @@ $okButton.Add_Click({ [System.Windows.MessageBox]::Show("Congradulations, you ca
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(700,800)
+$cancelButton.Location = New-Object System.Drawing.Point(700,200)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.BackColor = "red"
 $cancelButton.ForeColor = "white"
