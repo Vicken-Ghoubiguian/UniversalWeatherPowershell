@@ -60,6 +60,23 @@ class dateAndTime
         return $this.asTimestamp
     }
 
+    # set current format to MDYHMS
+    [void] setCurrentFormatAsMDYHMS()
+    {
+        # if the current format is already MDYHMS
+        If($this.currentFormat -ne [dateAndTimeFormat]::MDYHMSFormat) {
+
+            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('MM/d/yyyy H:m:s')
+            $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
+
+            # Message to display : "suntime converted to MDYHMS format successfully."
+
+        } Else {
+            
+            # Message to display : "suntime format already as MDYHMS."
+        }
+    }
+
     # set current format to DMYHMS
     [void] setCurrentFormatAsDMYHMS()
     {
