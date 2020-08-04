@@ -59,4 +59,55 @@ class dateAndTime
     {
         return $this.asTimestamp
     }
+
+    # set current format to DMYHMS
+    [void] setCurrentFormatAsDMYHMS()
+    {
+        # if the current format is already DMYHMS
+        If($this.currentFormat -ne [dateAndTimeFormat]::DMYHMSFormat) {
+
+            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('d/MM/yyyy H:m:s')
+            $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
+
+            # Message to display : "suntime converted to DMYHMS format successfully."
+
+        } Else {
+            
+            # Message to display : "suntime format already as DMYHMS."
+        }
+    }
+
+    # set current format to YMDHMS
+    [void] setCurrentFormatAsYMDHMS()
+    {
+        # if the current format is already YMDHMS
+        If($this.currentFormat -ne [dateAndTimeFormat]::YMDHMSFormat) {
+
+            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('yyyy/MM/d H:m:s')
+            $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
+
+            # Message to display : "suntime converted to YMDHMS format successfully."
+
+        } Else {
+            
+            # Message to display : "suntime format already as YMDHMS."
+        }
+    }
+
+    # set current format to timestamp
+    [void] setCurrentFormatAsTimestamp()
+    {
+        # if the current format is already timestamp
+        If($this.currentFormat -ne [dateAndTimeFormat]::TimestampFormat) {
+
+            $this.sunTimeInCurrentFormat = $this.asTimestamp
+            $this.currentFormat = [dateAndTimeFormat]::TimestampFormat
+
+            # Message to display : "suntime converted to timestamp successfully."
+
+        } Else {
+
+            # Message to display : "suntime format already as timestamp."
+        }
+    }    
 }
