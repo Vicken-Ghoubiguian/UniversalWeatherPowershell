@@ -14,14 +14,18 @@ function formatingNumberFunction{
         [int]$wishedNumber
     )
 
+    [string]$intermVariable = ""
+
     If($wishedNumber -lt 10)
     {
-        return "0" + $wishedNumber
+        $intermVariable = "0" + $wishedNumber
     }
     Else
     {
-        return $wishedNumber
+        $intermVariable = $wishedNumber
     }
+
+    return $intermVariable
 }
 
 # Definition of the dateAndTime Powershell class to manage dates and times together
@@ -130,9 +134,14 @@ class dateAndTime
             $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
 
             #
+            $year = formatingNumberFunction($gettinDate.Year)
+            $month = formatingNumberFunction($gettinDate.Month)
+            $day = formatingNumberFunction($gettinDate.Day)
+            $hour = formatingNumberFunction($gettinDate.Hour)
+            $minute = formatingNumberFunction($gettinDate.Minute)
+            $seconde = formatingNumberFunction($gettinDate.Second)
 
-
-            $this.sunTimeInCurrentFormat = $gettinDate.Year.ToString() + "/" + $gettinDate.Month.ToString() + "/" + $gettinDate.Day.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
+            $this.sunTimeInCurrentFormat = $year + "/" + $month + "/" + $day + " " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
 
             # Message to display : "suntime converted to YMDHMS format successfully."
