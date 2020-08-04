@@ -76,16 +76,28 @@ $okButton.Add_Click({
 
     $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
     $weatherDisplayerBox.Text += "Country code: " + $a.countryCode + "`n"
+    $weatherDisplayerBox.Text += "`n"
+
     $weatherDisplayerBox.Text += "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")" + "`n"
+    $weatherDisplayerBox.Text += "`n"
+
     $weatherDisplayerBox.Text += "Main weather: ", $a.weatherDescription.getMainDescription() + "`n"
     $weatherDisplayerBox.Text += "Describe weather: " + $a.weatherDescription.getPrecisedDescription() + "`n"
     $weatherDisplayerBox.Text += "Weather icon URL: " + $a.weatherDescription.getWeatherURLIcon() + "`n"
+    $weatherDisplayerBox.Text += "`n"
+
     $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
     $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
     $weatherDisplayerBox.Text += "Maximum temperature: " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
     $weatherDisplayerBox.Text += "Minimum temperature: " + $a.minTemperature.getTemperatureValue() + " " + $a.minTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.minTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
+    $weatherDisplayerBox.Text += "`n"
+
     $weatherDisplayerBox.Text += "UV index: " + $a.uv.GetIndex() + "`n"
     $weatherDisplayerBox.Text += "UV risk: " + $a.uv.GetRisk() + "`n"
+    $weatherDisplayerBox.Text += "`n"
+
+    $weatherDisplayerBox.Text += "Sunrise time (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getTimestamp() + "`n"
+    $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getTimestamp() + "`n"
 
     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null 
 
