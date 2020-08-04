@@ -7,6 +7,23 @@ Enum dateAndTimeFormat {
     MDYHMSFormat = 3
 }
 
+# Formating function to display dates and times
+function test{
+
+    param(
+        [int]$wishedNumber
+    )
+
+    If($wishedNumber -lt 10)
+    {
+        return "0" + $wishedNumber
+    }
+    Else
+    {
+        return $wishedNumber
+    }
+}
+
 # Definition of the dateAndTime Powershell class to manage dates and times together
 class dateAndTime
 {    
@@ -111,6 +128,9 @@ class dateAndTime
             #
             $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
             $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+            #
+
 
             $this.sunTimeInCurrentFormat = $gettinDate.Year.ToString() + "/" + $gettinDate.Month.ToString() + "/" + $gettinDate.Day.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
             $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
