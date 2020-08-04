@@ -8,7 +8,7 @@ Enum dateAndTimeFormat {
 }
 
 # Formating function to display dates and times
-function test{
+function formatingNumberFunction{
 
     param(
         [int]$wishedNumber
