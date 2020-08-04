@@ -91,7 +91,15 @@ class dateAndTime
             $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
             $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
 
-            $this.sunTimeInCurrentFormat = $gettinDate.Month.ToString() + "/" + $gettinDate.Day.ToString() + "/" + $gettinDate.Year.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
+            #
+            $year = formatingNumberFunction($gettinDate.Year)
+            $month = formatingNumberFunction($gettinDate.Month)
+            $day = formatingNumberFunction($gettinDate.Day)
+            $hour = formatingNumberFunction($gettinDate.Hour)
+            $minute = formatingNumberFunction($gettinDate.Minute)
+            $seconde = formatingNumberFunction($gettinDate.Second)
+
+            $this.sunTimeInCurrentFormat = $month + "/" + $day + "/" + $year + " " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to MDYHMS format successfully."
@@ -112,7 +120,15 @@ class dateAndTime
             $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
             $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
 
-            $this.sunTimeInCurrentFormat = $gettinDate.Day.ToString() + "/" + $gettinDate.Month.ToString() + "/" + $gettinDate.Year.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
+            #
+            $year = formatingNumberFunction($gettinDate.Year)
+            $month = formatingNumberFunction($gettinDate.Month)
+            $day = formatingNumberFunction($gettinDate.Day)
+            $hour = formatingNumberFunction($gettinDate.Hour)
+            $minute = formatingNumberFunction($gettinDate.Minute)
+            $seconde = formatingNumberFunction($gettinDate.Second)
+
+            $this.sunTimeInCurrentFormat = $day + "/" + $month + "/" + $year + " " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to DMYHMS format successfully."
@@ -141,6 +157,7 @@ class dateAndTime
             $minute = formatingNumberFunction($gettinDate.Minute)
             $seconde = formatingNumberFunction($gettinDate.Second)
 
+            #
             $this.sunTimeInCurrentFormat = $year + "/" + $month + "/" + $day + " " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
 
