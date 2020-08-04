@@ -102,7 +102,7 @@ if($a.weatherError)
     echo ""
 
     # Displaying wished minimum temperature in kelvin
-    Write-Host -NoNewLine "Maximum temperature: ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
+    Write-Host -NoNewLine "Minimum temperature: ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
 
     # New lines...
     echo ""
