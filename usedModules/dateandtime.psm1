@@ -66,7 +66,11 @@ class dateAndTime
         # if the current format is already MDYHMS
         If($this.currentFormat -ne [dateAndTimeFormat]::MDYHMSFormat) {
 
-            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('MM/d/yyyy H:m:s')
+            #
+            $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+            $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+            $this.sunTimeInCurrentFormat = $gettinDate.Month.ToString() + "/" + $gettinDate.Day.ToString() + "/" + $gettinDate.Year.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to MDYHMS format successfully."
@@ -83,7 +87,11 @@ class dateAndTime
         # if the current format is already DMYHMS
         If($this.currentFormat -ne [dateAndTimeFormat]::DMYHMSFormat) {
 
-            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('d/MM/yyyy H:m:s')
+            #
+            $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+            $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+            $this.sunTimeInCurrentFormat = $gettinDate.Day.ToString() + "/" + $gettinDate.Month.ToString() + "/" + $gettinDate.Year.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to DMYHMS format successfully."
@@ -100,7 +108,11 @@ class dateAndTime
         # if the current format is already YMDHMS
         If($this.currentFormat -ne [dateAndTimeFormat]::YMDHMSFormat) {
 
-            $this.sunTimeInCurrentFormat = [datetime]::FromFileTime($this.asTimestamp).ToString('yyyy/MM/d H:m:s')
+            #
+            $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+            $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+            $this.sunTimeInCurrentFormat = $gettinDate.Year.ToString() + "/" + $gettinDate.Month.ToString() + "/" + $gettinDate.Day.ToString() + " " + $gettinDate.Hour.ToString() + ":" + $gettinDate.Minute.ToString() + ":" + $gettinDate.Second.ToString()
             $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
 
             # Message to display : "suntime converted to YMDHMS format successfully."
