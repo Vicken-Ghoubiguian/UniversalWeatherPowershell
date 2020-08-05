@@ -59,6 +59,9 @@ $temperatureScaleListBox.Height = 27
 [void] $temperatureScaleListBox.Items.Add('Celsius')
 [void] $temperatureScaleListBox.Items.Add('Fahrenheit')
 
+# Set the default value at 'Kelvin' (index 0)
+$temperatureScaleListBox.SelectedIndex = 0
+
 # Adding 'temperatureScaleListBox' to the current form
 $form.Controls.Add($temperatureScaleListBox)
 
