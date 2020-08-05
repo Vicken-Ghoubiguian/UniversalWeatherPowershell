@@ -50,8 +50,13 @@ $form.Controls.Add($apiKeyLabel)
 # 
 $temperatureScaleListBox = New-Object System.Windows.Forms.ListBox
 $temperatureScaleListBox.Location = New-Object System.Drawing.Point(350,185)
-$temperatureScaleListBox.Size = New-Object System.Drawing.Size(20,10)
+$temperatureScaleListBox.Size = New-Object System.Drawing.Size(260,50)
 $temperatureScaleListBox.Height = 80
+
+#
+[void] $temperatureScaleListBox.Items.Add('Kelvin')
+[void] $temperatureScaleListBox.Items.Add('Celsius')
+[void] $temperatureScaleListBox.Items.Add('Fahrenheit')
 
 #
 $form.Controls.Add($temperatureScaleListBox)
