@@ -120,6 +120,29 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Weather icon URL: " + $a.weatherDescription.getWeatherURLIcon() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
+        # If the selected temperature scale is 'Celsius' (index 1), then...
+        If($temperatureScaleListBox.SelectedIndex -eq 1) {
+
+            # Conversion of all temperatures to 'Celsius'...
+            $a.temperature.setTemperatureAsCelsius()
+            $a.feelingLikeTemperature.setTemperatureAsCelsius()
+            $a.maxTemperature.setTemperatureAsCelsius()
+            $a.minTemperature.setTemperatureAsCelsius()
+
+        # Else if the selected temperature scale is 'Fahrenheit' (index 2), then...
+        } Elseif($temperatureScaleListBox.SelectedIndex -eq 2) {
+
+            # Conversion of all temperatures to 'Fahrenheit'...
+            $a.temperature.setTemperatureAsFahrenheit()
+            $a.feelingLikeTemperature.setTemperatureAsFahrenheit()
+            $a.maxTemperature.setTemperatureAsFahrenheit()
+            $a.minTemperature.setTemperatureAsFahrenheit()
+
+        # Else, temperature scale remains 'Kelvin'...
+        } Else {
+
+        }
+
         $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
         $weatherDisplayerBox.Text += "Maximum temperature: " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
