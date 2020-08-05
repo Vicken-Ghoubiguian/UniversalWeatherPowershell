@@ -81,12 +81,13 @@ $okButton.Add_Click({
 
     $a = [universalWeatherPowershell]::new($cityTextBox.Text, $apiKeyTextBox.Text)
 
-    # 
+    # if the weatherError attribute is not null (so if this attribute contains an occured error), then...
     If($a.weatherError) {
 
         # Displaying error message in a message box
         [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error") | Out-Null
 
+    # else...
     } else {
 
         $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
