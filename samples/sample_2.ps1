@@ -143,6 +143,7 @@ $okButton.Add_Click({
 
         }
 
+        #
         $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
         $weatherDisplayerBox.Text += "Maximum temperature: " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
@@ -175,9 +176,13 @@ $form.Controls.Add($cancelButton)
 # Handler click of the 'cancel' button
 $cancelButton.Add_Click({ 
 
+    #
     $cityTextBox.Text = ""
     $apiKeyTextBox.Text = ""
-    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Canceled...", "Ok", "Error") | Out-null 
+    $weatherDisplayerBox.Text = ""
+
+    #
+    [System.Windows.MessageBox]::Show("Are you leaving us already? Ok, it was a pleasure meeting you.", "Canceled...", "Ok", "Error") | Out-null 
     
 })
 
