@@ -47,21 +47,22 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
-# 
+# Defining 'temperatureScaleListBox' to inquire wished temperature scale
 $temperatureScaleListBox = New-Object System.Windows.Forms.ListBox
 $temperatureScaleListBox.Location = New-Object System.Drawing.Point(350,185)
 $temperatureScaleListBox.Size = New-Object System.Drawing.Size(260,50)
-$temperatureScaleListBox.Height = 80
+$temperatureScaleListBox.Width = 550
+$temperatureScaleListBox.Height = 27
 
-#
+# Adding all temperature scale to the 'temperatureScaleListBox' listbox
 [void] $temperatureScaleListBox.Items.Add('Kelvin')
 [void] $temperatureScaleListBox.Items.Add('Celsius')
 [void] $temperatureScaleListBox.Items.Add('Fahrenheit')
 
-#
+# Adding 'temperatureScaleListBox' to the current form
 $form.Controls.Add($temperatureScaleListBox)
 
-#
+# Adding 'temperatureScaleLabel' label to indicate the 'temperatureScaleListBox' listbox
 $temperatureScaleLabel = New-Object System.Windows.Forms.Label
 $temperatureScaleLabel.Location = New-Object System.Drawing.Point(150,185)
 $temperatureScaleLabel.Size = New-Object System.Drawing.Size(280,20)
