@@ -56,8 +56,8 @@ $form.Controls.Add($temperatureScaleLabel)
 
 # Adding 'weatherDisplayerBox' to display returned weather datas
 $weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
-$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,340) 
-$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,500)
+$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,300) 
+$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,640)
 $weatherDisplayerBox.Font = New-Object System.Drawing.Font("Consolas", 8 ,[System.Drawing.FontStyle]::Regular)
 $weatherDisplayerBox.MultiLine = $True
 $weatherDisplayerBox.Enabled = $False
