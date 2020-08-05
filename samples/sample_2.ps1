@@ -47,10 +47,17 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
+#
+$temperatureScaleLabel = New-Object System.Windows.Forms.Label
+$temperatureScaleLabel.Location = New-Object System.Drawing.Point(150,185)
+$temperatureScaleLabel.Size = New-Object System.Drawing.Size(280,20)
+$temperatureScaleLabel.Text = 'Temperature scale:'
+$form.Controls.Add($temperatureScaleLabel)
+
 # Adding 'weatherDisplayerBox' to display returned weather datas
 $weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
-$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,250) 
-$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,700)
+$weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,340) 
+$weatherDisplayerBox.Size = New-Object System.Drawing.Size(920,500)
 $weatherDisplayerBox.Font = New-Object System.Drawing.Font("Consolas", 8 ,[System.Drawing.FontStyle]::Regular)
 $weatherDisplayerBox.MultiLine = $True
 $weatherDisplayerBox.Enabled = $False
@@ -61,7 +68,7 @@ $form.Controls.Add($weatherDisplayerBox)
 
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(600,200)
+$okButton.Location = New-Object System.Drawing.Point(600,240)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.BackColor = "green"
 $okButton.ForeColor = "white"
@@ -115,7 +122,7 @@ $okButton.Add_Click({
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(700,200)
+$cancelButton.Location = New-Object System.Drawing.Point(700,240)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.BackColor = "red"
 $cancelButton.ForeColor = "white"
