@@ -179,6 +179,7 @@ $cancelButton.Add_Click({
     #
     $cityTextBox.Text = ""
     $apiKeyTextBox.Text = ""
+    $temperatureScaleListBox.SelectedIndex = 0
     $weatherDisplayerBox.Text = ""
 
     #
