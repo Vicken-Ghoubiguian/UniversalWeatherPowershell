@@ -47,6 +47,15 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
+# 
+$temperatureScaleListBox = New-Object System.Windows.Forms.ListBox
+$temperatureScaleListBox.Location = New-Object System.Drawing.Point(350,185)
+$temperatureScaleListBox.Size = New-Object System.Drawing.Size(20,10)
+$temperatureScaleListBox.Height = 80
+
+#
+$form.Controls.Add($temperatureScaleListBox)
+
 #
 $temperatureScaleLabel = New-Object System.Windows.Forms.Label
 $temperatureScaleLabel.Location = New-Object System.Drawing.Point(150,185)
