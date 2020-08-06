@@ -93,13 +93,13 @@ class dateAndTime
 
             #
             $year = formatingNumberFunction($gettinDate.Year)
-            $month = formatingNumberFunction($gettinDate.Month)
+            $month = formatingNumberFunction($gettinDate.Month) | %{(Get-Culture).DateTimeFormat.GetMonthName($_)}
             $day = formatingNumberFunction($gettinDate.Day)
             $hour = formatingNumberFunction($gettinDate.Hour)
             $minute = formatingNumberFunction($gettinDate.Minute)
             $seconde = formatingNumberFunction($gettinDate.Second)
 
-            $this.sunTimeInCurrentFormat = $month + "/" + $day + "/" + $year + " " + $hour + ":" + $minute + ":" + $seconde
+            $this.sunTimeInCurrentFormat = $month + " " + $day + " " + $year + " - " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to MDYHMS format successfully."
@@ -122,13 +122,13 @@ class dateAndTime
 
             #
             $year = formatingNumberFunction($gettinDate.Year)
-            $month = formatingNumberFunction($gettinDate.Month)
+            $month = formatingNumberFunction($gettinDate.Month) | %{(Get-Culture).DateTimeFormat.GetMonthName($_)}
             $day = formatingNumberFunction($gettinDate.Day)
             $hour = formatingNumberFunction($gettinDate.Hour)
             $minute = formatingNumberFunction($gettinDate.Minute)
             $seconde = formatingNumberFunction($gettinDate.Second)
 
-            $this.sunTimeInCurrentFormat = $day + "/" + $month + "/" + $year + " " + $hour + ":" + $minute + ":" + $seconde
+            $this.sunTimeInCurrentFormat = $day + " " + $month + " " + $year + " - " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::DMYHMSFormat
 
             # Message to display : "suntime converted to DMYHMS format successfully."
@@ -151,14 +151,14 @@ class dateAndTime
 
             #
             $year = formatingNumberFunction($gettinDate.Year)
-            $month = formatingNumberFunction($gettinDate.Month)
+            $month = formatingNumberFunction($gettinDate.Month) | %{(Get-Culture).DateTimeFormat.GetMonthName($_)}
             $day = formatingNumberFunction($gettinDate.Day)
             $hour = formatingNumberFunction($gettinDate.Hour)
             $minute = formatingNumberFunction($gettinDate.Minute)
             $seconde = formatingNumberFunction($gettinDate.Second)
 
             #
-            $this.sunTimeInCurrentFormat = $year + "/" + $month + "/" + $day + " " + $hour + ":" + $minute + ":" + $seconde
+            $this.sunTimeInCurrentFormat = $year + " " + $month + " " + $day + " - " + $hour + ":" + $minute + ":" + $seconde
             $this.currentFormat = [dateAndTimeFormat]::YMDHMSFormat
 
             # Message to display : "suntime converted to YMDHMS format successfully."
