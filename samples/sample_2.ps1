@@ -97,17 +97,19 @@ $form.Controls.Add($okButton)
 # Handler click of the 'ok' button
 $okButton.Add_Click({
 
+    # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
     $a = [universalWeatherPowershell]::new($cityTextBox.Text, $apiKeyTextBox.Text)
 
     # if the weatherError attribute is not null (so if this attribute contains an occured error), then...
     If($a.weatherError) {
 
-        # Displaying error message in a message box
+        # Displaying error message in a MessageBox
         [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error") | Out-Null
 
     # else...
     } else {
 
+        # Displaying all weather datas in the displayerbox
         $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
         $weatherDisplayerBox.Text += "Country code: " + $a.countryCode + "`n"
         $weatherDisplayerBox.Text += "`n"
@@ -143,7 +145,7 @@ $okButton.Add_Click({
 
         }
 
-        #
+        # Continuing to display all weather datas in the displayerbox
         $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
         $weatherDisplayerBox.Text += "Maximum temperature: " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
@@ -157,7 +159,7 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Sunrise time (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getTimestamp() + "`n"
         $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getTimestamp() + "`n"
 
-        #
+        # Displaying success message in a MessageBox...
         [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null 
 
     }
@@ -176,13 +178,13 @@ $form.Controls.Add($cancelButton)
 # Handler click of the 'cancel' button
 $cancelButton.Add_Click({ 
 
-    #
+    # Returning all widgets to default values
     $cityTextBox.Text = ""
     $apiKeyTextBox.Text = ""
     $temperatureScaleListBox.SelectedIndex = 0
     $weatherDisplayerBox.Text = ""
 
-    #
+    # Displaying cancel message in a MessageBox...
     [System.Windows.MessageBox]::Show("Are you leaving us already? Ok, it was a pleasure meeting you.", "Canceled...", "Ok", "Error") | Out-null 
     
 })
