@@ -12,4 +12,22 @@ class weatherError
         $this.message = $message
         $this.stackTrace = $stackTrace
     }
+
+    # 'type' attribute getter
+    [string] getType()
+    {
+        return $this.type
+    }
+
+    # 'message' attribute getter
+    [string] getMessage()
+    {
+        return $this.message
+    }
+
+    # 'stackTrace' attribute getter
+    [string] getStackTrace()
+    {
+        return $this.stackTrace
+    }
 }
