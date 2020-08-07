@@ -81,7 +81,7 @@ if($a.weatherError)
     echo ""
 
     ########
-    # Displaying temperatures
+    # Configuring temperature scale
     ########
 
     #
