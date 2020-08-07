@@ -84,15 +84,41 @@ if($a.weatherError)
     # Displaying temperatures
     ########
 
+    #
     If(($temperatureScale -eq "Celsius") -or ($temperatureScale -eq "celsius")) {
 
+        $a.temperature.setTemperatureAsCelsius()
+        $a.feelingLikeTemperature.setTemperatureAsCelsius()
+        $a.minTemperature.setTemperatureAsCelsius()
+        $a.maxTemperature.setTemperatureAsCelsius()
+
+    #
     } Elseif(($temperatureScale -eq "Fahrenheit") -or ($temperatureScale -eq "fahrenheit")) {
 
+        $a.temperature.setTemperatureAsFahrenheit()
+        $a.feelingLikeTemperature.setTemperatureAsFahrenheit()
+        $a.minTemperature.setTemperatureAsFahrenheit()
+        $a.maxTemperature.setTemperatureAsFahrenheit()
+
+    #
     } Elseif(($temperatureScale -eq "Kelvin") -or ($temperatureScale -eq "kelvin")) {
 
+        # Displaying error message in a message box
+        Write-Host -NoNewLine "Warning: temperature scale already in Kelvin"
+
+    #
     } Else {
 
+        # Displaying error message in a message box
+        Write-Host -NoNewLine "Error: unknown temperature scale"
+
+        #
+        exit 1
     }
+
+    # New lines...
+    echo ""
+    echo ""
 
     ########
     # Displaying temperatures
