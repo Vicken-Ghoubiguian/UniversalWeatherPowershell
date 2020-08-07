@@ -84,6 +84,20 @@ if($a.weatherError)
     # Displaying temperatures
     ########
 
+    If(($temperatureScale -eq "Celsius") -or ($temperatureScale -eq "celsius")) {
+
+    } Elseif(($temperatureScale -eq "Fahrenheit") -or ($temperatureScale -eq "fahrenheit")) {
+
+    } Elseif(($temperatureScale -eq "Kelvin") -or ($temperatureScale -eq "kelvin")) {
+
+    } Else {
+
+    }
+
+    ########
+    # Displaying temperatures
+    ########
+
     # Displaying current temperature in kelvin
     Write-Host -NoNewLine "Temperature: ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
 
