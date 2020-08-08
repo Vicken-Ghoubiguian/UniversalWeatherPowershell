@@ -72,7 +72,26 @@ $temperatureScaleLabel.Size = New-Object System.Drawing.Size(280,20)
 $temperatureScaleLabel.Text = 'Temperature scale:'
 $form.Controls.Add($temperatureScaleLabel)
 
-#
+# Defining 'dateAndTimeFormatListBox' to inquire wished date and time format
+$dateAndTimeFormatListBox = New-Object System.Windows.Forms.ListBox
+$dateAndTimeFormatListBox.Location = New-Object System.Drawing.Point(350,240)
+$dateAndTimeFormatListBox.Size = New-Object System.Drawing.Size(260,50)
+$dateAndTimeFormatListBox.Width = 550
+$dateAndTimeFormatListBox.Height = 27
+
+# Adding all date and time formats to the 'dateAndTimeFormatListBox' listbox
+[void] $dateAndTimeFormatListBox.Items.Add('timestamp')
+[void] $dateAndTimeFormatListBox.Items.Add('DMYHMS')
+[void] $dateAndTimeFormatListBox.Items.Add('YMDHMS')
+[void] $dateAndTimeFormatListBox.Items.Add('MDYHMS')
+
+# Set the default value at 'timestamp' (index 0)
+$dateAndTimeFormatListBox.SelectedIndex = 0
+
+# Adding 'dateAndTimeFormatListBox' to the current form
+$form.Controls.Add($dateAndTimeFormatListBox)
+
+# Adding 'dateAndTimeFormatLabel' label to indicate the 'dateAndTimeFormatListBox' listbox
 $dateAndTimeFormatLabel = New-Object System.Windows.Forms.Label
 $dateAndTimeFormatLabel.Location = New-Object System.Drawing.Point(135,240)
 $dateAndTimeFormatLabel.Size = New-Object System.Drawing.Size(280,20)
@@ -93,7 +112,7 @@ $form.Controls.Add($weatherDisplayerBox)
 
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(600,280)
+$okButton.Location = New-Object System.Drawing.Point(600,290)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.BackColor = "green"
 $okButton.ForeColor = "white"
@@ -174,7 +193,7 @@ $okButton.Add_Click({
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(700,280)
+$cancelButton.Location = New-Object System.Drawing.Point(700,290)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.BackColor = "red"
 $cancelButton.ForeColor = "white"
