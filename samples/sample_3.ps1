@@ -5,7 +5,8 @@ Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell
 param (
     [string]$city,
     [string]$apiKey,
-    [string]$temperatureScale
+    [string]$temperatureScale,
+    [string]$dateAndTimeFormat
 )
 
 #
@@ -47,13 +48,51 @@ if($a.weatherError)
     } Elseif($temperatureScale -eq "kelvin") {
 
         # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Error occured", "Ok", "Warning") | Out-Null
+        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
 
     # Else... 
     } Else {
 
         # Displaying error message in a messagebox...
         [System.Windows.MessageBox]::Show("Error: unknown temperature scale", "Error occured", "Ok", "Error") | Out-Null
+
+        # Exiting the process with code 1 (an error occured)...
+        exit 1
+    }
+
+    ########
+    # Configuring date and time format
+    ########
+
+    # If the wished date and time format is "timestamp"...
+    If($dateAndTimeFormat -eq "timestamp") {
+
+        # Displaying warning message in a messagebox...
+        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
+
+    # If the wished date and time format is "DMYHMS"...
+    } Elseif($dateAndTimeFormat -eq "DMYHMS") {
+
+        $a.sunrise.setCurrentFormatAsDMYHMS()
+        $a.sunset.setCurrentFormatAsDMYHMS()
+
+    # If the wished date and time format is "YMDHMS"...
+    } Elseif($dateAndTimeFormat -eq "YMDHMS") {
+
+        $a.sunrise.setCurrentFormatAsYMDHMS()
+        $a.sunset.setCurrentFormatAsYMDHMS()
+
+    # If the wished date and time format is "MDYHMS"...
+    } Elseif($dateAndTimeFormat -eq "MDYHMS") {
+
+        $a.sunrise.setCurrentFormatAsMDYHMS()
+        $a.sunset.setCurrentFormatAsMDYHMS()
+
+    # Else...
+    } Else {
+
+        # Displaying error message in a messagebox...
+        [System.Windows.MessageBox]::Show("Error: unknown date and time format", "Error occured", "Ok", "Error") | Out-Null
 
         # Exiting the process with code 1 (an error occured)...
         exit 1
@@ -171,13 +210,13 @@ if($a.weatherError)
     ########################################
 
     # Displaying sunrise time as timestamp
-    Write-Host -NoNewLine "Sunrise time (", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getTimestamp()
+    Write-Host -NoNewLine "Sunrise time (", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getSunTimeInCurrentFormat()
 
     # New line...
     echo ""
 
     # Displaying sunset time as timestamp
-    Write-Host -NoNewLine "Sunset time (", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getTimestamp()
+    Write-Host -NoNewLine "Sunset time (", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getSunTimeInCurrentFormat()
 
     # New lines...
     echo ""
