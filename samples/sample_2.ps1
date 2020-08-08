@@ -112,7 +112,7 @@ $form.Controls.Add($weatherDisplayerBox)
 
 # Adding 'ok' button
 $okButton = New-Object System.Windows.Forms.Button
-$okButton.Location = New-Object System.Drawing.Point(600,290)
+$okButton.Location = New-Object System.Drawing.Point(700,290)
 $okButton.Size = New-Object System.Drawing.Size(75,23)
 $okButton.BackColor = "green"
 $okButton.ForeColor = "white"
@@ -193,7 +193,7 @@ $okButton.Add_Click({
 
 # Adding 'cancel' button
 $cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(700,290)
+$cancelButton.Location = New-Object System.Drawing.Point(800,290)
 $cancelButton.Size = New-Object System.Drawing.Size(75,23)
 $cancelButton.BackColor = "red"
 $cancelButton.ForeColor = "white"
