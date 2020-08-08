@@ -55,7 +55,7 @@ if($a.weatherError)
         # Displaying error message in the console...
         Write-Host -NoNewLine "Error: unknown temperature scale"
 
-        # 
+        # Exiting the process with code 1 (an error occured)...
         exit 1
     }
 
