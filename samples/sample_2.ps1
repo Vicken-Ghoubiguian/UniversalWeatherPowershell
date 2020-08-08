@@ -72,6 +72,13 @@ $temperatureScaleLabel.Size = New-Object System.Drawing.Size(280,20)
 $temperatureScaleLabel.Text = 'Temperature scale:'
 $form.Controls.Add($temperatureScaleLabel)
 
+#
+$dateAndTimeFormatLabel = New-Object System.Windows.Forms.Label
+$dateAndTimeFormatLabel.Location = New-Object System.Drawing.Point(135,240)
+$dateAndTimeFormatLabel.Size = New-Object System.Drawing.Size(280,20)
+$dateAndTimeFormatLabel.Text = 'Date and time format:'
+$form.Controls.Add($dateAndTimeFormatLabel)
+
 # Adding 'weatherDisplayerBox' to display returned weather datas
 $weatherDisplayerBox = New-Object System.Windows.Forms.RichTextBox
 $weatherDisplayerBox.Location = New-Object System.Drawing.Size(40,300) 
