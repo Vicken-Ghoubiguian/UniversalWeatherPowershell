@@ -98,6 +98,10 @@ if($a.weatherError)
         exit 1
     }
 
+    ########
+    # Configuring success message: you can now play with weather
+    ########
+
     # Displaying success message in a message box
     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info") | Out-null
 
