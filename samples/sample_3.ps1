@@ -28,7 +28,7 @@ if($a.weatherError)
     ########
 
     # If the wished temperature scale is "Celsius"...
-    If(($temperatureScale -eq "Celsius") -or ($temperatureScale -eq "celsius")) {
+    If($temperatureScale -eq "celsius") {
 
         $a.temperature.setTemperatureAsCelsius()
         $a.feelingLikeTemperature.setTemperatureAsCelsius()
@@ -36,7 +36,7 @@ if($a.weatherError)
         $a.maxTemperature.setTemperatureAsCelsius()
 
     # If the wished temperature scale is "Fahrenheit"...
-    } Elseif(($temperatureScale -eq "Fahrenheit") -or ($temperatureScale -eq "fahrenheit")) {
+    } Elseif($temperatureScale -eq "fahrenheit") {
 
         $a.temperature.setTemperatureAsFahrenheit()
         $a.feelingLikeTemperature.setTemperatureAsFahrenheit()
@@ -44,7 +44,7 @@ if($a.weatherError)
         $a.maxTemperature.setTemperatureAsFahrenheit()
 
     # If the wished temperature scale is "Kelvin"...
-    } Elseif(($temperatureScale -eq "Kelvin") -or ($temperatureScale -eq "kelvin")) {
+    } Elseif($temperatureScale -eq "kelvin") {
 
         # Displaying warning message in the console...
         Write-Host -NoNewLine "Warning: temperature scale already in Kelvin"
