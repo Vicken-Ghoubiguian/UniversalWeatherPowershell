@@ -1,15 +1,16 @@
 ﻿<#
     
 #>
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\ultraviolet.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\temperature.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\dateandtime.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\language.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\pressure.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\coordinates.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherDescription.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\wind.psm1
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell\usedModules\weatherError.psm1
+
+Using module .\usedModules\ultraviolet.psm1
+Using module .\usedModules\temperature.psm1
+Using module .\usedModules\dateandtime.psm1
+Using module .\usedModules\language.psm1
+Using module .\usedModules\pressure.psm1
+Using module .\usedModules\coordinates.psm1
+Using module .\usedModules\weatherDescription.psm1
+Using module .\usedModules\wind.psm1
+Using module .\usedModules\weatherError.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
