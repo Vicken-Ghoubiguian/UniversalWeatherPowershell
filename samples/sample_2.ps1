@@ -169,6 +169,8 @@ $okButton.Add_Click({
         # Else, temperature scale remains 'Kelvin'...
         } Else {
 
+            # Displaying warning message in a messagebox...
+            [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
         }
 
         # Continuing to display all weather datas in the displayerbox
