@@ -191,6 +191,7 @@ $okButton.Add_Click({
             $a.sunrise.setCurrentFormatAsMDYHMS()
             $a.sunset.setCurrentFormatAsMDYHMS()
 
+        # Else, date and time format remains 'timestamp'...
         } Else {
 
             # Displaying warning message in a messagebox...
