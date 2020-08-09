@@ -173,6 +173,29 @@ $okButton.Add_Click({
             [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
         }
 
+        # If the selected date and time format is 'DMYHMS' (index 1), then...
+        If($dateAndTimeFormatListBox.SelectedIndex -eq 1) {
+
+            $a.sunrise.setCurrentFormatAsDMYHMS()
+            $a.sunset.setCurrentFormatAsDMYHMS()
+
+        # Else if the selected date and time format is 'YMDHMS' (index 2), then...
+        } Elseif($dateAndTimeFormatListBox.SelectedIndex -eq 2) {
+
+            $a.sunrise.setCurrentFormatAsYMDHMS()
+            $a.sunset.setCurrentFormatAsYMDHMS()
+
+        # Else if the selected date and time format is 'MDYHMS' (index 3), then...
+        } Elseif($dateAndTimeFormatListBox.SelectedIndex -eq 3) {
+
+            $a.sunrise.setCurrentFormatAsMDYHMS()
+            $a.sunset.setCurrentFormatAsMDYHMS()
+
+        } Else {
+
+            #
+        }
+
         # Continuing to display all weather datas in the displayerbox
         $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
@@ -184,8 +207,8 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "UV risk: " + $a.uv.GetRisk() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Sunrise time (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getTimestamp() + "`n"
-        $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getTimestamp() + "`n"
+        $weatherDisplayerBox.Text += "Sunrise time (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getSunTimeInCurrentFormat() + "`n"
+        $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
 
         # Displaying success message in a MessageBox...
         [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null 
