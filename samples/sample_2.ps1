@@ -135,19 +135,6 @@ $okButton.Add_Click({
     # else...
     } else {
 
-        # Displaying all weather datas in the displayerbox
-        $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
-        $weatherDisplayerBox.Text += "Country code: " + $a.countryCode + "`n"
-        $weatherDisplayerBox.Text += "`n"
-
-        $weatherDisplayerBox.Text += "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")" + "`n"
-        $weatherDisplayerBox.Text += "`n"
-
-        $weatherDisplayerBox.Text += "Main weather: ", $a.weatherDescription.getMainDescription() + "`n"
-        $weatherDisplayerBox.Text += "Describe weather: " + $a.weatherDescription.getPrecisedDescription() + "`n"
-        $weatherDisplayerBox.Text += "Weather icon URL: " + $a.weatherDescription.getWeatherURLIcon() + "`n"
-        $weatherDisplayerBox.Text += "`n"
-
         # If the selected temperature scale is 'Celsius' (index 1), then...
         If($temperatureScaleListBox.SelectedIndex -eq 1) {
 
@@ -198,6 +185,19 @@ $okButton.Add_Click({
             [System.Windows.MessageBox]::Show("Warning: date and time format already as timestamp", "Warning occured", "Ok", "Warning") | Out-Null
         }
 
+        # Displaying all weather datas in the displayerbox
+        $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
+        $weatherDisplayerBox.Text += "Country code: " + $a.countryCode + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
+        $weatherDisplayerBox.Text += "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")" + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
+        $weatherDisplayerBox.Text += "Main weather: ", $a.weatherDescription.getMainDescription() + "`n"
+        $weatherDisplayerBox.Text += "Describe weather: " + $a.weatherDescription.getPrecisedDescription() + "`n"
+        $weatherDisplayerBox.Text += "Weather icon URL: " + $a.weatherDescription.getWeatherURLIcon() + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
         # Continuing to display all weather datas in the displayerbox
         $weatherDisplayerBox.Text += "Temperature: " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
@@ -213,8 +213,7 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
 
         # Displaying success message in a MessageBox...
-        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null 
-
+        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null
     }
 })
 
