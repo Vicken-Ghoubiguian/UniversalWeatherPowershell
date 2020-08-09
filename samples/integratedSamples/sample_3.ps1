@@ -9,7 +9,7 @@ param (
     [string]$dateAndTimeFormat
 )
 
-#
+# Import the Assembly 'PresentationFramework' to the current sample
 Add-Type -AssemblyName PresentationFramework
 
 # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments

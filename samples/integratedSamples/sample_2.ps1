@@ -1,7 +1,7 @@
 ﻿# Importation of the UniversalWeatherPowershell module
 Using module .\..\..
 
-# 
+# Import the Assemblies 'System.Windows.Forms' and 'PresentationFramework' to the current sample
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationFramework
 
