@@ -1,5 +1,5 @@
 ﻿# Importation of the UniversalWeatherPowershell module
-Using module .\..
+Using module .\..\..
 
 # 
 Add-Type -AssemblyName System.Windows.Forms

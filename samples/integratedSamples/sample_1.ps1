@@ -1,5 +1,5 @@
 ﻿# Importation of the UniversalWeatherPowershell module
-Using module .\..
+Using module .\..\..
 
 # Definition of all parameters : '$city' for the wished city and '$apiKey' for the api key
 param (
