@@ -1,5 +1,5 @@
 ﻿# Importation of the UniversalWeatherPowershell module
-Using module C:\Users\ericg\Desktop\UniversalWeatherPowershell
+Using module .\..
 
 # Definition of all parameters : '$city' for the wished city, '$apiKey' for the api key and '$temperatureScale' for the wished temperature scale
 param (
