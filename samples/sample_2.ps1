@@ -193,7 +193,8 @@ $okButton.Add_Click({
 
         } Else {
 
-            #
+            # Displaying warning message in a messagebox...
+            [System.Windows.MessageBox]::Show("Warning: date and time format already as timestamp", "Warning occured", "Ok", "Warning") | Out-Null
         }
 
         # Continuing to display all weather datas in the displayerbox
