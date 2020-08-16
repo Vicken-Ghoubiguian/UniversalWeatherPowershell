@@ -20,7 +20,7 @@ Powershell package to return current weather in a wished city.
 This project consists of the development of an API as a package which catch and manage the chosen city weather. 
 This API is written in Powershell and can be used or included in any powershell code, software or project.
 
-To access the GitHub repository, click [here](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell).
+To access the GitHub repository, click [here](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell).<br/>
 To access the Powershell Gallery repository, click [here](#truc).
   
 <a name="structure"/></a>
