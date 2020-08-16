@@ -28,10 +28,10 @@ To access the Powershell Gallery repository, click [here](#truc).
 
 This project is structured in several elements:
 
-- The main module UniversalWeatherPowershell.psm1 qui contient la classe Universal Weather Powershell permettant d'initialiser, de manipuler et de gérer la météo dans une ville donnée;
-- The usedModules directory containing all the classes used in the main class and allowing to initialize, manipulate and manage a particular characteristic (temperature, atmospheric pressure ...) in one module each;
-- The samples directory which contains examples of uses this module and package;
-- The Dockerfiles directory which contains all Dockerfiles to containerize their respective examples.
+- The main module [UniversalWeatherPowershell.psm1](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/blob/master/UniversalWeatherPowershell.psm1) qui contient la classe Universal Weather Powershell permettant d'initialiser, de manipuler et de gérer la météo dans une ville donnée;
+- The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) directory containing all the classes used in the main class and allowing to initialize, manipulate and manage a particular characteristic (temperature, atmospheric pressure ...) in one module each;
+- The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples/integratedSamples) directory which contains examples of uses this module and package;
+- The [Dockerfiles](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/Dockerfiles) directory which contains all Dockerfiles to containerize their respective examples.
 
 Further explanations will be provided by browsing the GitHub repository.
 
