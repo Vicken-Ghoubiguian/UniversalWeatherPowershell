@@ -16,9 +16,14 @@ Powershell package to return current weather in a wished city.
 
 <a name="presentation"/></a>
 ## What is this project ?
+
+This project consists of the development of an API as a package which catch and manage the chosen city weather. 
+This API is written in Powershell and can be used or included in any powershell code, software or project.
   
 <a name="structure"/></a>
 ## How is it structured ?
+
+
 
 <a name="how_use"/></a>
 ## How use it ?
