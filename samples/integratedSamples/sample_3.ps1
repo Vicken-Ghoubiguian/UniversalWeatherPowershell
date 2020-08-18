@@ -204,6 +204,29 @@ if($a.weatherError)
     echo ""
 
     ########
+    # Displaying wind
+    ########
+
+    # Displaying wind speed
+    Write-Host -NoNewLine "Speed: ", $a.currentWind.getWindSpeed()
+
+    # New line...
+    echo ""
+
+    # Displaying wind deg
+    Write-Host -NoNewLine "Deg: ", $a.currentWind.getWindDeg()
+
+    # New line...
+    echo ""
+
+    # Displaying wind gust
+    Write-Host -NoNewLine "Gust: ", $a.currentWind.getWindGust()
+
+    # New lines...
+    echo ""
+    echo ""
+
+    ########
     # Displaying humidity
     ########
 
