@@ -17,42 +17,42 @@ class universalWeatherPowershell
 {
 
        # Attribute for the coordonates (longitude and latitude)
-       [coordinates]$coordinates
+       hidden [coordinates]$coordinates
 
        # Attribute for the weather description
-       [weatherDescription]$weatherDescription
+       hidden [weatherDescription]$weatherDescription
 
        # Attributes for all datas concerning temperature
-       [temperature]$temperature
-       [temperature]$feelingLikeTemperature
-       [temperature]$minTemperature
-       [temperature]$maxTemperature
+       hidden [temperature]$temperature
+       hidden [temperature]$feelingLikeTemperature
+       hidden [temperature]$minTemperature
+       hidden [temperature]$maxTemperature
 
        # Attribute for pressure
-       [pressure]$pressure
+       hidden [pressure]$pressure
 
        # Attribute for humidity
-       [int]$humidity
+       hidden [int]$humidity
 
        # Attribute for all datas concerning wind
-       [wind]$currentWind
+       hidden [wind]$currentWind
 
        # Attributes for respectively sunrise and sunset dates and times
-       [dateAndTime]$sunrise
-       [dateAndTime]$sunset
+       hidden [dateAndTime]$sunrise
+       hidden [dateAndTime]$sunset
 
        # Attributes for all datas concerning the wished location
-       [string]$countryCode
-       [string]$cityName
+       hidden [string]$countryCode
+       hidden [string]$cityName
 
        # Attribute for all datas concerning the current language
-       [language]$currentLanguage
+       hidden [language]$currentLanguage
 
        # Attribute for all datas concerning UV
-       [ultraviolet]$uv
+       hidden [ultraviolet]$uv
 
        # Attribute for occured error (in case) 
-       [weatherError]$weatherError
+       hidden [weatherError]$weatherError
 
        # universalWeatherPowershell class constructor with all needed parameters
        universalWeatherPowershell([string] $city, [string] $apiKey) 
