@@ -7,6 +7,9 @@ Enum languageCode {
     DA = 3
 }
 
+# Array containing all the languages ​​used
+$global:languageName = @("English", "Français", "Deutsch", "Dansk")
+
 # Definition of the language Powershell class to manage current language datas
 class language
 {
@@ -18,6 +21,12 @@ class language
     {
         # Allocating the value of choosen language as member of the languageCode enum
         $this.choosenLanguage = [languageCode]::EN
+    }
+
+    # language attributes getter
+    [string] getLanguage()
+    {
+        return $global:languageName[$this.choosenLanguage]
     }
 
     #
