@@ -205,6 +205,12 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Minimum temperature: " + $a.minTemperature.getTemperatureValue() + " " + $a.minTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.minTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
+        $weatherDisplayerBox.Text += "Pressure: " + $a.pressure.getPressureValue() + " " + $a.pressure.getPressureUnit() + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
+        $weatherDisplayerBox.Text += "Humidity: " + $a.humidity + " %" + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
         $weatherDisplayerBox.Text += "UV index: " + $a.uv.GetIndex() + "`n"
         $weatherDisplayerBox.Text += "UV risk: " + $a.uv.GetRisk() + "`n"
         $weatherDisplayerBox.Text += "`n"

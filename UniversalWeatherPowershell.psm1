@@ -32,7 +32,7 @@ class universalWeatherPowershell
        [pressure]$pressure
 
        # Attribute for humidity
-       [float]$humidity
+       [int]$humidity
 
        # Attribute for all datas concerning wind
        [wind]$currentWind
@@ -99,6 +99,9 @@ $weatherRequestsContent
 
                     # Allocating the wind values as an object of the single PowerShell class wind in the currentWind class attribute
                     $this.currentWind = [wind]::new($weatherRequestsResults.wind.speed, $weatherRequestsResults.wind.deg, $weatherRequestsResults.wind.gust)
+
+                    # Allocating the value of humidity to the respective class attribute
+                    $this.humidity = $weatherRequestsResults.main.humidity
 
                     # Allocating the value of pressure to the pressure attribute
                     $this.pressure = [pressure]::new($weatherRequestsResults.main.pressure)
