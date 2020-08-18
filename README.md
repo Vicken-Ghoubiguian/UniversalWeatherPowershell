@@ -9,6 +9,7 @@ Powershell package to return current weather in a wished city.
 2. [How is it structured ?](#structure)
 
 3. [How use it ?](#how_use)
+	- [prerequisites](#how_use_prerequisites)
 	- [From the GitHub repository](#how_use_github)
 	- [From the Powershell Gallery repository](#how_use_powershell_gallery)
 
@@ -41,6 +42,9 @@ Further explanations will be provided by browsing the GitHub repository.
 ## How use it ?
 
 There are 2 ways to use this module: by [cloning the current GitHub repository](#how_use_github) or by [installing the package from Powershell Gallery](#how_use_powershell_gallery).
+
+<a name="how_use_prerequisites"></a>
+### Prerequisites
 
 <a name="how_use_github"></a>
 ### From the GitHub repository
