@@ -208,6 +208,11 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Pressure: " + $a.pressure.getPressureValue() + " " + $a.pressure.getPressureUnit() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
+        $weatherDisplayerBox.Text += "Speed: " + $a.currentWind.getWindSpeed() + "`n"
+        $weatherDisplayerBox.Text += "Deg: " + $a.currentWind.getWindDeg() + "`n"
+        $weatherDisplayerBox.Text += "Gust: " + $a.currentWind.getWindGust() + "`n"
+        $weatherDisplayerBox.Text += "`n"
+
         $weatherDisplayerBox.Text += "Humidity: " + $a.humidity + " %" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
