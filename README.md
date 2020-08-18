@@ -9,6 +9,8 @@ Powershell package to return current weather in a wished city.
 2. [How is it structured ?](#structure)
 
 3. [How use it ?](#how_use)
+	- [From the GitHub repository](#how_use_github)
+	- [From the Powershell Gallery repository](#how_use_powershell_gallery)
 
 4. [What is used in this project ?](#what_used)
 
@@ -37,6 +39,12 @@ Further explanations will be provided by browsing the GitHub repository.
 
 <a name="how_use"/></a>
 ## How use it ?
+
+<a name="how_use_github"></a>
+### From the GitHub repository
+
+<a name="how_use_powershell_gallery"></a>
+### From the Powershell Gallery repository
 
 <a name="what_used"/></a>
 ## What is used in this project ?
