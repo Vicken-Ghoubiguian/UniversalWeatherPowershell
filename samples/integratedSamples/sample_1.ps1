@@ -109,6 +109,28 @@ if($a.weatherError)
     echo ""
 
     ########
+    # Displaying pressure
+    ########
+
+    # Displaying pressure in hectopascal (hPa)
+    Write-Host -NoNewLine "Pressure: ", $a.pressure.getPressureValue() $a.pressure.getPressureUnit()
+
+    # New lines...
+    echo ""
+    echo ""
+
+    ########
+    # Displaying humidity
+    ########
+
+    # Displaying humidity in per cent
+    Write-Host -NoNewLine "Humidity: ", $a.humidity "%"
+
+    # New lines...
+    echo ""
+    echo ""
+
+    ########
     # Displaying uv
     ########
 
