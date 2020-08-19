@@ -239,4 +239,16 @@ $weatherRequestsContent
        {
             return $this.weatherError
        }
+
+       # 'sunrise' attribute getter
+       [dateAndTime] getSunrise()
+       {
+            return $this.sunrise
+       }
+
+       # 'sunset' attribute getter
+       [dateAndTime] getSunset()
+       {
+            return $this.sunset
+       }
 }
