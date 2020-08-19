@@ -156,85 +156,85 @@ $weatherRequestsContent
             }
        }
 
-       #
+       # 'coordinates' attribute getter
        [coordinates] getCoordinates()
        {
             return $this.coordinates
        }
 
-       #
+       # 'weatherDescription' attribute getter
        [weatherDescription] getWeatherDescription()
        {
             return $this.weatherDescription
        }
 
-       #
+       # 'temperature' attribute getter
        [temperature] getTemperature()
        {
             return $this.temperature
        }
 
-       #
+       # 'feelingLikeTemperature' attribute getter
        [temperature] getFeelingTemperature()
        {
             return $this.feelingLikeTemperature
        }
 
-       #
+       # 'maxTemperature' attribute getter
        [temperature] getMaximumTemperature()
        {
             return $this.maxTemperature
        }
 
-       #
+       # 'minTemperature' attribute getter
        [temperature] getMinimumTemperature()
        {
             return $this.minTemperature
        }
 
-       #
+       # 'currentLanguage' attribute getter
        [language] getLanguage()
        {
             return $this.currentLanguage
        }
 
-       #
+       # 'cityName' attribute getter
        [string] getCity()
        {
             return $this.cityName
        }
 
-       #
+       # 'countryCode' attribute getter
        [string] getCountryCode()
        {
             return $this.countryCode
        }
 
-       #
+       # 'uv' attribute getter
        [ultraviolet] getUltraViolet()
        {
             return $this.uv
        }
 
-       #
+       # 'currentWind' attribute getter
        [wind] getWind()
        {
             return $this.currentWind
        }
 
-       #
+       # 'pressure' attribute getter
        [pressure] getPressure()
        {
             return $this.pressure
        }
 
-       #
+       # 'humidity' attribute getter
        [int] getHumidity()
        {
             return $this.humidity
        }
 
-       #
+       # 'weatherError' attribute getter
        [weatherError] getWeatherError()
        {
             return $this.weatherError
