@@ -8,7 +8,20 @@ Enum languageCode {
 }
 
 # Array containing all the languages ​​used
-$global:languageName = @("English", "Français", "Deutsch", "Dansk")
+$global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
+
+#
+$global:temperatureArray = @("Temperature", "Température", "Temperatur", "Temperatur")
+$global:feelingTemperatureArray = @("Feeling temperature", "Température de ressenti", "Temperatur fühlen", "Følelse af temperatur")
+$global:maximumTemperatureArray = @("Maximum temperature", "Température maximale", "Maximale Temperatur", "Maksimal temperatur")
+$global:minimumTemperatureArray = @("Minimum temperature", "Température minimale", "Mindesttemperatur", "Minimumstemperatur")
+
+#
+$global:pressureArray = @("Atmospheric pressure", "Pression atmosphérique", "Luftdruck", "Atmosfærisk tryk")
+
+#
+$global:sunriseArray = @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang")
+$global:sunsetArray = @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang")
 
 # Definition of the language Powershell class to manage current language datas
 class language
@@ -23,10 +36,16 @@ class language
         $this.choosenLanguage = [languageCode]::EN
     }
 
-    # language attributes getter
-    [string] getLanguage()
+    # language's index getter
+    [int] getLanguageIndex()
     {
-        return $global:languageName[$this.choosenLanguage]
+        return $this.choosenLanguage
+    }
+
+    # language's name getter
+    [string] getLanguageName()
+    {
+        return $global:languagesArray[$this.choosenLanguage]
     }
 
     #
