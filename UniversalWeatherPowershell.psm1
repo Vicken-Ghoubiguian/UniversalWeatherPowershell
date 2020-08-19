@@ -210,8 +210,33 @@ $weatherRequestsContent
             return $this.countryCode
        }
 
+       #
        [ultraviolet] getUltraViolet()
        {
             return $this.uv
+       }
+
+       #
+       [wind] getWind()
+       {
+            return $this.currentWind
+       }
+
+       #
+       [pressure] getPressure()
+       {
+            return $this.pressure
+       }
+
+       #
+       [int] getHumidity()
+       {
+            return $this.humidity
+       }
+
+       #
+       [weatherError] getWeatherError()
+       {
+            return $this.weatherError
        }
 }
