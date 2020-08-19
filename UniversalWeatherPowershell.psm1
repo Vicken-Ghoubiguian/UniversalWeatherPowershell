@@ -155,4 +155,63 @@ $weatherRequestsContent
                $this.weatherError = [weatherError]::new($errorType, $errorMessage, $errorStackTrace)
             }
        }
+
+       #
+       [coordinates] getCoordinates()
+       {
+            return $this.coordinates
+       }
+
+       #
+       [weatherDescription] getWeatherDescription()
+       {
+            return $this.weatherDescription
+       }
+
+       #
+       [temperature] getTemperature()
+       {
+            return $this.temperature
+       }
+
+       #
+       [temperature] getFeelingTemperature()
+       {
+            return $this.feelingLikeTemperature
+       }
+
+       #
+       [temperature] getMaximumTemperature()
+       {
+            return $this.maxTemperature
+       }
+
+       #
+       [temperature] getMinimumTemperature()
+       {
+            return $this.minTemperature
+       }
+
+       #
+       [language] getLanguage()
+       {
+            return $this.currentLanguage
+       }
+
+       #
+       [string] getCity()
+       {
+            return $this.cityName
+       }
+
+       #
+       [string] getCountryCode()
+       {
+            return $this.countryCode
+       }
+
+       [ultraviolet] getUltraViolet()
+       {
+            return $this.uv
+       }
 }
