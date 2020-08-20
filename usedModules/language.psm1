@@ -10,7 +10,7 @@ Enum languageCode {
 # Array containing all the languages ​​used
 $global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
 
-#
+# Array containing all fields names in all defined languages
 $global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordinates", "Geografische Koordinaten", "Geografiske koordinater"),
                             @("Temperature", "Température", "Temperatur", "Temperatur"),
                             @("Feeling temperature", "Température de ressenti", "Temperatur fühlen", "Følelse af temperatur"),
@@ -22,7 +22,7 @@ $global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordin
                             @("Risque UltraViolet", "UV Risk", "UV-Risiko", "UV-risiko"),
                             @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"))
 
-#
+# Array containing all months names in all defined languages
 $global:monthsArray = @(@("Janvier", "January", "Januar", "Januar"),
                         @("Février", "February", "Februar", "Februar"),
                         @("Mars", "March", "März", "Marts"),
