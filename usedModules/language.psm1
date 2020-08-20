@@ -49,6 +49,12 @@ class language
         $this.choosenLanguage = [languageCode]::EN
     }
 
+    #
+    [string] getWishedFieldName([int] $wishedFieldName)
+    {
+        return $global:fieldNamesArray[$wishedFieldName, $this.choosenLanguage]
+    }
+
     # language's index getter
     [int] getLanguageIndex()
     {
