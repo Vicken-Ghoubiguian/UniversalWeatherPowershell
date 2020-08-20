@@ -49,6 +49,9 @@ There are 2 ways to use this module: by [cloning the current GitHub repository](
 <a name="how_use_github"></a>
 ### From the GitHub repository
 
+To make this project work or integrate it into yours, whether as a module to import from [Powershell Gallery](#how_use_powershell_gallery) or a clone of the [GitHub repository](#how_use_github), you must have a machine running Windows 10 or higher (home, professional or educational version) or Windows Server 2016 or higher.
+To make the Docker images of the different samples work (Grouped in the [Dockerfiles directory](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/Dockerfiles)), you must install [Docker on Windows](https://docs.docker.com/docker-for-windows/install/).
+
 <a name="how_use_powershell_gallery"></a>
 ### From the Powershell Gallery repository
 
