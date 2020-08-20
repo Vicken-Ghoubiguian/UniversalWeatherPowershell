@@ -23,6 +23,20 @@ $global:pressureArray = @("Atmospheric pressure", "Pression atmosphérique", "Lu
 $global:sunriseArray = @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang")
 $global:sunsetArray = @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang")
 
+#
+$global:monthsArray = @(@("Janvier", "January", "Januar", "Januar"),
+                        @("Février", "February", "Februar", "Februar"),
+                        @("Mars", "March", "März", "Marts"),
+                        @("Avril", "April", "April", "April"),
+                        @("Mai", "May", "Mai", "Maj"),
+                        @("Juin", "June", "Juni", "Juni"),
+                        @("Juillet", "July", "Juli", "Juli"),
+                        @("Août", "August", "August", "August"),
+                        @("Septembre", "September", "September", "September"),
+                        @("Octobre", "October", "Oktober", "Oktober"),
+                        @("Novembre", "November", "November", "November"),
+                        @("Décembre","December", "Dezember", "December"))
+
 # Definition of the language Powershell class to manage current language datas
 class language
 {
