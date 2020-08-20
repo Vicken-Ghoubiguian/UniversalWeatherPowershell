@@ -11,17 +11,16 @@ Enum languageCode {
 $global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
 
 #
-$global:temperatureArray = @("Temperature", "Température", "Temperatur", "Temperatur")
-$global:feelingTemperatureArray = @("Feeling temperature", "Température de ressenti", "Temperatur fühlen", "Følelse af temperatur")
-$global:maximumTemperatureArray = @("Maximum temperature", "Température maximale", "Maximale Temperatur", "Maksimal temperatur")
-$global:minimumTemperatureArray = @("Minimum temperature", "Température minimale", "Mindesttemperatur", "Minimumstemperatur")
-
-#
-$global:pressureArray = @("Atmospheric pressure", "Pression atmosphérique", "Luftdruck", "Atmosfærisk tryk")
-
-#
-$global:sunriseArray = @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang")
-$global:sunsetArray = @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang")
+$global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordinates", "Geografische Koordinaten", "Geografiske koordinater"),
+                            @("Temperature", "Température", "Temperatur", "Temperatur"),
+                            @("Feeling temperature", "Température de ressenti", "Temperatur fühlen", "Følelse af temperatur"),
+                            @("Maximum temperature", "Température maximale", "Maximale Temperatur", "Maksimal temperatur"),
+                            @("Minimum temperature", "Température minimale", "Mindesttemperatur", "Minimumstemperatur"),
+                            @("Atmospheric pressure", "Pression atmosphérique", "Luftdruck", "Atmosfærisk tryk"),
+                            @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang"),
+                            @("Indice UltraViolet", "UV Index", "UV-Index", "UV-indeks"),
+                            @("Risque UltraViolet", "UV Risk", "UV-Risiko", "UV-risiko"),
+                            @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"))
 
 #
 $global:monthsArray = @(@("Janvier", "January", "Januar", "Januar"),
