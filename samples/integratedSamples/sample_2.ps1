@@ -186,16 +186,16 @@ $okButton.Add_Click({
         }
 
         # Displaying all weather datas in the displayerbox
-        $weatherDisplayerBox.Text = "City: " + $a.cityName + "`n"
-        $weatherDisplayerBox.Text += "Country code: " + $a.countryCode + "`n"
+        $weatherDisplayerBox.Text = $a.currentLanguage.getWishedFieldName(11) + ": " + $a.cityName + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(12) + ": " + $a.countryCode + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(0) + ": (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Main weather: ", $a.weatherDescription.getMainDescription() + "`n"
-        $weatherDisplayerBox.Text += "Describe weather: " + $a.weatherDescription.getPrecisedDescription() + "`n"
-        $weatherDisplayerBox.Text += "Weather icon URL: " + $a.weatherDescription.getWeatherURLIcon() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(13) + ": ", $a.weatherDescription.getMainDescription() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(14) + ": " + $a.weatherDescription.getPrecisedDescription() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(15) + ": " + $a.weatherDescription.getWeatherURLIcon() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         # Continuing to display all weather datas in the displayerbox
@@ -205,15 +205,15 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(4) + ": " + $a.minTemperature.getTemperatureValue() + " " + $a.minTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.minTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Pressure: " + $a.pressure.getPressureValue() + " " + $a.pressure.getPressureUnit() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(5) + ": " + $a.pressure.getPressureValue() + " " + $a.pressure.getPressureUnit() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Speed: " + $a.currentWind.getWindSpeed() + "`n"
-        $weatherDisplayerBox.Text += "Deg: " + $a.currentWind.getWindDeg() + "`n"
-        $weatherDisplayerBox.Text += "Gust: " + $a.currentWind.getWindGust() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(16) + ": " + $a.currentWind.getWindSpeed() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(17) + ": " + $a.currentWind.getWindDeg() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(18) + ": " + $a.currentWind.getWindGust() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Humidity: " + $a.humidity + " %" + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(10) + ": " + $a.humidity + " %" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(8) + ": " + $a.uv.GetIndex() + "`n"

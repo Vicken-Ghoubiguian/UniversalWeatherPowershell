@@ -20,7 +20,16 @@ $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographi
                             @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang"),
                             @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"),
                             @("UV Index", "Indice UltraViolet", "UV-Index", "UV-indeks"),
-                            @("UV Risk", "Risque UltraViolet", "UV-Risiko", "UV-risiko"))
+                            @("UV Risk", "Risque UltraViolet", "UV-Risiko", "UV-risiko"),
+                            @("Humidity", "Humidité", "Feuchtigkeit", "Fugtighed"),
+                            @("City", "Ville", "Stadt", "By"),
+                            @("Country code", "Code du pays", "Landesvorwahl", "Landekode"),
+                            @("Main weather", "Météo principale", "Hauptwetter", "Hovedvejr"),
+                            @("Describe weather", "Décrivez la météo", "Beschreibe das Wetter", "Beskriv vejret"),
+                            @("Weather icon URL", "URL de l'icône météo", "Wetter Symbol URL", "Vejrs ikon URL"),
+                            @("Speed", "Vitesse", "Geschwindigkeit", "Hastighed"),
+                            @("Deg", "Deg", "Grad", "Grad"),
+                            @("Gust", "Rafale", "Böe", "Vindstød"))
 
 # Array containing all months names in all defined languages
 $global:monthsArray = @(@("January", "Janvier", "Januar", "Januar"),
