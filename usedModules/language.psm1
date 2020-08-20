@@ -11,7 +11,7 @@ Enum languageCode {
 $global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
 
 # Array containing all fields names in all defined languages
-$global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordinates", "Geografische Koordinaten", "Geografiske koordinater"),
+$global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographiques", "Geografische Koordinaten", "Geografiske koordinater"),
                             @("Temperature", "Température", "Temperatur", "Temperatur"),
                             @("Feeling temperature", "Température de ressenti", "Temperatur fühlen", "Følelse af temperatur"),
                             @("Maximum temperature", "Température maximale", "Maximale Temperatur", "Maksimal temperatur"),
@@ -19,22 +19,22 @@ $global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordin
                             @("Atmospheric pressure", "Pression atmosphérique", "Luftdruck", "Atmosfærisk tryk"),
                             @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang"),
                             @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"),
-                            @("Indice UltraViolet", "UV Index", "UV-Index", "UV-indeks"),
-                            @("Risque UltraViolet", "UV Risk", "UV-Risiko", "UV-risiko"))
+                            @("UV Index", "Indice UltraViolet", "UV-Index", "UV-indeks"),
+                            @("UV Risk", "Risque UltraViolet", "UV-Risiko", "UV-risiko"))
 
 # Array containing all months names in all defined languages
-$global:monthsArray = @(@("Janvier", "January", "Januar", "Januar"),
-                        @("Février", "February", "Februar", "Februar"),
-                        @("Mars", "March", "März", "Marts"),
-                        @("Avril", "April", "April", "April"),
+$global:monthsArray = @(@("January", "Janvier", "Januar", "Januar"),
+                        @("February", "Février", "Februar", "Februar"),
+                        @("March", "Mars", "März", "Marts"),
+                        @("April", "Avril", "April", "April"),
                         @("Mai", "May", "Mai", "Maj"),
-                        @("Juin", "June", "Juni", "Juni"),
-                        @("Juillet", "July", "Juli", "Juli"),
-                        @("Août", "August", "August", "August"),
-                        @("Septembre", "September", "September", "September"),
-                        @("Octobre", "October", "Oktober", "Oktober"),
-                        @("Novembre", "November", "November", "November"),
-                        @("Décembre","December", "Dezember", "December"))
+                        @("June", "Juin", "Juni", "Juni"),
+                        @("July", "Juillet", "Juli", "Juli"),
+                        @("August", "Août", "August", "August"),
+                        @("September", "Septembre", "September", "September"),
+                        @("October", "Octobre", "Oktober", "Oktober"),
+                        @("November", "Novembre", "November", "November"),
+                        @("December", "Décembre", "Dezember", "December"))
 
 # Definition of the language Powershell class to manage current language datas
 class language
