@@ -18,9 +18,9 @@ $global:fieldNamesArray = @(@("Coordonnées géographiques", "Geographic coordin
                             @("Minimum temperature", "Température minimale", "Mindesttemperatur", "Minimumstemperatur"),
                             @("Atmospheric pressure", "Pression atmosphérique", "Luftdruck", "Atmosfærisk tryk"),
                             @("Sunrise", "Lever du soleil", "Sonnenaufgang", "Solopgang"),
+                            @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"),
                             @("Indice UltraViolet", "UV Index", "UV-Index", "UV-indeks"),
-                            @("Risque UltraViolet", "UV Risk", "UV-Risiko", "UV-risiko"),
-                            @("Sunset", "Coucher du soleil", "Sonnenuntergang", "Solnedgang"))
+                            @("Risque UltraViolet", "UV Risk", "UV-Risiko", "UV-risiko"))
 
 # Array containing all months names in all defined languages
 $global:monthsArray = @(@("Janvier", "January", "Januar", "Januar"),

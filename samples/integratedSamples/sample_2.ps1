@@ -200,9 +200,9 @@ $okButton.Add_Click({
 
         # Continuing to display all weather datas in the displayerbox
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(1) + ": " + $a.temperature.getTemperatureValue() + " " + $a.temperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.temperature.getTemperatureMeasurementUnit() + ")" + "`n"
-        $weatherDisplayerBox.Text += "Feeling temperature: " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
-        $weatherDisplayerBox.Text += "Maximum temperature: " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
-        $weatherDisplayerBox.Text += "Minimum temperature: " + $a.minTemperature.getTemperatureValue() + " " + $a.minTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.minTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(2) + ": " + $a.feelingLikeTemperature.getTemperatureValue() + " " + $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.feelingLikeTemperature.getTemperatureMeasurementUnit() + ")" + "`n" 
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(3) + ": " + $a.maxTemperature.getTemperatureValue() + " " + $a.maxTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.maxTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(4) + ": " + $a.minTemperature.getTemperatureValue() + " " + $a.minTemperature.getTemperatureMeasurementUnitSymbol() + " (" + $a.minTemperature.getTemperatureMeasurementUnit() + ")" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         $weatherDisplayerBox.Text += "Pressure: " + $a.pressure.getPressureValue() + " " + $a.pressure.getPressureUnit() + "`n"
@@ -216,12 +216,12 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += "Humidity: " + $a.humidity + " %" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "UV index: " + $a.uv.GetIndex() + "`n"
-        $weatherDisplayerBox.Text += "UV risk: " + $a.uv.GetRisk() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(8) + ": " + $a.uv.GetIndex() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(9) + ": " + $a.uv.GetRisk() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += "Sunrise time (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getSunTimeInCurrentFormat() + "`n"
-        $weatherDisplayerBox.Text += "Sunset time (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(7) + " (" + $a.sunrise.getCurrentFormat() + "): " + $a.sunrise.getSunTimeInCurrentFormat() + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(6) + " (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
 
         # Displaying success message in a MessageBox...
         [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null
