@@ -52,7 +52,7 @@ class language
     #
     [string] getWishedFieldName([int] $wishedFieldName)
     {
-        return $global:fieldNamesArray[$wishedFieldName, $this.choosenLanguage]
+        return $global:fieldNamesArray[$wishedFieldName][$this.choosenLanguage]
     }
 
     # language's index getter
