@@ -54,8 +54,8 @@ class universalWeatherPowershell
        # Attribute for occured error (in case) 
        hidden [weatherError]$weatherError
 
-       # universalWeatherPowershell class constructor with all needed parameters
-       universalWeatherPowershell([string] $city, [string] $apiKey) 
+       # universalWeatherPowershell class default constructor with all needed parameters
+       universalWeatherPowershell([string] $city, [string] $apiKey)
        {
 
             ###########################################################################
@@ -64,6 +64,108 @@ class universalWeatherPowershell
 
             # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
             $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "&appid=" + $apiKey
+
+            # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
+            try {
+
+               $weatherRequest = Invoke-WebRequest -Uri $weatherURL -Method Get
+
+               $weatherRequestsContent = $weatherRequest.Content
+
+               $weatherRequestsJSONContent = @"
+               
+$weatherRequestsContent
+
+"@
+
+               $weatherRequestsResults = ConvertFrom-Json -InputObject $weatherRequestsJSONContent
+
+               # Bloc we wish execute to get all informations about uv index (UV BLOC)
+               try {
+
+                    # Allocating the value of choosen language
+                    $this.currentLanguage = [language]::new()
+
+                    # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
+                    $this.coordinates = [coordinates]::new([convert]::ToDouble($weatherRequestsResults.coord.lat),[convert]::ToDouble($weatherRequestsResults.coord.lon))
+
+                    # Allocating the value of main description, precised description and icon to the weatherDescription attribute
+                    $this.weatherDescription = [weatherDescription]::new($weatherRequestsResults.weather[0].main, $weatherRequestsResults.weather[0].description, $weatherRequestsResults.weather[0].icon)
+
+                    # Allocating the value of countrycode and cityname in their respective class attributes
+                    $this.countryCode = $weatherRequestsResults.sys.country
+                    $this.cityName = $weatherRequestsResults.name
+
+                    # Allocating the value of sunrise time and sunset time to the respectives class attributes
+                    $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
+                    $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
+
+                    # Allocating the wind values as an object of the single PowerShell class wind in the currentWind class attribute
+                    $this.currentWind = [wind]::new($weatherRequestsResults.wind.speed, $weatherRequestsResults.wind.deg, $weatherRequestsResults.wind.gust)
+
+                    # Allocating the value of humidity to the respective class attribute
+                    $this.humidity = $weatherRequestsResults.main.humidity
+
+                    # Allocating the value of pressure to the pressure attribute
+                    $this.pressure = [pressure]::new($weatherRequestsResults.main.pressure)
+
+                    # Allocating all temperatures to their respectives objects
+                    $this.temperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp))
+                    $this.feelingLikeTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.feels_like))
+                    $this.minTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp_min))
+                    $this.maxTemperature = [temperature]::new([convert]::ToDouble($weatherRequestsResults.main.temp_max))
+
+                    ###########################################################################
+                    # Extracting the UV index value and determine the UV risk...              #
+                    ###########################################################################
+
+                    # 
+                    $uviURL = "http://api.openweathermap.org/data/2.5/uvi?appid=" + $apiKey + "&lat=" + $this.coordinates.getLatitude() + "&lon=" + $this.coordinates.getLongitude()
+
+                    $uviRequest = Invoke-WebRequest -Uri $uviURL -Method Get
+
+                    $uviRequestsJSONContent = $uviRequest.Content
+
+                    $uviRequestsHashTable = ConvertFrom-Json $uviRequestsJSONContent
+
+                    # Allocating all ultraviolet datas in the attribute uv
+                    $this.uv = [ultraviolet]::new([System.Math]::Floor([convert]::ToDouble($uviRequestsHashTable.value)))
+
+               # Bloc to execute if an System.Net.WebException is encountered (UV BLOC)
+               } catch [System.Net.WebException] {
+
+                  $errorType = $_.Exception.GetType().Name
+
+                  $errorMessage = $_.Exception.Message
+
+                  $errorStackTrace = $_.Exception.StackTrace
+
+                  $this.weatherError = [weatherError]::new($errorType, $errorMessage, $errorStackTrace)
+               }
+
+            # Bloc to execute if an System.Net.WebException is encountered (WEATHER BLOC)
+            } catch [System.Net.WebException] {
+
+               $errorType = $_.Exception.GetType().Name
+
+               $errorMessage = $_.Exception.Message
+
+               $errorStackTrace = $_.Exception.StackTrace
+
+               $this.weatherError = [weatherError]::new($errorType, $errorMessage, $errorStackTrace)
+            }
+       }
+
+       # universalWeatherPowershell class constructor with the wished country's ISO 3166-1 alpha-2 code in addition
+       universalWeatherPowershell([string] $city, [string]$countrysISOAlpha2Code, [string] $apiKey)
+       {
+
+            ###########################################################################
+            # Recovering all the weather datas values and extracting them all...      #
+            ###########################################################################
+
+            # Create an HTTP request to take the current weather, execute it and assign its value to the $weatherURL variable
+            $weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + $city + "," + $countrysISOAlpha2Code + "&appid=" + $apiKey
 
             # Bloc we wish execute to get all informations about general weather datas (WEATHER BLOC)
             try {
