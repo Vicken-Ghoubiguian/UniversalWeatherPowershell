@@ -4,6 +4,7 @@ Using module .\..\..
 # Definition of all parameters : '$city' for the wished city, '$apiKey' for the api key and '$temperatureScale' for the wished temperature scale
 param (
     [string]$city,
+    [string]$countrysISOAlpha2Code,
     [string]$apiKey,
     [string]$temperatureScale,
     [string]$dateAndTimeFormat
@@ -13,7 +14,7 @@ param (
 Add-Type -AssemblyName PresentationFramework
 
 # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
-$a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKey
+$a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $countrysISOAlpha2Code, $apiKey
 
 # if the weatherError attribute is not null (so if this attribute contains an occured error), then...
 if($a.weatherError)
