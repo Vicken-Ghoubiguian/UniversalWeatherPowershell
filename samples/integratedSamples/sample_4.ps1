@@ -1,13 +1,11 @@
 ﻿# Importation of the UniversalWeatherPowershell module
 Using module .\..\..
 
-# Definition of all parameters : '$city' for the wished city, '$apiKey' for the api key and '$temperatureScale' for the wished temperature scale
+# Definition of all parameters : '$city' for the wished city and '$apiKey' for the api key
 param (
     [string]$city,
     [string]$countrysISOAlpha2Code,
-    [string]$apiKey,
-    [string]$temperatureScale,
-    [string]$dateAndTimeFormat
+    [string]$apiKey
 )
 
 # Import the Assembly 'PresentationFramework' to the current sample
@@ -24,84 +22,6 @@ if($a.weatherError)
 
 # else...
 } else {
-
-    ########
-    # Configuring temperature scale
-    ########
-
-    # If the wished temperature scale is "Celsius"...
-    If($temperatureScale -eq "celsius") {
-
-        $a.temperature.setTemperatureAsCelsius()
-        $a.feelingLikeTemperature.setTemperatureAsCelsius()
-        $a.minTemperature.setTemperatureAsCelsius()
-        $a.maxTemperature.setTemperatureAsCelsius()
-
-    # If the wished temperature scale is "Fahrenheit"...
-    } Elseif($temperatureScale -eq "fahrenheit") {
-
-        $a.temperature.setTemperatureAsFahrenheit()
-        $a.feelingLikeTemperature.setTemperatureAsFahrenheit()
-        $a.minTemperature.setTemperatureAsFahrenheit()
-        $a.maxTemperature.setTemperatureAsFahrenheit()
-
-    # If the wished temperature scale is "Kelvin"...
-    } Elseif($temperatureScale -eq "kelvin") {
-
-        # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
-
-    # Else... 
-    } Else {
-
-        # Displaying error message in a messagebox...
-        [System.Windows.MessageBox]::Show("Error: unknown temperature scale", "Error occured", "Ok", "Error") | Out-Null
-
-        # Exiting the process with code 1 (an error occured)...
-        exit 1
-    }
-
-    ########
-    # Configuring date and time format
-    ########
-
-    # If the wished date and time format is "timestamp"...
-    If($dateAndTimeFormat -eq "timestamp") {
-
-        # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
-
-    # If the wished date and time format is "DMYHMS"...
-    } Elseif($dateAndTimeFormat -eq "DMYHMS") {
-
-        $a.sunrise.setCurrentFormatAsDMYHMS()
-        $a.sunset.setCurrentFormatAsDMYHMS()
-
-    # If the wished date and time format is "YMDHMS"...
-    } Elseif($dateAndTimeFormat -eq "YMDHMS") {
-
-        $a.sunrise.setCurrentFormatAsYMDHMS()
-        $a.sunset.setCurrentFormatAsYMDHMS()
-
-    # If the wished date and time format is "MDYHMS"...
-    } Elseif($dateAndTimeFormat -eq "MDYHMS") {
-
-        $a.sunrise.setCurrentFormatAsMDYHMS()
-        $a.sunset.setCurrentFormatAsMDYHMS()
-
-    # Else...
-    } Else {
-
-        # Displaying error message in a messagebox...
-        [System.Windows.MessageBox]::Show("Error: unknown date and time format", "Error occured", "Ok", "Error") | Out-Null
-
-        # Exiting the process with code 1 (an error occured)...
-        exit 1
-    }
-
-    ########
-    # Configuring success message: you can now play with weather
-    ########
 
     # Displaying success message in a message box
     [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info") | Out-null
@@ -155,10 +75,6 @@ if($a.weatherError)
 
     # Displaying current weather icon URL
     Write-Host -NoNewLine "Weather icon URL: ", $a.weatherDescription.getWeatherURLIcon()
-
-    # New lines...
-    echo ""
-    echo ""
 
     # New lines...
     echo ""
@@ -260,13 +176,13 @@ if($a.weatherError)
     ########################################
 
     # Displaying sunrise time as timestamp
-    Write-Host -NoNewLine "Sunrise time (", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getSunTimeInCurrentFormat()
+    Write-Host -NoNewLine "Sunrise time (", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getTimestamp()
 
     # New line...
     echo ""
 
     # Displaying sunset time as timestamp
-    Write-Host -NoNewLine "Sunset time (", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getSunTimeInCurrentFormat()
+    Write-Host -NoNewLine "Sunset time (", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getTimestamp()
 
     # New lines...
     echo ""
