@@ -119,7 +119,7 @@ if($a.weatherError)
     echo ""
 
     # Displaying the country code where the wished city is localized
-    Write-Host -NoNewline "Country code: ", $a.countryCode
+    Write-Host -NoNewline "Country's ISO 3166-1 alpha-2 code: ", $a.countryCode
 
     # New lines...
     echo ""
