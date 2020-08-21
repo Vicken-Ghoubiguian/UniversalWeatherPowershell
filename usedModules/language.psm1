@@ -23,7 +23,7 @@ $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographi
                             @("UV Risk", "Risque UltraViolet", "UV-Risiko", "UV-risiko"),
                             @("Humidity", "Humidité", "Feuchtigkeit", "Fugtighed"),
                             @("City", "Ville", "Stadt", "By"),
-                            @("Country code", "Code du pays", "Landesvorwahl", "Landekode"),
+                            @("Country's ISO 3166-1 alpha-2 code", "Code ISO 3166-1 alpha-2 du pays", "ISO 3166-1 Alpha-2-Code der Lande", "ISO 3166-1 Alpha-2 landekode"),
                             @("Main weather", "Météo principale", "Hauptwetter", "Hovedvejr"),
                             @("Describe weather", "Décrivez la météo", "Beschreibe das Wetter", "Beskriv vejret"),
                             @("Weather icon URL", "URL de l'icône météo", "Wetter Symbol URL", "Vejrs ikon URL"),
