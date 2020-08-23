@@ -17,13 +17,13 @@ $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $apiKe
 if($a.weatherError)
 {
     # Displaying error message in a message box
-    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error") | Out-Null
+    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
 # else...
 } else {
 
     # Displaying success message in a message box
-    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info") | Out-null
+    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", $a.currentLanguage.getWishedMessageBoxTitle(0), "Ok", "Info") | Out-null
 
     # New line...
     echo ""

@@ -20,7 +20,7 @@ $a = New-Object -TypeName universalWeatherPowershell -ArgumentList $city, $count
 if($a.weatherError)
 {
     # Displaying error message in a message box
-    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error") | Out-Null
+    [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
 # else...
 } else {
@@ -49,13 +49,13 @@ if($a.weatherError)
     } Elseif($temperatureScale -eq "kelvin") {
 
         # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
+        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
 
     # Else... 
     } Else {
 
         # Displaying error message in a messagebox...
-        [System.Windows.MessageBox]::Show("Error: unknown temperature scale", "Error occured", "Ok", "Error") | Out-Null
+        [System.Windows.MessageBox]::Show("Error: unknown temperature scale", $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
         # Exiting the process with code 1 (an error occured)...
         exit 1
@@ -69,7 +69,7 @@ if($a.weatherError)
     If($dateAndTimeFormat -eq "timestamp") {
 
         # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
+        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
 
     # If the wished date and time format is "DMYHMS"...
     } Elseif($dateAndTimeFormat -eq "DMYHMS") {
@@ -93,7 +93,7 @@ if($a.weatherError)
     } Else {
 
         # Displaying error message in a messagebox...
-        [System.Windows.MessageBox]::Show("Error: unknown date and time format", "Error occured", "Ok", "Error") | Out-Null
+        [System.Windows.MessageBox]::Show("Error: unknown date and time format", $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
         # Exiting the process with code 1 (an error occured)...
         exit 1
@@ -104,7 +104,7 @@ if($a.weatherError)
     ########
 
     # Displaying success message in a message box
-    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Success...", "Ok", "Info") | Out-null
+    [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", $a.currentLanguage.getWishedMessageBoxTitle(0), "Ok", "Info") | Out-null
 
     # New line...
     echo ""

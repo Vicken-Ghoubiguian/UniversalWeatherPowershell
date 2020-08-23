@@ -12,7 +12,8 @@ $global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
 
 # Array containing all the MessageBox possibles titles
 $global:messageBoxTitlesArray = @(@("Success...", "Succès...", "Erfolg...", "Succes..."),
-                                  @("Error occurred", "Une erreur est survenue", "Ein Fehler ist aufgetreten", "Der er sket en fejl"))
+                                  @("Error occurred", "Une erreur est survenue", "Fehler aufgetreten", "Fejl opstod"),
+                                  @("Warning occurred", "Un avertissement s'est produit", "Warnung aufgetreten", "Advarsel opstod"))
 
 # Array containing all fields names in all defined languages
 $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographiques", "Geografische Koordinaten", "Geografiske koordinater"),
