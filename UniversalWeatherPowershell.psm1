@@ -58,6 +58,9 @@ class universalWeatherPowershell
        universalWeatherPowershell([string] $city, [string] $apiKey)
        {
 
+            # Allocating the value of choosen language
+            $this.currentLanguage = [language]::new()
+
             ###########################################################################
             # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
@@ -82,10 +85,7 @@ $weatherRequestsContent
 
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
-
-                    # Allocating the value of choosen language
-                    $this.currentLanguage = [language]::new()
-
+                    
                     # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
                     $this.coordinates = [coordinates]::new([convert]::ToDouble($weatherRequestsResults.coord.lat),[convert]::ToDouble($weatherRequestsResults.coord.lon))
 
@@ -160,6 +160,9 @@ $weatherRequestsContent
        universalWeatherPowershell([string] $city, [string]$countrysISOAlpha2Code, [string] $apiKey)
        {
 
+            # Allocating the value of choosen language
+            $this.currentLanguage = [language]::new()
+
             ###########################################################################
             # Recovering all the weather datas values and extracting them all...      #
             ###########################################################################
@@ -184,9 +187,6 @@ $weatherRequestsContent
 
                # Bloc we wish execute to get all informations about uv index (UV BLOC)
                try {
-
-                    # Allocating the value of choosen language
-                    $this.currentLanguage = [language]::new()
 
                     # Allocating the values of longitude and latitude in the attributes longitude and latitude respectively
                     $this.coordinates = [coordinates]::new([convert]::ToDouble($weatherRequestsResults.coord.lat),[convert]::ToDouble($weatherRequestsResults.coord.lon))
