@@ -34,13 +34,13 @@ if($a.weatherError)
     ########
 
     # Displaying wished city name
-    Write-Host -NoNewline "City: ", $a.cityName
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(11), ": ", $a.cityName
 
     # New line...
     echo ""
 
     # Displaying the country code where the wished city is localized
-    Write-Host -NoNewline "Country's ISO 3166-1 alpha-2 code: ", $a.countryCode
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(12), ": ", $a.countryCode
 
     # New lines...
     echo ""
@@ -51,7 +51,7 @@ if($a.weatherError)
     ########
 
     # Displaying geographic coordinates of the wished city...
-    Write-Host -NoNewline "Geographic coordinates: (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")"
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(0), ": (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")"
 
     # New lines...
     echo ""
@@ -62,19 +62,19 @@ if($a.weatherError)
     ########
 
     # Displaying current main weather
-    Write-Host -NoNewLine "Main weather: ", $a.weatherDescription.getMainDescription()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(13), ": ", $a.weatherDescription.getMainDescription()
 
     # New line...
     echo ""
 
     # Displaying current describe weather
-    Write-Host -NoNewLine "Describe weather: ", $a.weatherDescription.getPrecisedDescription()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(14), ": ", $a.weatherDescription.getPrecisedDescription()
 
     # New line...
     echo ""
 
     # Displaying current weather icon URL
-    Write-Host -NoNewLine "Weather icon URL: ", $a.weatherDescription.getWeatherURLIcon()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(15), ": ", $a.weatherDescription.getWeatherURLIcon()
 
     # New lines...
     echo ""
@@ -85,25 +85,25 @@ if($a.weatherError)
     ########
 
     # Displaying current temperature in kelvin
-    Write-Host -NoNewLine "Temperature: ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(1), ": ", $a.temperature.getTemperatureValue() $a.temperature.getTemperatureMeasurementUnitSymbol() " (" $a.temperature.getTemperatureMeasurementUnit() ")"
 
     # New line...
     echo ""
 
     # Displaying feeling like temperature in kelvin
-    Write-Host -NoNewLine "Feeling temperature: ", $a.feelingLikeTemperature.getTemperatureValue() $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.feelingLikeTemperature.getTemperatureMeasurementUnit() ")"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(2), ": ", $a.feelingLikeTemperature.getTemperatureValue() $a.feelingLikeTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.feelingLikeTemperature.getTemperatureMeasurementUnit() ")"
 
     # New line...
     echo ""
 
     # Displaying wished maximum temperature in kelvin
-    Write-Host -NoNewLine "Maximum temperature: ", $a.maxTemperature.getTemperatureValue() $a.maxTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.maxTemperature.getTemperatureMeasurementUnit() ")"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(3), ": ", $a.maxTemperature.getTemperatureValue() $a.maxTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.maxTemperature.getTemperatureMeasurementUnit() ")"
 
     # New line...
     echo ""
 
     # Displaying wished minimum temperature in kelvin
-    Write-Host -NoNewLine "Minimum temperature: ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(4), ": ", $a.minTemperature.getTemperatureValue() $a.minTemperature.getTemperatureMeasurementUnitSymbol() " (" $a.minTemperature.getTemperatureMeasurementUnit() ")"
 
     # New lines...
     echo ""
@@ -114,7 +114,7 @@ if($a.weatherError)
     ########
 
     # Displaying pressure in hectopascal (hPa)
-    Write-Host -NoNewLine "Pressure: ", $a.pressure.getPressureValue() $a.pressure.getPressureUnit()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(5), ": ", $a.pressure.getPressureValue() $a.pressure.getPressureUnit()
 
     # New lines...
     echo ""
@@ -125,19 +125,19 @@ if($a.weatherError)
     ########
 
     # Displaying wind speed
-    Write-Host -NoNewLine "Speed: ", $a.currentWind.getWindSpeed()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(16), ": ", $a.currentWind.getWindSpeed()
 
     # New line...
     echo ""
 
     # Displaying wind deg
-    Write-Host -NoNewLine "Deg: ", $a.currentWind.getWindDeg()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(17), ": ", $a.currentWind.getWindDeg()
 
     # New line...
     echo ""
 
     # Displaying wind gust
-    Write-Host -NoNewLine "Gust: ", $a.currentWind.getWindGust()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(18), ": ", $a.currentWind.getWindGust()
 
     # New lines...
     echo ""
@@ -148,7 +148,7 @@ if($a.weatherError)
     ########
 
     # Displaying humidity in per cent
-    Write-Host -NoNewLine "Humidity: ", $a.humidity "%"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(10), ": ", $a.humidity "%"
 
     # New lines...
     echo ""
@@ -159,13 +159,13 @@ if($a.weatherError)
     ########
 
     # Displaying uv index
-    Write-Host -NoNewline "UV index: ", $a.uv.GetIndex()
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(8), ": ", $a.uv.GetIndex()
 
     # New line...
     echo ""
 
     # Displaying uv risk
-    Write-Host -NoNewline "UV risk: ", $a.uv.GetRisk()
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(9), ": ", $a.uv.GetRisk()
 
     # New lines...
     echo ""
@@ -176,13 +176,13 @@ if($a.weatherError)
     ########################################
 
     # Displaying sunrise time as timestamp
-    Write-Host -NoNewLine "Sunrise time (", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getTimestamp()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(7), "(", $a.sunrise.getCurrentFormat(), "): ", $a.sunrise.getTimestamp()
 
     # New line...
     echo ""
 
     # Displaying sunset time as timestamp
-    Write-Host -NoNewLine "Sunset time (", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getTimestamp()
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(6), "(", $a.sunset.getCurrentFormat(), "): ", $a.sunset.getTimestamp()
 
     # New lines...
     echo ""
