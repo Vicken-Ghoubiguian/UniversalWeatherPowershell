@@ -10,6 +10,10 @@ Enum languageCode {
 # Array containing all the languages ​​used
 $global:languagesArray = @("English", "Français", "Deutsch", "Dansk")
 
+# Array containing all the MessageBox possibles titles
+$global:messageBoxTitlesArray = @(@("Success...", "Succès...", "Erfolg...", "Succes..."),
+                                  @("Error occurred", "Une erreur est survenue", "Ein Fehler ist aufgetreten", "Der er sket en fejl"))
+
 # Array containing all fields names in all defined languages
 $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographiques", "Geografische Koordinaten", "Geografiske koordinater"),
                             @("Temperature", "Température", "Temperatur", "Temperatur"),
@@ -62,6 +66,12 @@ class language
     [string] getWishedFieldName([int] $wishedFieldName)
     {
         return $global:fieldNamesArray[$wishedFieldName][$this.choosenLanguage]
+    }
+
+    #
+    [string] getWishedMessageBoxTitle([int] $requestedMessageBox)
+    {
+        return $global:messageBoxTitlesArray[$requestedMessageBox][$this.choosenLanguage]
     }
 
     # language's index getter
