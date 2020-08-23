@@ -130,7 +130,7 @@ $okButton.Add_Click({
     If($a.weatherError) {
 
         # Displaying error message in a MessageBox
-        [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, "Error occured", "Ok", "Error") | Out-Null
+        [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
     # else...
     } else {
@@ -157,7 +157,7 @@ $okButton.Add_Click({
         } Else {
 
             # Displaying warning message in a messagebox...
-            [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", "Warning occured", "Ok", "Warning") | Out-Null
+            [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
         }
 
         # If the selected date and time format is 'DMYHMS' (index 1), then...
@@ -182,7 +182,7 @@ $okButton.Add_Click({
         } Else {
 
             # Displaying warning message in a messagebox...
-            [System.Windows.MessageBox]::Show("Warning: date and time format already as timestamp", "Warning occured", "Ok", "Warning") | Out-Null
+            [System.Windows.MessageBox]::Show("Warning: date and time format already as timestamp", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
         }
 
         # Displaying all weather datas in the displayerbox
@@ -224,7 +224,7 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(6) + " (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
 
         # Displaying success message in a MessageBox...
-        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", "Validated...", "Ok", "Info") | Out-null
+        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", $a.currentLanguage.getWishedMessageBoxTitle(0), "Ok", "Info") | Out-null
     }
 })
 
@@ -248,7 +248,7 @@ $cancelButton.Add_Click({
     $weatherDisplayerBox.Text = ""
 
     # Displaying cancel message in a MessageBox...
-    [System.Windows.MessageBox]::Show("Are you leaving us already? Ok, it was a pleasure meeting you.", "Canceled...", "Ok", "Error") | Out-null 
+    [System.Windows.MessageBox]::Show("Are you leaving us already? Ok, it was a pleasure meeting you.", $a.currentLanguage.getWishedMessageBoxTitle(3), "Ok", "Error") | Out-null 
     
 })
 
