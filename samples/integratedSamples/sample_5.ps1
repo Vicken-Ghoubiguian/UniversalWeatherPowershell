@@ -70,6 +70,8 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Australia')
 [void] $countryListBox.Items.Add('Austria')
 [void] $countryListBox.Items.Add('Azerbaijan')
+
+#
 [void] $countryListBox.Items.Add('Bahamas (the)')
 [void] $countryListBox.Items.Add('Bahrain')
 [void] $countryListBox.Items.Add('Bangladesh')
@@ -80,7 +82,7 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Benin')
 [void] $countryListBox.Items.Add('Bermuda')
 [void] $countryListBox.Items.Add('Bhutan')
-[void] $countryListBox.Items.Add('Plurinational State of Bolivia')
+[void] $countryListBox.Items.Add('Bolivia (Plurinational State of)')
 [void] $countryListBox.Items.Add('Bonaire, Sint Eustatius and Saba')
 [void] $countryListBox.Items.Add('Bosnia and Herzegovina')
 [void] $countryListBox.Items.Add('Botswana')
@@ -91,6 +93,58 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Bulgaria')
 [void] $countryListBox.Items.Add('Burkina Faso')
 [void] $countryListBox.Items.Add('Burundi')
+
+#
+[void] $countryListBox.Items.Add('Cabo Verde')
+[void] $countryListBox.Items.Add('Cambodia')
+[void] $countryListBox.Items.Add('Cameroon')
+[void] $countryListBox.Items.Add('Canada')
+[void] $countryListBox.Items.Add('Cayman Islands (the)')
+[void] $countryListBox.Items.Add('Central African Republic (the)')
+[void] $countryListBox.Items.Add('Chad')
+[void] $countryListBox.Items.Add('Chile')
+[void] $countryListBox.Items.Add('China')
+[void] $countryListBox.Items.Add('Christmas Island')
+[void] $countryListBox.Items.Add('Cocos (Keeling) Islands (the)')
+[void] $countryListBox.Items.Add('Colombia')
+[void] $countryListBox.Items.Add('Comoros (the)')
+[void] $countryListBox.Items.Add('Congo (the Democratic Republic of the)')
+[void] $countryListBox.Items.Add('Congo (the)')
+[void] $countryListBox.Items.Add('Cook Islands (the)')
+[void] $countryListBox.Items.Add('Comoros (the)')
+[void] $countryListBox.Items.Add('Costa Rica')
+[void] $countryListBox.Items.Add('Croatia')
+[void] $countryListBox.Items.Add('Cuba')
+[void] $countryListBox.Items.Add('Curaçao')
+[void] $countryListBox.Items.Add('Cyprus')
+[void] $countryListBox.Items.Add('Czechia')
+[void] $countryListBox.Items.Add("Côte d'Ivoire")
+
+#
+[void] $countryListBox.Items.Add('Denmark')
+[void] $countryListBox.Items.Add('Djibouti')
+[void] $countryListBox.Items.Add('Dominica')
+[void] $countryListBox.Items.Add('Dominican Republic (the)')
+
+#
+[void] $countryListBox.Items.Add('Ecuador')
+[void] $countryListBox.Items.Add('Egypt')
+[void] $countryListBox.Items.Add('El Salvador')
+[void] $countryListBox.Items.Add('Equatorial Guinea')
+[void] $countryListBox.Items.Add('Eritrea')
+[void] $countryListBox.Items.Add('Estonia')
+[void] $countryListBox.Items.Add('Eswatini')
+[void] $countryListBox.Items.Add('Ethiopia')
+
+#
+[void] $countryListBox.Items.Add('Falkland Islands (the) [Malvinas]')
+[void] $countryListBox.Items.Add('Faroe Islands (the)')
+[void] $countryListBox.Items.Add('Fiji')
+[void] $countryListBox.Items.Add('Finland')
+[void] $countryListBox.Items.Add('France')
+[void] $countryListBox.Items.Add('French Guiana')
+[void] $countryListBox.Items.Add('French Polynesia')
+[void] $countryListBox.Items.Add('French Southern Territories (the)')
 
 #
 $countryListBox.SelectedIndex = 0
