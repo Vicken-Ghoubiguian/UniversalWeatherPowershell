@@ -47,14 +47,14 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
-#
+# Defining 'countryListBox' to inquire the wished city's current country
 $countryListBox = New-Object System.Windows.Forms.ListBox
 $countryListBox.Location = New-Object System.Drawing.Point(350,155)
 $countryListBox.Size = New-Object System.Drawing.Size(260,50)
 $countryListBox.Width = 550
 $countryListBox.Height = 27
 
-#
+# 'A' countries
 [void] $countryListBox.Items.Add('Afghanistan')
 [void] $countryListBox.Items.Add('Åland Islands')
 [void] $countryListBox.Items.Add('Albania')
@@ -71,7 +71,7 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Austria')
 [void] $countryListBox.Items.Add('Azerbaijan')
 
-#
+# 'B' countries
 [void] $countryListBox.Items.Add('Bahamas (the)')
 [void] $countryListBox.Items.Add('Bahrain')
 [void] $countryListBox.Items.Add('Bangladesh')
@@ -94,7 +94,7 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Burkina Faso')
 [void] $countryListBox.Items.Add('Burundi')
 
-#
+# 'C' countries
 [void] $countryListBox.Items.Add('Cabo Verde')
 [void] $countryListBox.Items.Add('Cambodia')
 [void] $countryListBox.Items.Add('Cameroon')
@@ -120,13 +120,13 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Czechia')
 [void] $countryListBox.Items.Add("Côte d'Ivoire")
 
-#
+# 'D' countries
 [void] $countryListBox.Items.Add('Denmark')
 [void] $countryListBox.Items.Add('Djibouti')
 [void] $countryListBox.Items.Add('Dominica')
 [void] $countryListBox.Items.Add('Dominican Republic (the)')
 
-#
+# 'E' countries
 [void] $countryListBox.Items.Add('Ecuador')
 [void] $countryListBox.Items.Add('Egypt')
 [void] $countryListBox.Items.Add('El Salvador')
@@ -136,7 +136,7 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Eswatini')
 [void] $countryListBox.Items.Add('Ethiopia')
 
-#
+# 'F' countries
 [void] $countryListBox.Items.Add('Falkland Islands (the) [Malvinas]')
 [void] $countryListBox.Items.Add('Faroe Islands (the)')
 [void] $countryListBox.Items.Add('Fiji')
@@ -146,13 +146,13 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
 
-#
+# Set the default value at 'Afghanistan' (index 0)
 $countryListBox.SelectedIndex = 0
 
-#
+# Adding 'countryListBox' to the current form
 $form.Controls.Add($countryListBox)
 
-#
+# Adding 'countryLabel' label to indicate the 'countryListBox' textbox
 $countryLabel = New-Object System.Windows.Forms.Label
 $countryLabel.Location = New-Object System.Drawing.Point(200,155)
 $countryLabel.Size = New-Object System.Drawing.Size(280,20)
