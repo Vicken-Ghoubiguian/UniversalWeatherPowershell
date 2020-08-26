@@ -6,7 +6,9 @@ Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName PresentationFramework
 
 # Countries ISO 3166-1 alpha-2 code array
-$global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS")
+$global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ"
+
+                                            )
 
 # Creation of the GUI
 $form = New-Object Windows.Forms.Form
