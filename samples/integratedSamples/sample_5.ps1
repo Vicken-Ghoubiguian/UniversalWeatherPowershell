@@ -47,6 +47,29 @@ $apiKeyLabel.Size = New-Object System.Drawing.Size(280,20)
 $apiKeyLabel.Text = 'Api key:'
 $form.Controls.Add($apiKeyLabel)
 
+#
+$countryCodeListBox = New-Object System.Windows.Forms.ListBox
+$countryCodeListBox.Location = New-Object System.Drawing.Point(350,185)
+$countryCodeListBox.Size = New-Object System.Drawing.Size(260,50)
+$countryCodeListBox.Width = 550
+$countryCodeListBox.Height = 27
+
+#
+[void] $countryCodeListBox.Items.Add('AF (Afghanistan)')
+
+#
+$countryCodeListBox.SelectedIndex = 0
+
+#
+#$form.Controls.Add($countryCodeListBox)
+
+#
+$countryCodeLabel = New-Object System.Windows.Forms.Label
+$countryCodeLabel.Location = New-Object System.Drawing.Point(200,120)
+$countryCodeLabel.Size = New-Object System.Drawing.Size(280,20)
+$countryCodeLabel.Text = "Country's ISO 3166-1 alpha-2 code:"
+#$form.Controls.Add($countryCodeLabel)
+
 # Defining 'temperatureScaleListBox' to inquire wished temperature scale
 $temperatureScaleListBox = New-Object System.Windows.Forms.ListBox
 $temperatureScaleListBox.Location = New-Object System.Drawing.Point(350,185)
