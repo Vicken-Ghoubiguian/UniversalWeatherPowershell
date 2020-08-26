@@ -55,14 +55,48 @@ $countryListBox.Width = 550
 $countryListBox.Height = 27
 
 #
-[void] $countryListBox.Items.Add('Afghanistan (AF)')
-[void] $countryListBox.Items.Add('Åland Islands (AX)')
+[void] $countryListBox.Items.Add('Afghanistan')
+[void] $countryListBox.Items.Add('Åland Islands')
+[void] $countryListBox.Items.Add('Albania')
+[void] $countryListBox.Items.Add('Algeria')
+[void] $countryListBox.Items.Add('American Samoa')
+[void] $countryListBox.Items.Add('Andorra')
+[void] $countryListBox.Items.Add('Angola')
+[void] $countryListBox.Items.Add('Anguilla')
+[void] $countryListBox.Items.Add('Antigua and Barbuda')
+[void] $countryListBox.Items.Add('Argentina')
+[void] $countryListBox.Items.Add('Armenia')
+[void] $countryListBox.Items.Add('Aruba')
+[void] $countryListBox.Items.Add('Australia')
+[void] $countryListBox.Items.Add('Austria')
+[void] $countryListBox.Items.Add('Azerbaijan')
+[void] $countryListBox.Items.Add('Bahamas (the)')
+[void] $countryListBox.Items.Add('Bahrain')
+[void] $countryListBox.Items.Add('Bangladesh')
+[void] $countryListBox.Items.Add('Barbados')
+[void] $countryListBox.Items.Add('Belarus')
+[void] $countryListBox.Items.Add('Belgium')
+[void] $countryListBox.Items.Add('Belize')
+[void] $countryListBox.Items.Add('Benin')
+[void] $countryListBox.Items.Add('Bermuda')
+[void] $countryListBox.Items.Add('Bhutan')
+[void] $countryListBox.Items.Add('Plurinational State of Bolivia')
+[void] $countryListBox.Items.Add('Bonaire, Sint Eustatius and Saba')
+[void] $countryListBox.Items.Add('Bosnia and Herzegovina')
+[void] $countryListBox.Items.Add('Botswana')
+[void] $countryListBox.Items.Add('Bouvet Island')
+[void] $countryListBox.Items.Add('Brazil')
+[void] $countryListBox.Items.Add('British Indian Ocean Territory (the)')
+[void] $countryListBox.Items.Add('Brunei Darussalam')
+[void] $countryListBox.Items.Add('Bulgaria')
+[void] $countryListBox.Items.Add('Burkina Faso')
+[void] $countryListBox.Items.Add('Burundi')
 
 #
 $countryListBox.SelectedIndex = 0
 
 #
-$form.Controls.Add($countryCodeListBox)
+$form.Controls.Add($countryListBox)
 
 #
 $countryLabel = New-Object System.Windows.Forms.Label
