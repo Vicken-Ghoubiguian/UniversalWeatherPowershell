@@ -151,6 +151,34 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
 
+# 'U' countries
+[void] $countryListBox.Items.Add('Uganda')
+[void] $countryListBox.Items.Add('Ukraine')
+[void] $countryListBox.Items.Add('United Arab Emirates (the)')
+[void] $countryListBox.Items.Add('United Kingdom of Great Britain and Northern Ireland (the)')
+[void] $countryListBox.Items.Add('United States Minor Outlying Islands (the)')
+[void] $countryListBox.Items.Add('United States of America (the)')
+[void] $countryListBox.Items.Add('Uruguay')
+[void] $countryListBox.Items.Add('Uzbekistan')
+
+# 'V' countries
+[void] $countryListBox.Items.Add('Vanuatu')
+[void] $countryListBox.Items.Add('Venezuela (Bolivarian Republic of)')
+[void] $countryListBox.Items.Add('Viet Nam')
+[void] $countryListBox.Items.Add('Virgin Islands (British)')
+[void] $countryListBox.Items.Add('Virgin Islands (U.S.)')
+
+# 'W' countries
+[void] $countryListBox.Items.Add('Wallis and Futuna')
+[void] $countryListBox.Items.Add('Western Sahara')
+
+# 'Y' countries
+[void] $countryListBox.Items.Add('Yemen')
+
+# 'Z' countries
+[void] $countryListBox.Items.Add('Zambia')
+[void] $countryListBox.Items.Add('Zimbabwe')
+
 # Set the default value at 'Afghanistan' (index 0)
 $countryListBox.SelectedIndex = 0
 
