@@ -55,7 +55,8 @@ $countryCodeListBox.Width = 550
 $countryCodeListBox.Height = 27
 
 #
-[void] $countryCodeListBox.Items.Add('AF (Afghanistan)')
+[void] $countryCodeListBox.Items.Add('Afghanistan (AF)')
+[void] $countryCodeListBox.Items.Add('Åland Islands (AX)')
 
 #
 $countryCodeListBox.SelectedIndex = 0
