@@ -7,7 +7,11 @@ Add-Type -AssemblyName PresentationFramework
 
 # Countries ISO 3166-1 alpha-2 code array
 $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", "AM", "AW", "AU", "AT", "AZ"
-
+                                              "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "BN", "BG", "BF", "BI",
+                                              "CV", "KH", "CM", "CA", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CD", "CG", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "CI",
+                                              "DK", "DJ", "DM", "DO",
+                                              "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET",
+                                              "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF"
                                             )
 
 # Creation of the GUI
