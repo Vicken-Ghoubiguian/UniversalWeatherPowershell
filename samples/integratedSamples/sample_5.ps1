@@ -427,7 +427,7 @@ $okButton.Add_Click({
 
         # Displaying all weather datas in the displayerbox
         $weatherDisplayerBox.Text = $a.currentLanguage.getWishedFieldName(11) + ": " + $a.cityName + "`n"
-        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(12) + ": " + $a.countryCode + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(12) + ": " + $a.countryCode + " [" + $countryListBox.SelectedItem + "]" + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(0) + ": (", $a.coordinates.getLatitude(), ", ", $a.coordinates.getLongitude(), ")" + "`n"
