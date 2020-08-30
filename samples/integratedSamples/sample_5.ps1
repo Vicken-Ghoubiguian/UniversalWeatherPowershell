@@ -13,6 +13,8 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO"
                                               "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET",
                                               "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF",
 
+                                              "OM",
+                                              "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR",
                                               "QA",
                                               "MK", "RO", "RU", "RW", "RE",
                                               "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", "LK", "SD", "SR", "SJ", "SE", "CH", "SY",
@@ -165,6 +167,24 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
 
+
+
+# 'O' countries
+[void] $countryListBox.Items.Add('Oman')
+
+# 'P' countries
+[void] $countryListBox.Items.Add('Pakistan')
+[void] $countryListBox.Items.Add('Palau')
+[void] $countryListBox.Items.Add('Palestine, State of')
+[void] $countryListBox.Items.Add('Panama')
+[void] $countryListBox.Items.Add('Papua New Guinea')
+[void] $countryListBox.Items.Add('Paraguay')
+[void] $countryListBox.Items.Add('Peru')
+[void] $countryListBox.Items.Add('Philippines (the)')
+[void] $countryListBox.Items.Add('Pitcairn')
+[void] $countryListBox.Items.Add('Poland')
+[void] $countryListBox.Items.Add('Portugal')
+[void] $countryListBox.Items.Add('Puerto Rico')
 
 # 'Q' countries
 [void] $countryListBox.Items.Add('Qatar')
