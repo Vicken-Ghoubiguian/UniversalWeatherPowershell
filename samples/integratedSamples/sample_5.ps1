@@ -15,7 +15,7 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO"
 
                                               "QA",
                                               "MK", "RO", "RU", "RW", "RE",
-
+                                              "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
                                               "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
                                               "UG", "UA", "AE", "GB", "UM", "US", "UY", "UZ", 
                                               "VU", "VE", "VN", "VG", "VI",
@@ -176,6 +176,39 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Rwanda')
 [void] $countryListBox.Items.Add('Réunion')
 
+# 'S' countries
+[void] $countryListBox.Items.Add('Saint Barthélemy')
+[void] $countryListBox.Items.Add('Saint Helena, Ascension and Tristan da Cunha')
+[void] $countryListBox.Items.Add('Saint Kitts and Nevis')
+[void] $countryListBox.Items.Add('Saint Lucia')
+[void] $countryListBox.Items.Add('Saint Martin (French part)')
+[void] $countryListBox.Items.Add('Saint Pierre and Miquelon')
+[void] $countryListBox.Items.Add('Saint Vincent and the Grenadines')
+[void] $countryListBox.Items.Add('Samoa')
+[void] $countryListBox.Items.Add('San Marino')
+[void] $countryListBox.Items.Add('Sao Tome and Principe')
+[void] $countryListBox.Items.Add('Saudi Arabia')
+[void] $countryListBox.Items.Add('Senegal')
+[void] $countryListBox.Items.Add('Serbia')
+[void] $countryListBox.Items.Add('Seychelles')
+[void] $countryListBox.Items.Add('Sierra Leone')
+[void] $countryListBox.Items.Add('Singapore')
+[void] $countryListBox.Items.Add('Sint Maarten (Dutch part)')
+[void] $countryListBox.Items.Add('Slovakia')
+[void] $countryListBox.Items.Add('Slovenia')
+[void] $countryListBox.Items.Add('Solomon Islands')
+[void] $countryListBox.Items.Add('Somalia')
+[void] $countryListBox.Items.Add('South Africa')
+[void] $countryListBox.Items.Add('South Georgia and the South Sandwich Islands')
+[void] $countryListBox.Items.Add('South Sudan')
+[void] $countryListBox.Items.Add('Spain')
+[void] $countryListBox.Items.Add('Sri Lanka')
+[void] $countryListBox.Items.Add('Sudan (the)')
+[void] $countryListBox.Items.Add('Suriname')
+[void] $countryListBox.Items.Add('Svalbard and Jan Mayen')
+[void] $countryListBox.Items.Add('Sweden')
+[void] $countryListBox.Items.Add('Switzerland')
+[void] $countryListBox.Items.Add('Syrian Arab Republic')
 
 # 'T' countries
 [void] $countryListBox.Items.Add('Taiwan (Province of China)')
