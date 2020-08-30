@@ -15,7 +15,7 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO"
 
                                               "QA",
                                               "MK", "RO", "RU", "RW", "RE",
-                                              "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+                                              "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", "LK", "SD", "SR", "SJ", "SE", "CH", "SY",
                                               "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
                                               "UG", "UA", "AE", "GB", "UM", "US", "UY", "UZ", 
                                               "VU", "VE", "VN", "VG", "VI",
