@@ -364,7 +364,7 @@ $form.Controls.Add($okButton)
 $okButton.Add_Click({
 
     # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
-    $a = [universalWeatherPowershell]::new($cityTextBox.Text, $apiKeyTextBox.Text)
+    $a = [universalWeatherPowershell]::new($cityTextBox.Text, $countryISO31668_1Alpha_2CodeArray[$countryListBox.SelectedIndex], $apiKeyTextBox.Text)
 
     # if the weatherError attribute is not null (so if this attribute contains an occured error), then...
     If($a.weatherError) {
