@@ -13,12 +13,15 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO"
                                               "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET",
                                               "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF",
 
-                                               "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
-                                               "UG", "UA", "AE", "GB", "UM", "US", "UY", "UZ", 
-                                               "VU", "VE", "VN", "VG", "VI",
-                                               "WF", "EH",
-                                               "YE",
-                                               "ZM", "ZW"
+                                              "QA",
+                                              "MK", "RO", "RU", "RW", "RE",
+
+                                              "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
+                                              "UG", "UA", "AE", "GB", "UM", "US", "UY", "UZ", 
+                                              "VU", "VE", "VN", "VG", "VI",
+                                              "WF", "EH",
+                                              "YE",
+                                              "ZM", "ZW"
                                             )
 
 # Creation of the GUI
@@ -162,6 +165,16 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
 
+
+# 'Q' countries
+[void] $countryListBox.Items.Add('Qatar')
+
+# 'R' countries
+[void] $countryListBox.Items.Add('Republic of North Macedonia')
+[void] $countryListBox.Items.Add('Romania')
+[void] $countryListBox.Items.Add('Russian Federation (the)')
+[void] $countryListBox.Items.Add('Rwanda')
+[void] $countryListBox.Items.Add('Réunion')
 
 
 # 'T' countries
