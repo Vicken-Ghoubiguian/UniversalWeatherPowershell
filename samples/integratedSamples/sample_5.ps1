@@ -11,7 +11,14 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AL", "DZ", "AS", "AD", "AO"
                                               "CV", "KH", "CM", "CA", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CD", "CG", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "CI",
                                               "DK", "DJ", "DM", "DO",
                                               "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET",
-                                              "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF"
+                                              "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF",
+
+                                               "TW", "TJ", "TZ", "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
+                                               "UG", "UA", "AE", "GB", "UM", "US", "UY", "UZ", 
+                                               "VU", "VE", "VN", "VG", "VI",
+                                               "WF", "EH",
+                                               "YE",
+                                               "ZM", "ZW"
                                             )
 
 # Creation of the GUI
@@ -154,6 +161,24 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Guiana')
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
+
+
+
+# 'T' countries
+[void] $countryListBox.Items.Add('Taiwan (Province of China)')
+[void] $countryListBox.Items.Add('Tajikistan')
+[void] $countryListBox.Items.Add('Tanzania, United Republic of')
+[void] $countryListBox.Items.Add('Thailand')
+[void] $countryListBox.Items.Add('Timor-Leste')
+[void] $countryListBox.Items.Add('Togo')
+[void] $countryListBox.Items.Add('Tokelau')
+[void] $countryListBox.Items.Add('Tonga')
+[void] $countryListBox.Items.Add('Trinidad and Tobago')
+[void] $countryListBox.Items.Add('Tunisia')
+[void] $countryListBox.Items.Add('Turkey')
+[void] $countryListBox.Items.Add('Turkmenistan')
+[void] $countryListBox.Items.Add('Turks and Caicos Islands (the)')
+[void] $countryListBox.Items.Add('Tuvalu')
 
 # 'U' countries
 [void] $countryListBox.Items.Add('Uganda')
