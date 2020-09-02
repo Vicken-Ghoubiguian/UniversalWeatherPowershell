@@ -12,6 +12,10 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AX", "AL", "DZ", "AS", "AD"
                                               "DK", "DJ", "DM", "DO",
                                               "EC", "EG", "SV", "GQ", "ER", "EE", "SZ", "ET",
                                               "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF",
+                                              "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY",
+                                              "HT", "HM", "VA", "HN", "HK", "HU",
+                                              "IS", "IN", "ID", "IR",  "IQ", "IE", "IM", "IL", "IT",
+                                              "JM", "JP", "JE", "JO",
 
                                               "OM",
                                               "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR",
@@ -166,6 +170,49 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('French Guiana')
 [void] $countryListBox.Items.Add('French Polynesia')
 [void] $countryListBox.Items.Add('French Southern Territories (the)')
+
+# 'G' countries
+[void] $countryListBox.Items.Add('Gabon')
+[void] $countryListBox.Items.Add('Gambia (the)')
+[void] $countryListBox.Items.Add('Georgia')
+[void] $countryListBox.Items.Add('Germany')
+[void] $countryListBox.Items.Add('Ghana')
+[void] $countryListBox.Items.Add('Gibraltar')
+[void] $countryListBox.Items.Add('Greece')
+[void] $countryListBox.Items.Add('Greenland')
+[void] $countryListBox.Items.Add('Grenada')
+[void] $countryListBox.Items.Add('Guadeloupe')
+[void] $countryListBox.Items.Add('Guam')
+[void] $countryListBox.Items.Add('Guatemala')
+[void] $countryListBox.Items.Add('Guernsey')
+[void] $countryListBox.Items.Add('Guinea')
+[void] $countryListBox.Items.Add('Guinea-Bissau')
+[void] $countryListBox.Items.Add('Guyana')
+
+# 'H' countries
+[void] $countryListBox.Items.Add('Haiti')
+[void] $countryListBox.Items.Add('Heard Island and McDonald Islands')
+[void] $countryListBox.Items.Add('Holy See (the)')
+[void] $countryListBox.Items.Add('Honduras')
+[void] $countryListBox.Items.Add('Hong Kong')
+[void] $countryListBox.Items.Add('Hungary')
+
+# 'I' countries
+[void] $countryListBox.Items.Add('Iceland')
+[void] $countryListBox.Items.Add('India')
+[void] $countryListBox.Items.Add('Indonesia')
+[void] $countryListBox.Items.Add('Iran (Islamic Republic of)')
+[void] $countryListBox.Items.Add('Iraq')
+[void] $countryListBox.Items.Add('Ireland')
+[void] $countryListBox.Items.Add('Isle of Man')
+[void] $countryListBox.Items.Add('Israel')
+[void] $countryListBox.Items.Add('Italy')
+
+# 'J' countries
+[void] $countryListBox.Items.Add('Jamaica')
+[void] $countryListBox.Items.Add('Japan')
+[void] $countryListBox.Items.Add('Jersey')
+[void] $countryListBox.Items.Add('Jordan')
 
 
 
