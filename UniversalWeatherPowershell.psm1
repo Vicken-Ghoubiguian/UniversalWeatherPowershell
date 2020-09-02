@@ -156,7 +156,7 @@ $weatherRequestsContent
             }
        }
 
-       # universalWeatherPowershell class constructor with the wished country's ISO 3166-1 alpha-2 code in addition
+       # universalWeatherPowershell class constructor with the wished country's ISO 3166-1 alpha-2 or country's ISO 3166-1 alpha-3 code in addition
        universalWeatherPowershell([string] $city, [string]$countrysISOAlpha2Code, [string] $apiKey)
        {
 
