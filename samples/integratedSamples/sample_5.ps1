@@ -16,6 +16,7 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AX", "AL", "DZ", "AS", "AD"
                                               "HT", "HM", "VA", "HN", "HK", "HU",
                                               "IS", "IN", "ID", "IR",  "IQ", "IE", "IM", "IL", "IT",
                                               "JM", "JP", "JE", "JO",
+                                              "KZ", "KE", "KI", "KP", "KR", "KW", "KG",
 
                                               "OM",
                                               "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR",
@@ -213,6 +214,15 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Japan')
 [void] $countryListBox.Items.Add('Jersey')
 [void] $countryListBox.Items.Add('Jordan')
+
+# 'K' countries
+[void] $countryListBox.Items.Add('Kazakhstan')
+[void] $countryListBox.Items.Add('Kenya')
+[void] $countryListBox.Items.Add('Kiribati')
+[void] $countryListBox.Items.Add("Korea (the Democratic People's Republic of)")
+[void] $countryListBox.Items.Add('Korea (the Republic of)')
+[void] $countryListBox.Items.Add('Kuwait')
+[void] $countryListBox.Items.Add('Kyrgyzstan')
 
 
 
