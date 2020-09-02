@@ -19,6 +19,7 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AX", "AL", "DZ", "AS", "AD"
                                               "KZ", "KE", "KI", "KP", "KR", "KW", "KG",
                                               "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU",
 
+                                              "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MP", "NO",
                                               "OM",
                                               "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR",
                                               "QA",
@@ -237,6 +238,21 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Luxembourg')
 
 
+
+# 'N' countries
+[void] $countryListBox.Items.Add('Namibia')
+[void] $countryListBox.Items.Add('Nauru')
+[void] $countryListBox.Items.Add('Nepal')
+[void] $countryListBox.Items.Add('Netherlands (the)')
+[void] $countryListBox.Items.Add('New Caledonia')
+[void] $countryListBox.Items.Add('New Zealand')
+[void] $countryListBox.Items.Add('Nicaragua')
+[void] $countryListBox.Items.Add('Niger (the)')
+[void] $countryListBox.Items.Add('Nigeria')
+[void] $countryListBox.Items.Add('Niue')
+[void] $countryListBox.Items.Add('Norfolk Island')
+[void] $countryListBox.Items.Add('Northern Mariana Islands (the)')
+[void] $countryListBox.Items.Add('Norway')
 
 # 'O' countries
 [void] $countryListBox.Items.Add('Oman')
