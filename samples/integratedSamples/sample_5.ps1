@@ -18,7 +18,7 @@ $global:countryISO31668_1Alpha_2CodeArray = @("AF", "AX", "AL", "DZ", "AS", "AD"
                                               "JM", "JP", "JE", "JO",
                                               "KZ", "KE", "KI", "KP", "KR", "KW", "KG",
                                               "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU",
-
+                                              "MO", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM"
                                               "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MP", "NO",
                                               "OM",
                                               "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR",
@@ -237,7 +237,29 @@ $countryListBox.Height = 27
 [void] $countryListBox.Items.Add('Lithuania')
 [void] $countryListBox.Items.Add('Luxembourg')
 
-
+# 'M' countries
+[void] $countryListBox.Items.Add('Macao')
+[void] $countryListBox.Items.Add('Madagascar')
+[void] $countryListBox.Items.Add('Malawi')
+[void] $countryListBox.Items.Add('Malaysia')
+[void] $countryListBox.Items.Add('Maldives')
+[void] $countryListBox.Items.Add('Mali')
+[void] $countryListBox.Items.Add('Malta')
+[void] $countryListBox.Items.Add('Marshall Islands (the)')
+[void] $countryListBox.Items.Add('Martinique')
+[void] $countryListBox.Items.Add('Mauritania')
+[void] $countryListBox.Items.Add('Mauritius')
+[void] $countryListBox.Items.Add('Mayotte')
+[void] $countryListBox.Items.Add('Mexico')
+[void] $countryListBox.Items.Add('Micronesia (Federated States of)')
+[void] $countryListBox.Items.Add('Moldova (the Republic of)')
+[void] $countryListBox.Items.Add('Monaco')
+[void] $countryListBox.Items.Add('Mongolia')
+[void] $countryListBox.Items.Add('Montenegro')
+[void] $countryListBox.Items.Add('Montserrat')
+[void] $countryListBox.Items.Add('Morocco')
+[void] $countryListBox.Items.Add('Mozambique')
+[void] $countryListBox.Items.Add('Myanmar')
 
 # 'N' countries
 [void] $countryListBox.Items.Add('Namibia')
