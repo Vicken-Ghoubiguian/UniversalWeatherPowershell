@@ -363,8 +363,6 @@ $form.Controls.Add($okButton)
 # Handler click of the 'ok' button
 $okButton.Add_Click({
 
-    Write-Host $countryListBox.SelectedIndex, " ", $countryISO31668_1Alpha_2CodeArray[$countryListBox.SelectedIndex]
-
     # Definition of a new object of type 'universalWeatherPowershell' with '$city' and '$apiKey' as arguments
     $a = [universalWeatherPowershell]::new($cityTextBox.Text, $countryISO31668_1Alpha_2CodeArray[$countryListBox.SelectedIndex], $apiKeyTextBox.Text)
 
