@@ -16,6 +16,10 @@ $global:messageBoxTitlesArray = @(@("Success...", "Succès...", "Erfolg...", "Su
                                   @("Warning occurred...", "Un avertissement s'est produit...", "Warnung aufgetreten...", "Advarsel opstod..."),
                                   @("Canceled...", "Annulé...", "Abgesagt...", "Annulleret..."))
 
+# Array containing all the MessageBox possibles contents
+$global:messageBoxContentsArray = @(@("Congratulations, you can now play with weather.", "Félicitations, vous pouvez maintenant jouer avec la météo.", "Herzlichen Glückwunsch, Sie können jetzt mit dem Wetter spielen.", "Tillykke, du kan nu lege med vejret."),
+                                    @("Sorry but an error occurred when executing request: ", "Désolé mais une erreur s'est produite lors de l'exécution de la requête: ", "Leider ist beim Ausführen der Anforderung ein Fehler aufgetreten: ", "Beklager, men der opstod en fejl under udførelse af anmodning: "))
+
 # Array containing all fields names in all defined languages
 $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographiques", "Geografische Koordinaten", "Geografiske koordinater"),
                             @("Temperature", "Température", "Temperatur", "Temperatur"),
