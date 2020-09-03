@@ -68,19 +68,19 @@ class language
         $this.choosenLanguage = [languageCode]::EN
     }
 
-    #
+    # Wished field name getter
     [string] getWishedFieldName([int] $wishedFieldName)
     {
         return $global:fieldNamesArray[$wishedFieldName][$this.choosenLanguage]
     }
 
-    #
+    # Wished MessageBox title getter
     [string] getWishedMessageBoxTitle([int] $requestedMessageBoxTitle)
     {
         return $global:messageBoxTitlesArray[$requestedMessageBoxTitle][$this.choosenLanguage]
     }
 
-    #
+    # Wished MessageBox content getter
     [string] getWishedMessageBoxContent([int] $requestedMessageBoxContent)
     {
         return $global:messageBoxTitlesArray[$requestedMessageBoxContent][$this.choosenLanguage]
@@ -98,7 +98,7 @@ class language
         return $global:languagesArray[$this.choosenLanguage]
     }
 
-    #
+    # Set the current language to English
     [void] setLanguageAsEnglish()
     {
         If($this.choosenLanguage -eq [languageCode]::EN)
@@ -111,7 +111,7 @@ class language
         }
     }
 
-    #
+    # Set the current language to French
     [void] setLanguageAsFrench()
     {
         If($this.choosenLanguage -eq [languageCode]::FR)
@@ -124,7 +124,7 @@ class language
         }
     }
 
-    #
+    # Set the current language to German
     [void] setLanguageAsGerman()
     {
         If($this.choosenLanguage -eq [languageCode]::DE)
@@ -137,7 +137,7 @@ class language
         }
     }
 
-    #
+    # Set the current language to Danish
     [void] setLanguageAsDanish()
     {
         If($this.choosenLanguage -eq [languageCode]::DA)
