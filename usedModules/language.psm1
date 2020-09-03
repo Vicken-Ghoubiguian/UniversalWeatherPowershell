@@ -75,9 +75,15 @@ class language
     }
 
     #
-    [string] getWishedMessageBoxTitle([int] $requestedMessageBox)
+    [string] getWishedMessageBoxTitle([int] $requestedMessageBoxTitle)
     {
-        return $global:messageBoxTitlesArray[$requestedMessageBox][$this.choosenLanguage]
+        return $global:messageBoxTitlesArray[$requestedMessageBoxTitle][$this.choosenLanguage]
+    }
+
+    #
+    [string] getWishedMessageBoxContent([int] $requestedMessageBoxContent)
+    {
+        return $global:messageBoxTitlesArray[$requestedMessageBoxContent][$this.choosenLanguage]
     }
 
     # language's index getter
