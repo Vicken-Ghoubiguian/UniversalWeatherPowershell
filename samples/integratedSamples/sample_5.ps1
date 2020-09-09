@@ -477,7 +477,7 @@ $okButton.Add_Click({
     If($a.weatherError) {
 
         # Displaying error message in a MessageBox
-        [System.Windows.MessageBox]::Show("Sorry but an error occured when executing request: " + $a.weatherError.stackTrace, $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
+        [System.Windows.MessageBox]::Show($a.currentLanguage.getWishedMessageBoxContent(1) + $a.weatherError.stackTrace, $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
     # else...
     } else {
@@ -571,7 +571,7 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(6) + " (" + $a.sunset.getCurrentFormat() + "): " + $a.sunset.getSunTimeInCurrentFormat() + "`n"
 
         # Displaying success message in a MessageBox...
-        [System.Windows.MessageBox]::Show("Congradulations, you can now play with weather.", $a.currentLanguage.getWishedMessageBoxTitle(0), "Ok", "Info") | Out-null
+        [System.Windows.MessageBox]::Show($a.currentLanguage.getWishedMessageBoxContent(0), $a.currentLanguage.getWishedMessageBoxTitle(0), "Ok", "Info") | Out-null
     }
 })
 
