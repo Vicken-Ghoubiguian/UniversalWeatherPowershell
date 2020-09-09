@@ -19,7 +19,8 @@ $global:messageBoxTitlesArray = @(@("Success...", "Succès...", "Erfolg...", "Su
 # Array containing all the MessageBox possibles contents
 $global:messageBoxContentsArray = @(@("Congratulations, you can now play with weather.", "Félicitations, vous pouvez maintenant jouer avec la météo.", "Herzlichen Glückwunsch, Sie können jetzt mit dem Wetter spielen.", "Tillykke, du kan nu lege med vejret."),
                                     @("Sorry but an error occurred when executing request: ", "Désolé mais une erreur s'est produite lors de l'exécution de la requête: ", "Leider ist beim Ausführen der Anforderung ein Fehler aufgetreten: ", "Beklager, men der opstod en fejl under udførelse af anmodning: "),
-                                    @("Warning: date and time format already as timestamp", "Attention: format de la date et de l'heure déjà comme timestamp", "Warnung: Datums- und Uhrzeitformat bereits als timestamp", "Advarsel: dato- og tidsformat allerede som timestamp"))
+                                    @("Warning: date and time format already as timestamp", "Attention: format de la date et de l'heure déjà comme timestamp", "Warnung: Datums- und Uhrzeitformat bereits als timestamp", "Advarsel: dato- og tidsformat allerede som timestamp"),
+                                    @("Warning: temperature scale already in Kelvin", "Attention: unité de température déjà en Kelvin", "Warnung: Temperaturskala bereits in Kelvin", "Advarsel: temperaturskala allerede i Kelvin"))
 
 # Array containing all fields names in all defined languages
 $global:fieldNamesArray = @(@("Geographic coordinates", "Coordonnées géographiques", "Geografische Koordinaten", "Geografiske koordinater"),
