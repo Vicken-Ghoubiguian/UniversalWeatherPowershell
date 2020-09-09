@@ -504,7 +504,7 @@ $okButton.Add_Click({
         } Else {
 
             # Displaying warning message in a messagebox...
-            [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
+            [System.Windows.MessageBox]::Show($a.currentLanguage.getWishedMessageBoxContent(3), $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
         }
 
         # If the selected date and time format is 'DMYHMS' (index 1), then...
