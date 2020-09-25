@@ -43,9 +43,6 @@ class universalWeatherPowershell
        hidden [dateAndTime]$sunset
 
        # Attributes for all datas concerning the wished location
-       hidden [string]$countryCode
-       hidden [string]$cityName
-
        hidden [geographicLocation]$geographicLocation
 
        # Attribute for all datas concerning the current language
@@ -308,13 +305,13 @@ $weatherRequestsContent
        # 'cityName' attribute getter
        [string] getCity()
        {
-            return $this.cityName
+            return $this.geographicLocation.getCityName()
        }
 
        # 'countryCode' attribute getter
        [string] getCountryCode()
        {
-            return $this.countryCode
+            return $this.geographicLocation.getCountryCode()
        }
 
        # 'geographicLocation' attribute getter
