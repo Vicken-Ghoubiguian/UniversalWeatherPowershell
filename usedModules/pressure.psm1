@@ -1,4 +1,12 @@
-﻿# Definition of the pressure Powershell class to manage pressure datas
+﻿# Definition of the pressureMeasurementUnit Powershell enum to get the wished pressure measurement unit
+Enum pressureMeasurementUnit {
+    
+    hectopascal = 0
+    pascal = 1
+    bar = 2
+}
+
+# Definition of the pressure Powershell class to manage pressure datas
 class pressure
 {
     # Attributes for respectively the pressure value and the pressure measurement unit
