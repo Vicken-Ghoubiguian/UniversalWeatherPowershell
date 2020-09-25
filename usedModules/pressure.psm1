@@ -19,13 +19,13 @@ class pressure
         $this.pressureUnit = $pressureUnit
     }
 
-    #
+    # 'pressureValue' attribute getter
     [float] getPressureValue()
     {
         return $this.pressureValue
     }
 
-    #
+    # 'pressureUnit' attribute getter
     [string] getPressureUnit()
     {
         return $this.pressureUnit

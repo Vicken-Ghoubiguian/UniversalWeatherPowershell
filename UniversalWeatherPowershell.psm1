@@ -11,6 +11,7 @@ Using module .\usedModules\coordinates.psm1
 Using module .\usedModules\weatherDescription.psm1
 Using module .\usedModules\wind.psm1
 Using module .\usedModules\weatherError.psm1
+Using module .\usedModules\geographicLocation.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
@@ -44,6 +45,8 @@ class universalWeatherPowershell
        # Attributes for all datas concerning the wished location
        hidden [string]$countryCode
        hidden [string]$cityName
+
+       hidden [geographicLocation]$geographicLocation
 
        # Attribute for all datas concerning the current language
        hidden [language]$currentLanguage
@@ -198,6 +201,8 @@ $weatherRequestsContent
                     $this.countryCode = $weatherRequestsResults.sys.country
                     $this.cityName = $weatherRequestsResults.name
 
+                    $this.geographicLocation = [geographicLocation]::new($weatherRequestsResults.sys.country, $weatherRequestsResults.name)
+
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
                     $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
@@ -310,6 +315,12 @@ $weatherRequestsContent
        [string] getCountryCode()
        {
             return $this.countryCode
+       }
+
+       # 'geographicLocation' attribute getter
+       [geographicLocation] getGeographicLocation()
+       {
+            return $this.geographicLocation
        }
 
        # 'uv' attribute getter
