@@ -34,13 +34,13 @@ if($a.weatherError)
     ########
 
     # Displaying wished city name
-    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(11), ": ", $a.cityName
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(11), ": ", $a.getGeographicLocation().getCityName()
 
     # New line...
     echo ""
 
     # Displaying the country code where the wished city is localized
-    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(12), ": ", $a.countryCode
+    Write-Host -NoNewline $a.currentLanguage.getWishedFieldName(12), ": ", $a.getGeographicLocation().getCountryCode()
 
     # New lines...
     echo ""

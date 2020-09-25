@@ -92,9 +92,8 @@ $weatherRequestsContent
                     # Allocating the value of main description, precised description and icon to the weatherDescription attribute
                     $this.weatherDescription = [weatherDescription]::new($weatherRequestsResults.weather[0].main, $weatherRequestsResults.weather[0].description, $weatherRequestsResults.weather[0].icon)
 
-                    # Allocating the value of countrycode and cityname in their respective class attributes
-                    $this.countryCode = $weatherRequestsResults.sys.country
-                    $this.cityName = $weatherRequestsResults.name
+                    # Allocating the value of countrycode and cityname in their respective class attribute
+                    $this.geographicLocation = [geographicLocation]::new($weatherRequestsResults.sys.country, $weatherRequestsResults.name)
 
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
@@ -198,8 +197,6 @@ $weatherRequestsContent
                     $this.countryCode = $weatherRequestsResults.sys.country
                     $this.cityName = $weatherRequestsResults.name
 
-                    $this.geographicLocation = [geographicLocation]::new($weatherRequestsResults.sys.country, $weatherRequestsResults.name)
-
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
                     $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
@@ -300,18 +297,6 @@ $weatherRequestsContent
        [language] getLanguage()
        {
             return $this.currentLanguage
-       }
-
-       # 'cityName' attribute getter
-       [string] getCity()
-       {
-            return $this.geographicLocation.getCityName()
-       }
-
-       # 'countryCode' attribute getter
-       [string] getCountryCode()
-       {
-            return $this.geographicLocation.getCountryCode()
        }
 
        # 'geographicLocation' attribute getter
