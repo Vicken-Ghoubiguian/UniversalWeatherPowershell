@@ -31,7 +31,7 @@ To access the Powershell Gallery repository, click [here](#truc).
 
 This project is structured in several elements:
 
-- The main module [UniversalWeatherPowershell.psm1](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/blob/master/UniversalWeatherPowershell.psm1) qui contient la classe Universal Weather Powershell permettant d'initialiser, de manipuler et de gérer la météo dans une ville donnée;
+- The main module [UniversalWeatherPowershell.psm1](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/blob/master/UniversalWeatherPowershell.psm1) which contains the Universal Weather Powershell class allowing to initialize, manipulate and manage the weather in a given city;
 - The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) directory containing all the classes used in the main class and allowing to initialize, manipulate and manage a particular characteristic (temperature, atmospheric pressure ...) in one module each;
 - The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples/integratedSamples) directory which contains examples of uses this module and package;
 
@@ -50,8 +50,9 @@ To make this project work or integrate it into yours, whether as a module to imp
 <a name="how_use_github"></a>
 ### From the GitHub repository
 
-To use this PowerShell package from its GitHub repository, you must first install the Git utility on Windows. Vous avez une multitude de clients Git que vous pouvez utiliser sous Windows ([GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/)...).
-Le meilleur choix est d'installer le client [Git for Windows](https://gitforwindows.org/). Download the exe file from the official website, then run it.
+To use this PowerShell package from its GitHub repository, you must first install the Git utility on Windows. 
+You have a plethora of Git clients that you can use on Windows ([GitKraken] (https://www.gitkraken.com/), [GitHub Desktop] (https://desktop.github.com/) ...) .
+The best choice is to install the client [Git for Windows](https://gitforwindows.org/). Download the exe file from the official website, then run it.
 
 <a name="how_use_powershell_gallery"></a>
 ### From the Powershell Gallery repository
