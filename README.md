@@ -51,7 +51,7 @@ To make this project work or integrate it into yours, whether as a module to imp
 <a name="how_use_github"></a>
 ### From the GitHub repository
 
-To make the Docker images of the different samples work (Grouped in the [Dockerfiles directory](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/Dockerfiles)), you must install [Docker on Windows](https://docs.docker.com/docker-for-windows/install/).
+
 
 <a name="how_use_powershell_gallery"></a>
 ### From the Powershell Gallery repository
