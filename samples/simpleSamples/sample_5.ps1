@@ -560,7 +560,7 @@ $okButton.Add_Click({
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(18) + ": " + $a.currentWind.getWindGust() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
-        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(10) + ": " + $a.getHumidity() + " %" + "`n"
+        $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(10) + ": " + $a.getHumidity().getHumidityValue() + " " + $a.getHumidity().getHumidityUnitScale() + "`n"
         $weatherDisplayerBox.Text += "`n"
 
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(8) + ": " + $a.uv.GetIndex() + "`n"
