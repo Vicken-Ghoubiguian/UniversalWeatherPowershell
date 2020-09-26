@@ -11,20 +11,15 @@ class pressure
 {
     # Attributes for respectively the pressure value and the pressure measurement unit
     hidden [float]$pressureValue
-    hidden [string]$pressureUnit
+    hidden [pressureMeasurementUnit]$pressureUnitId
+    hidden [string]$pressureUnitSymbol
 
-    # First pressure class constructor with all needed parameters
+    # pressure class constructor with all needed parameters
     pressure($pressureValue)
     {
         $this.pressureValue = $pressureValue
-        $this.pressureUnit = "hPa"
-    }
-
-    # Second pressure class constructor with all needed parameters
-    pressure($pressureValue, $pressureUnit)
-    {
-        $this.pressureValue = $pressureValue
-        $this.pressureUnit = $pressureUnit
+        $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+        $this.pressureUnitSymbol = "hPa"
     }
 
     # 'pressureValue' attribute getter
@@ -36,6 +31,6 @@ class pressure
     # 'pressureUnit' attribute getter
     [string] getPressureUnit()
     {
-        return $this.pressureUnit
+        return $this.pressureUnitSymbol
     }
 }
