@@ -12,6 +12,7 @@ Using module .\usedModules\weatherDescription.psm1
 Using module .\usedModules\wind.psm1
 Using module .\usedModules\weatherError.psm1
 Using module .\usedModules\geographicLocation.psm1
+Using module .\usedModules\humidity.psm1
 
 # Definition of the universalWeatherPowershell Powershell class to get and to do everything wanted with weather
 class universalWeatherPowershell 
