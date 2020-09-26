@@ -27,31 +27,81 @@ class pressure
     # set pressure to HectoPascal
     [void] setPressureAsHectoPascal()
     {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+        } Else {
+
+        }
     }
 
     # set pressure to Pascal
     [void] setPressureAsPascal()
     {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+        } Else {
+
+        }
     }
 
     # set pressure to Bar
     [void] setPressureAsBar()
     {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+        } Else {
+
+        }
     }
 
     # set pressure to Atmosphere
     [void] setPressureAsAtmosphere()
     {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+        } Else {
+
+        }
     }
 
     # set pressure to Torr
     [void] setPressureAsTorr()
     {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+        } Else {
+
+        }
     }
 
     # 'pressureValue' attribute getter
