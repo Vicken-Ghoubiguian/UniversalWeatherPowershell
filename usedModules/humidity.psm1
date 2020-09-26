@@ -11,13 +11,13 @@ class humidity {
         $this.humidityUnitScale = " %"
     }
 
-    #
+    # 'humidityValue' attribute getter
     [int] getHumidityValue()
     {
         return $this.humidityValue
     }
 
-    #
+    # 'humidityUnitScale' attribute getter
     [string] getHumidityUnitScale()
     {
         return $this.humidityUnitScale
