@@ -24,6 +24,36 @@ class pressure
         $this.pressureUnitSymbol = "hPa"
     }
 
+    # set pressure to HectoPascal
+    [void] setPressureAsHectoPascal()
+    {
+
+    }
+
+    # set pressure to Pascal
+    [void] setPressureAsPascal()
+    {
+
+    }
+
+    # set pressure to Bar
+    [void] setPressureAsBar()
+    {
+
+    }
+
+    # set pressure to Atmosphere
+    [void] setPressureAsAtmosphere()
+    {
+
+    }
+
+    # set pressure to Torr
+    [void] setPressureAsTorr()
+    {
+
+    }
+
     # 'pressureValue' attribute getter
     [float] getPressureValue()
     {
