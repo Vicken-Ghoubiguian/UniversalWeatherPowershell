@@ -8,7 +8,7 @@ class humidity {
     humidity([int] $humidityValue)
     {
         $this.humidityValue = $humidityValue
-        $this.humidityUnitScale = " %"
+        $this.humidityUnitScale = "%"
     }
 
     # 'humidityValue' attribute getter

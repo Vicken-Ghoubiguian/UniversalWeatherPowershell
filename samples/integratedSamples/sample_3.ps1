@@ -232,7 +232,7 @@ if($a.weatherError)
     ########
 
     # Displaying humidity in per cent
-    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(10), ": ", $a.getHumidity() "%"
+    Write-Host -NoNewLine $a.currentLanguage.getWishedFieldName(10), ": ", $a.getHumidity().getHumidityValue(), " ", $a.getHumidity().getHumidityUnitScale()
 
     # New lines...
     echo ""

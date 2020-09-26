@@ -325,7 +325,7 @@ $weatherRequestsContent
        }
 
        # 'humidity' attribute getter
-       [int] getHumidity()
+       [humidity] getHumidity()
        {
             return $this.humidity.getHumidityValue()
        }
