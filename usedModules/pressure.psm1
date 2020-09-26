@@ -5,6 +5,7 @@ Enum pressureMeasurementUnit {
     pascal = 1
     bar = 2
     atmosphere = 3
+    torr = 4
 }
 
 # Definition of the pressure Powershell class to manage pressure datas
