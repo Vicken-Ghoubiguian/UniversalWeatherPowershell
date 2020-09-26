@@ -50,7 +50,8 @@ To make this project work or integrate it into yours, whether as a module to imp
 <a name="how_use_github"></a>
 ### From the GitHub repository
 
-
+To use this PowerShell package from its GitHub repository, you must first install the Git utility on Windows. Vous avez une multitude de clients Git que vous pouvez utiliser sous Windows ([GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/)...).
+Le meilleur choix est d'installer le client [Git for Windows](https://gitforwindows.org/). Download the exe file from the official website, then run it.
 
 <a name="how_use_powershell_gallery"></a>
 ### From the Powershell Gallery repository
