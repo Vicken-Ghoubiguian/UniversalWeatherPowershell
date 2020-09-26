@@ -194,19 +194,12 @@ $weatherRequestsContent
                     # Allocating the value of main description, precised description and icon to the weatherDescription attribute
                     $this.weatherDescription = [weatherDescription]::new($weatherRequestsResults.weather[0].main, $weatherRequestsResults.weather[0].description, $weatherRequestsResults.weather[0].icon)
 
-                    # Allocating the value of countrycode and cityname in their respective class attributes
-                    $this.countryCode = $weatherRequestsResults.sys.country
-                    $this.cityName = $weatherRequestsResults.name
-
                     # Allocating the value of sunrise time and sunset time to the respectives class attributes
                     $this.sunrise = [dateAndTime]::new($weatherRequestsResults.sys.sunrise)
                     $this.sunset = [dateAndTime]::new($weatherRequestsResults.sys.sunset)
 
                     # Allocating the wind values as an object of the single PowerShell class wind in the currentWind class attribute
                     $this.currentWind = [wind]::new($weatherRequestsResults.wind.speed, $weatherRequestsResults.wind.deg, $weatherRequestsResults.wind.gust)
-
-                    # Allocating the value of humidity to the respective class attribute
-                    $this.humidity = $weatherRequestsResults.main.humidity
 
                     # Allocating the value of pressure to the pressure attribute
                     $this.pressure = [pressure]::new($weatherRequestsResults.main.pressure)
@@ -327,7 +320,7 @@ $weatherRequestsContent
        # 'humidity' attribute getter
        [humidity] getHumidity()
        {
-            return $this.humidity.getHumidityValue()
+            return $this.humidity
        }
 
        # 'weatherError' attribute getter
