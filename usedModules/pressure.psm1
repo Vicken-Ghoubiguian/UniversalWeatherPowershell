@@ -57,13 +57,13 @@ class pressure
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
 
-            $this.pressureValue = $this.pressureValue/0.0000098692
+            $this.pressureValue = $this.pressureValue * 101325
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
 
-            $this.pressureValue = $this.pressureValue/0.0075006375541921
+            $this.pressureValue = $this.pressureValue * 133.3223684211
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
 
