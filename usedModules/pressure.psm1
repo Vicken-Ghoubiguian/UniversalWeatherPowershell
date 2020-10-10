@@ -111,14 +111,39 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+            $this.pressureValue = $this.pressureValue/1000
+            $this.pressureUnitId = [pressureMeasurementUnit]::bar
+            $this.pressureUnitSymbol = "bar"
+
+            # Message to display : "Pressure converted to Bar (bar) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+            $this.pressureValue = $this.pressureValue/100000
+            $this.pressureUnitId = [pressureMeasurementUnit]::bar
+            $this.pressureUnitSymbol = "bar"
+
+            # Message to display : "Pressure converted to Bar (bar) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
 
+            $this.pressureValue = $this.pressureValue * 1.01325
+            $this.pressureUnitId = [pressureMeasurementUnit]::bar
+            $this.pressureUnitSymbol = "bar"
+
+            # Message to display : "Pressure converted to Bar (bar) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+            $this.pressureValue = $this.pressureValue/750.06375541921
+            $this.pressureUnitId = [pressureMeasurementUnit]::bar
+            $this.pressureUnitSymbol = "bar"
+
+            # Message to display : "Pressure converted to Bar (bar) successfully."
 
         } Else {
 
+            # Message to display : "Pressure already in Bar (bar)."
         }
     }
 
