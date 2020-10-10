@@ -45,11 +45,27 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+            $this.pressureValue = $this.pressureValue * 100
+            $this.pressureUnitId = [pressureMeasurementUnit]::pascal
+            $this.pressureUnitSymbol = "Pa"
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+            $this.pressureValue = $this.pressureValue * 100000
+            $this.pressureUnitId = [pressureMeasurementUnit]::pascal
+            $this.pressureUnitSymbol = "Pa"
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
 
+            $this.pressureValue = $this.pressureValue/0.0000098692
+            $this.pressureUnitId = [pressureMeasurementUnit]::pascal
+            $this.pressureUnitSymbol = "Pa"
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+            $this.pressureValue = $this.pressureValue/0.0075006375541921
+            $this.pressureUnitId = [pressureMeasurementUnit]::pascal
+            $this.pressureUnitSymbol = "Pa"
 
         } Else {
 
