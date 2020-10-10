@@ -49,11 +49,15 @@ class pressure
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
 
+            # Message to display : "Pressure converted to Pascal (Pa) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
 
             $this.pressureValue = $this.pressureValue * 100000
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
+
+            # Message to display : "Pressure converted to Pascal (Pa) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
 
@@ -61,14 +65,19 @@ class pressure
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
 
+            # Message to display : "Pressure converted to Pascal (Pa) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
 
             $this.pressureValue = $this.pressureValue * 133.3223684211
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
             $this.pressureUnitSymbol = "Pa"
 
+            # Message to display : "Pressure converted to Pascal (Pa) successfully."
+
         } Else {
 
+            # Message to display : "Pressure already in Pascal (Pa)."
         }
     }
 
