@@ -29,14 +29,39 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
 
+            $this.pressureValue = $this.pressureValue/100
+            $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+            $this.pressureUnitSymbol = "hPa"
+
+            # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+            $this.pressureValue = $this.pressureValue * 1000
+            $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+            $this.pressureUnitSymbol = "hPa"
+
+            # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
 
+            $this.pressureValue = $this.pressureValue * 1013.2501
+            $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+            $this.pressureUnitSymbol = "hPa"
+
+            # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+            $this.pressureValue = $this.pressureValue * 1.333223684211
+            $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+            $this.pressureUnitSymbol = "hPa"
+
+            # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
 
         } Else {
 
+            # Message to display : "Pressure already in HectoPascal (hPa)."
         }
     }
 
