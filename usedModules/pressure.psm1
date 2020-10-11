@@ -62,6 +62,12 @@ class pressure
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
 
+            $this.pressureValue = $this.pressureValue * 68.9475729318
+            $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
+            $this.pressureUnitSymbol = "hPa"
+
+            # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
+
         } Else {
 
             # Message to display : "Pressure already in HectoPascal (hPa)."
@@ -104,6 +110,12 @@ class pressure
             # Message to display : "Pressure converted to Pascal (Pa) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+
+            $this.pressureValue = $this.pressureValue * 6894.7572931783
+            $this.pressureUnitId = [pressureMeasurementUnit]::pascal
+            $this.pressureUnitSymbol = "Pa"
+
+            # Message to display : "Pressure converted to Pascal (Pa) successfully."
 
         } Else {
 
@@ -148,6 +160,12 @@ class pressure
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
 
+            $this.pressureValue = $this.pressureValue/14,5037738
+            $this.pressureUnitId = [pressureMeasurementUnit]::bar
+            $this.pressureUnitSymbol = "bar"
+
+            # Message to display : "Pressure converted to Bar (bar) successfully."
+
         } Else {
 
             # Message to display : "Pressure already in Bar (bar)."
@@ -191,6 +209,12 @@ class pressure
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
 
+            $this.pressureValue = $this.pressureValue/14,696
+            $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
+            $this.pressureUnitSymbol = "atm"
+
+            # Message to display : "Pressure converted to Atmosphere (atm) successfully."
+
         } Else {
 
             # Message to display : "Pressure already in Atmosphere (atm)."
@@ -233,6 +257,12 @@ class pressure
             # Message to display : "Pressure converted to Toor (torr) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+
+            $this.pressureValue = $this.pressureValue * 51,715
+            $this.pressureUnitId = [pressureMeasurementUnit]::torr
+            $this.pressureUnitSymbol = "torr"
+
+            # Message to display : "Pressure converted to Toor (torr) successfully."
 
         } Else {
 
