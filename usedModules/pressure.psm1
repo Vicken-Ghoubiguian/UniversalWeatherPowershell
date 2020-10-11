@@ -6,7 +6,7 @@ Enum pressureMeasurementUnit {
     bar = 2
     atmosphere = 3
     torr = 4
-    psi = 5
+    poundsPerSquareInc = 5
 }
 
 # Definition of the pressure Powershell class to manage pressure datas
@@ -60,7 +60,7 @@ class pressure
 
             # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
 
-        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::poundsPerSquareInc) {
 
             $this.pressureValue = $this.pressureValue * 68.9475729318
             $this.pressureUnitId = [pressureMeasurementUnit]::hectopascal
@@ -109,7 +109,7 @@ class pressure
 
             # Message to display : "Pressure converted to Pascal (Pa) successfully."
 
-        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::poundsPerSquareInc) {
 
             $this.pressureValue = $this.pressureValue * 6894.7572931783
             $this.pressureUnitId = [pressureMeasurementUnit]::pascal
@@ -158,7 +158,7 @@ class pressure
 
             # Message to display : "Pressure converted to Bar (bar) successfully."
 
-        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::poundsPerSquareInc) {
 
             $this.pressureValue = $this.pressureValue/14,5037738
             $this.pressureUnitId = [pressureMeasurementUnit]::bar
@@ -207,7 +207,7 @@ class pressure
 
             # Message to display : "Pressure converted to Atmosphere (atm) successfully."
 
-        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::poundsPerSquareInc) {
 
             $this.pressureValue = $this.pressureValue/14,696
             $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
@@ -256,7 +256,7 @@ class pressure
 
             # Message to display : "Pressure converted to Toor (torr) successfully."
 
-        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::poundsPerSquareInc) {
 
             $this.pressureValue = $this.pressureValue * 51,715
             $this.pressureUnitId = [pressureMeasurementUnit]::torr
@@ -275,11 +275,35 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+            $this.pressureValue = $this.pressureValue/68.94757293168
+            $this.pressureUnitId = [pressureMeasurementUnit]::poundsPerSquareInc
+            $this.pressureUnitSymbol = "psi"
+
+            # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+            $this.pressureValue = $this.pressureValue/6894.757293168
+            $this.pressureUnitId = [pressureMeasurementUnit]::poundsPerSquareInc
+            $this.pressureUnitSymbol = "psi"
+
+            # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
 
+            $this.pressureValue = $this.pressureValue * 14.503773773022
+            $this.pressureUnitId = [pressureMeasurementUnit]::poundsPerSquareInc
+            $this.pressureUnitSymbol = "psi"
+
+            # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+            $this.pressureValue = $this.pressureValue * 14.695964
+            $this.pressureUnitId = [pressureMeasurementUnit]::poundsPerSquareInc
+            $this.pressureUnitSymbol = "psi"
+
+            # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
 
         } Else {
 
