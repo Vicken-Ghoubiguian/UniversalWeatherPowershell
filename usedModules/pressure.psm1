@@ -193,14 +193,39 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+            $this.pressureValue = $this.pressureValue/1.3332236842
+            $this.pressureUnitId = [pressureMeasurementUnit]::torr
+            $this.pressureUnitSymbol = "torr"
+
+            # Message to display : "Pressure converted to Toor (torr) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+            $this.pressureValue = $this.pressureValue/133.3223684211
+            $this.pressureUnitId = [pressureMeasurementUnit]::torr
+            $this.pressureUnitSymbol = "torr"
+
+            # Message to display : "Pressure converted to Toor (torr) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
 
+            $this.pressureValue = $this.pressureValue * 750.061682704
+            $this.pressureUnitId = [pressureMeasurementUnit]::torr
+            $this.pressureUnitSymbol = "torr"
+
+            # Message to display : "Pressure converted to Toor (torr) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+            $this.pressureValue = $this.pressureValue * 760
+            $this.pressureUnitId = [pressureMeasurementUnit]::torr
+            $this.pressureUnitSymbol = "torr"
+
+            # Message to display : "Pressure converted to Toor (torr) successfully."
 
         } Else {
 
+            # Message to display : "Pressure already in Atmosphere (atm)."
         }
     }
 
