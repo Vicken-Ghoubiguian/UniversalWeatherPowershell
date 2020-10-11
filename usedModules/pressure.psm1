@@ -6,6 +6,7 @@ Enum pressureMeasurementUnit {
     bar = 2
     atmosphere = 3
     torr = 4
+    psi = 5
 }
 
 # Definition of the pressure Powershell class to manage pressure datas
@@ -24,7 +25,7 @@ class pressure
         $this.pressureUnitSymbol = "hPa"
     }
 
-    # set pressure to HectoPascal
+    # set pressure to HectoPascal (hPa)
     [void] setPressureAsHectoPascal()
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
@@ -59,13 +60,15 @@ class pressure
 
             # Message to display : "Pressure converted to HectoPascal (hPa) successfully."
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+
         } Else {
 
             # Message to display : "Pressure already in HectoPascal (hPa)."
         }
     }
 
-    # set pressure to Pascal
+    # set pressure to Pascal (Pa)
     [void] setPressureAsPascal()
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
@@ -99,6 +102,8 @@ class pressure
             $this.pressureUnitSymbol = "Pa"
 
             # Message to display : "Pressure converted to Pascal (Pa) successfully."
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
 
         } Else {
 
@@ -141,6 +146,8 @@ class pressure
 
             # Message to display : "Pressure converted to Bar (bar) successfully."
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+
         } Else {
 
             # Message to display : "Pressure already in Bar (bar)."
@@ -181,6 +188,8 @@ class pressure
             $this.pressureUnitSymbol = "atm"
 
             # Message to display : "Pressure converted to Atmosphere (atm) successfully."
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
 
         } Else {
 
@@ -223,9 +232,28 @@ class pressure
 
             # Message to display : "Pressure converted to Toor (torr) successfully."
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::psi) {
+
         } Else {
 
             # Message to display : "Pressure already in Atmosphere (atm)."
+        }
+    }
+
+    # set pressure to Pounds per square inch (psi)
+    [void] setPressureAsPoundsPerSquareInch()
+    {
+        If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
+
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::atmosphere) {
+
+        } Else {
+
+            # Message to display : "Pressure already in Pounds per square inch (psi)."
         }
     }
 
