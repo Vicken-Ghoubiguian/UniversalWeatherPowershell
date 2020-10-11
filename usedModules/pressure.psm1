@@ -152,14 +152,39 @@ class pressure
     {
         If($this.pressureUnitId -eq [pressureMeasurementUnit]::hectopascal) {
 
+            $this.pressureValue = $this.pressureValue/1013.25
+            $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
+            $this.pressureUnitSymbol = "atm"
+
+            # Message to display : "Pressure converted to Atmosphere (atm) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::pascal) {
+
+            $this.pressureValue = $this.pressureValue/101325
+            $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
+            $this.pressureUnitSymbol = "atm"
+
+            # Message to display : "Pressure converted to Atmosphere (atm) successfully."
 
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::bar) {
 
+            $this.pressureValue = $this.pressureValue/1.01325
+            $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
+            $this.pressureUnitSymbol = "atm"
+
+            # Message to display : "Pressure converted to Atmosphere (atm) successfully."
+
         } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+
+            $this.pressureValue = $this.pressureValue/760
+            $this.pressureUnitId = [pressureMeasurementUnit]::atmosphere
+            $this.pressureUnitSymbol = "atm"
+
+            # Message to display : "Pressure converted to Atmosphere (atm) successfully."
 
         } Else {
 
+            # Message to display : "Pressure already in Atmosphere (atm)."
         }
     }
 
