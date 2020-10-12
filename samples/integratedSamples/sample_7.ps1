@@ -70,7 +70,7 @@ if($a.weatherError)
     If($dateAndTimeFormat -eq "timestamp") {
 
         # Displaying warning message in a messagebox...
-        [System.Windows.MessageBox]::Show("Warning: temperature scale already in Kelvin", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
+        [System.Windows.MessageBox]::Show("Warning: date and time format already in timestamp", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
 
     # If the wished date and time format is "DMYHMS"...
     } Elseif($dateAndTimeFormat -eq "DMYHMS") {
@@ -95,6 +95,51 @@ if($a.weatherError)
 
         # Displaying error message in a messagebox...
         [System.Windows.MessageBox]::Show("Error: unknown date and time format", $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
+
+        # Exiting the process with code 1 (an error occured)...
+        exit 1
+    }
+
+    ########
+    # Configuring pressure scale
+    ########
+
+    # If the wished pressure scale is "hectopascal"...
+    If($pressureScale -eq "hectopascal") {
+
+        # Displaying warning message in a messagebox...
+        [System.Windows.MessageBox]::Show("Warning: pressure scale already in HectoPascal", $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
+
+    # If the wished pressure scale is "pascal"...
+    } Elseif($pressureScale -eq "pascal") {
+
+        $a.pressure.setPressureAsPascal()
+
+    # If the wished pressure scale is "bar"...
+    } Elseif($pressureScale -eq "bar") {
+
+        $a.pressure.setPressureAsBar()
+        
+    # If the wished pressure scale is "atmosphere"...
+    } Elseif($pressureScale -eq "atmosphere") {
+
+        $a.pressure.setPressureAsAtmosphere()
+
+    # If the wished pressure scale is "torr"...
+    } Elseif($pressureScale -eq "torr") {
+
+        $a.pressure.setPressureAsTorr()
+
+    # If the wished pressure scale is "poundspersquareinch"...
+    } Elseif($pressureScale -eq "poundspersquareinch") {
+
+        $a.pressure.setPressureAsPoundsPerSquareInch()
+
+    # Else...
+    } Else {
+
+        # Displaying error message in a messagebox...
+        [System.Windows.MessageBox]::Show("Error: unknown pressure scale", $a.currentLanguage.getWishedMessageBoxTitle(1), "Ok", "Error") | Out-Null
 
         # Exiting the process with code 1 (an error occured)...
         exit 1
