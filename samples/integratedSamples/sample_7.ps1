@@ -7,7 +7,8 @@ param (
     [string]$countrysISOAlpha2Code,
     [string]$apiKey,
     [string]$temperatureScale,
-    [string]$dateAndTimeFormat
+    [string]$dateAndTimeFormat,
+    [string]$pressureScale
 )
 
 # Import the Assembly 'PresentationFramework' to the current sample
