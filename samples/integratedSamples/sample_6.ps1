@@ -560,6 +560,38 @@ $okButton.Add_Click({
             [System.Windows.MessageBox]::Show($a.currentLanguage.getWishedMessageBoxContent(2), $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
         }
 
+        # If the selected pressure scale is 'Pascal (Pa)' (index 1), then...
+        If($pressureScaleListBox.SelectedIndex -eq 1) {
+
+            $a.pressure.setPressureAsPascal()
+
+        # Else if the selected pressure scale is 'Bar (bar)' (index 2), then...
+        } Elseif($pressureScaleListBox.SelectedIndex -eq 2) {
+
+            $a.pressure.setPressureAsBar()
+
+        # Else if the selected pressure scale is 'Atmosphere (atm)' (index 3), then...
+        } Elseif($pressureScaleListBox.SelectedIndex -eq 3) {
+
+            $a.pressure.setPressureAsAtmosphere()
+
+        # Else if the selected pressure scale is 'Torr (torr)' (index 4), then...
+        } Elseif($pressureScaleListBox.SelectedIndex -eq 4) {
+
+            $a.pressure.setPressureAsTorr()
+
+        # Else if the selected pressure scale is 'Pounds per square inch (psi)' (index 5), then...
+        } Elseif($pressureScaleListBox.SelectedIndex -eq 5) {
+
+            $a.pressure.setPressureAsPoundsPerSquareInch()
+
+        # Else, pressure scale remains 'HectoPascal (hPa)'...
+        } Else {
+
+            # Displaying warning message in a messagebox...
+            [System.Windows.MessageBox]::Show($a.currentLanguage.getWishedMessageBoxContent(4), $a.currentLanguage.getWishedMessageBoxTitle(2), "Ok", "Warning") | Out-Null
+        }
+
         # Displaying all weather datas in the displayerbox
         $weatherDisplayerBox.Text = $a.currentLanguage.getWishedFieldName(11) + ": " + $a.getGeographicLocation().getCityName() + "`n"
         $weatherDisplayerBox.Text += $a.currentLanguage.getWishedFieldName(12) + ": " + $a.getGeographicLocation().getCountryCode() + " [" + $countryListBox.SelectedItem + "]" + "`n"
