@@ -401,7 +401,7 @@ $temperatureScaleListBox.Size = New-Object System.Drawing.Size(260,50)
 $temperatureScaleListBox.Width = 550
 $temperatureScaleListBox.Height = 27
 
-# Adding all temperature scale to the 'temperatureScaleListBox' listbox
+# Adding all temperature scales to the 'temperatureScaleListBox' listbox
 [void] $temperatureScaleListBox.Items.Add('Kelvin')
 [void] $temperatureScaleListBox.Items.Add('Celsius')
 [void] $temperatureScaleListBox.Items.Add('Fahrenheit')
@@ -418,6 +418,34 @@ $temperatureScaleLabel.Location = New-Object System.Drawing.Point(150,185)
 $temperatureScaleLabel.Size = New-Object System.Drawing.Size(280,20)
 $temperatureScaleLabel.Text = 'Temperature scale:'
 $form.Controls.Add($temperatureScaleLabel)
+
+# Adding 'temperatureScaleLabel' label to indicate the 'temperatureScaleListBox' listbox
+$pressureScaleLabel = New-Object System.Windows.Forms.Label
+$pressureScaleLabel.Location = New-Object System.Drawing.Point(150,210)
+$pressureScaleLabel.Size = New-Object System.Drawing.Size(125,20)
+$pressureScaleLabel.Text = 'Pressure scale:'
+$form.Controls.Add($pressureScaleLabel)
+
+# Defining 'pressureScaleListBox' to inquire wished pressure scale
+$pressureScaleListBox = New-Object System.Windows.Forms.ListBox
+$pressureScaleListBox.Location = New-Object System.Drawing.Point(350,210)
+$pressureScaleListBox.Size = New-Object System.Drawing.Size(260,50)
+$pressureScaleListBox.Width = 550
+$pressureScaleListBox.Height = 27
+
+# Adding all pressure scales to the 'pressureScaleListBox' listbox
+[void] $pressureScaleListBox.Items.Add('HectoPascal (hPa)')
+[void] $pressureScaleListBox.Items.Add('Pascal (Pa)')
+[void] $pressureScaleListBox.Items.Add('Bar (bar)')
+[void] $pressureScaleListBox.Items.Add('Atmosphere (atm)')
+[void] $pressureScaleListBox.Items.Add('Torr (torr)')
+[void] $pressureScaleListBox.Items.Add('Pounds per square inch (psi)')
+
+# Set the default value at 'HectoPascal' (index 0)
+$pressureScaleListBox.SelectedIndex = 0
+
+# Adding 'temperatureScaleListBox' to the current form
+$form.Controls.Add($pressureScaleListBox)
 
 # Defining 'dateAndTimeFormatListBox' to inquire wished date and time format
 $dateAndTimeFormatListBox = New-Object System.Windows.Forms.ListBox
