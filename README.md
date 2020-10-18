@@ -51,8 +51,10 @@ To make this project work or integrate it into yours, whether as a module to imp
 ### From the GitHub repository
 
 To use this PowerShell package from its GitHub repository, you must first install the Git utility on Windows. 
-You have a plethora of Git clients that you can use on Windows ([GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/) ...) .
+You have a plethora of Git clients that you can use on Windows ([GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/) ...), then install the one that suits you best.
 The best choice is to install the client [Git for Windows](https://gitforwindows.org/). Download the exe file from the official website, then run it.
+
+__suggestion__ : After you have cloned the project repository, you can migrate it to the `C:\Program Files (x86)\WindowsPowershell\Modules` directory, It will be manually installed from there and can be used by just calling its name like this: the command `Import-Module UniversalWeatherPowershell` in the prompt and the instruction `Using module UniversalWeatherPowershell` in any Powershell script.
 
 <a name="how_use_powershell_gallery"></a>
 ### From the Powershell Gallery repository
