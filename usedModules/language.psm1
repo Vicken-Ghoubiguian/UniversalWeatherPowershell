@@ -59,13 +59,13 @@ $global:monthsArray = @(@("January", "Janvier", "Januar", "Januar"),
                         @("December", "Décembre", "Dezember", "December"))
 
 # Array containing all weekdays names in all defined languages
-$global:weekdaysArray = @(@("Monday", "Lundi", "Montag", "Mandag"),
+$global:weekdaysArray = @(@("Sunday", "Dimanche", "Sonntag", "Søndag"),
+                          @("Monday", "Lundi", "Montag", "Mandag"),
                           @("Tuesday", "Mardi", "Dienstag", "Tirsdag"),
                           @("Wednesday", "Mercredi", "Mittwoch", "Onsdag"),
                           @("Thursday", "Jeudi", "Donnerstag", "Torsdag"),
                           @("Friday", "Vendredi", "Freitag", "Fredag"),
-                          @("Saturday", "Samedi", "Samstag", "Lørdag"),
-                          @("Sunday", "Dimanche", "Sonntag", "Søndag"))
+                          @("Saturday", "Samedi", "Samstag", "Lørdag"))
 
 # Definition of the language Powershell class to manage current language datas
 class language
@@ -96,6 +96,32 @@ class language
     [string] getWishedMessageBoxContent([int] $requestedMessageBoxContent)
     {
         return $global:messageBoxContentsArray[$requestedMessageBoxContent][$this.choosenLanguage]
+    }
+
+    # Wished month getter
+    [string] getWishedMonth([int] $requestedMonthNumber)
+    {
+        If(($requestedMonthNumber -gt 0) -and ($requestedMonthNumber -le 12))
+        {
+            return $global:monthsArray[$requestedMonthNumber][$this.choosenLanguage]
+        }
+        Else
+        {
+            return ""
+        }
+    }
+
+    # Wished week day getter
+    [string] getWishedWeekDay([int] $requestedWeekDayNumber)
+    {
+        If(($requestedWeekDayNumber -gt -1) -and ($requestedWeekDayNumber -le 6))
+        {
+            return $global:weekdaysArray[$requestedWeekDayNumber][$this.choosenLanguage]
+        }
+        Else
+        {
+            return ""
+        }
     }
 
     # language's index getter
