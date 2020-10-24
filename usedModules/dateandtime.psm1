@@ -81,6 +81,86 @@ class dateAndTime
         return $this.asTimestamp
     }
 
+    # Get year...
+    [int] getYear()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Year
+    }
+
+    # Get month number...
+    [int] getMonth()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Month
+    }
+
+    # Get month day...
+    [int] getMonthDay()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Day
+    }
+
+    # Get week day...
+    [int] getWeekDay()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.DayOfWeek.value__
+    }
+
+    # Get hour...
+    [int] getHour()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Hour
+    }
+
+    # Get minute...
+    [int] getMinute()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Minute
+    }
+
+    # Get second...
+    [int] getSecond()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Second
+    }
+
+    # Get millisecond...
+    [int] getMillisecond()
+    {
+        #
+        $unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
+        $gettinDate = Get-Date -Date $unixEpochStart.AddSeconds($this.asTimestamp)
+
+        return $gettinDate.Millisecond
+    }
+
     # set current format to MDYHMS
     [void] setCurrentFormatAsMDYHMS()
     {
