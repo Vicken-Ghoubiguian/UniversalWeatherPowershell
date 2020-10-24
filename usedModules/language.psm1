@@ -58,6 +58,15 @@ $global:monthsArray = @(@("January", "Janvier", "Januar", "Januar"),
                         @("November", "Novembre", "November", "November"),
                         @("December", "Décembre", "Dezember", "December"))
 
+# Array containing all weekdays names in all defined languages
+$global:weekdaysArray = @(@("Monday", "Lundi", "Montag", "Mandag"),
+                          @("Tuesday", "Mardi", "Dienstag", "Tirsdag"),
+                          @("Wednesday", "Mercredi", "Mittwoch", "Onsdag"),
+                          @("Thursday", "Jeudi", "Donnerstag", "Torsdag"),
+                          @("Friday", "Vendredi", "Freitag", "Fredag"),
+                          @("Saturday", "Samedi", "Samstag", "Lørdag"),
+                          @("Sunday", "Dimanche", "Sonntag", "Søndag"))
+
 # Definition of the language Powershell class to manage current language datas
 class language
 {
