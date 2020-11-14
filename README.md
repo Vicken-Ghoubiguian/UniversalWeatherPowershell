@@ -35,6 +35,8 @@ This project is structured in several elements:
 - The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) directory containing all the classes used in the main class and allowing to initialize, manipulate and manage a particular characteristic (temperature, atmospheric pressure ...) in one module each;
 - The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples) directory which contains examples of uses this module and package;
 
+The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) contains 11 files corresponding each one to a class: 
+
 The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples) contains 2 other directories:
 
 - The [integratedSamples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples/integratedSamples) which contains the samples, to run inside this folder because it calls the Powershell module in relative path from this directory.
