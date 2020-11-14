@@ -37,6 +37,18 @@ This project is structured in several elements:
 
 The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) contains 11 files corresponding each one to a class: 
 
+- __coordinates.psm1__:
+- __dateandtime.psm1__:
+- __geographicLocation.psm1__:
+- __humidity.psm1__:
+- __language.psm1__:
+- __pressure.psm1__:
+- __temperature.psm1__:
+- __ultraviolet.psm1__:
+- __weatherDescription.psm1__:
+- __weatherError.psm1__:
+- _wind.psm1__:
+
 The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples) contains 2 other directories:
 
 - The [integratedSamples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples/integratedSamples) which contains the samples, to run inside this folder because it calls the Powershell module in relative path from this directory.
