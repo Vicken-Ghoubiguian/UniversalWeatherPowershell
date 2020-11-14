@@ -47,7 +47,7 @@ The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershe
 - __ultraviolet.psm1__:
 - __weatherDescription.psm1__:
 - __weatherError.psm1__:
-- _wind.psm1__:
+- __wind.psm1__:
 
 The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples) contains 2 other directories:
 
