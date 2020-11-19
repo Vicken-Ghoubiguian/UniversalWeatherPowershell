@@ -1,4 +1,4 @@
-﻿# Definition of the geographicLocation class to encapsulate country and city names
+﻿# Definition of the humidity class to encapsulate all datas relatives to humidity
 class humidity {
 
     hidden [int]$humidityValue

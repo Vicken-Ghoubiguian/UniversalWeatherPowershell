@@ -37,17 +37,17 @@ This project is structured in several elements:
 
 The [usedModules](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/usedModules) contains 11 files corresponding each one to a class: 
 
-- __coordinates.psm1__:
-- __dateandtime.psm1__:
-- __geographicLocation.psm1__:
-- __humidity.psm1__:
-- __language.psm1__:
-- __pressure.psm1__:
-- __temperature.psm1__:
-- __ultraviolet.psm1__:
-- __weatherDescription.psm1__:
-- __weatherError.psm1__:
-- __wind.psm1__:
+- __coordinates.psm1__: defining the coordinates Powershell class to encapsulate coordinates datas (latitude and longitude);
+- __dateandtime.psm1__: defining the dateAndTime Powershell class to manage dates and times together;
+- __geographicLocation.psm1__: defining the geographicLocation Powershell class to encapsulate country and city names;
+- __humidity.psm1__: defining the humidity Powershell class to encapsulate all datas relatives to humidity;
+- __language.psm1__: defining the language Powershell class to manage current language datas;
+- __pressure.psm1__: defining the pressure Powershell class to manage pressure datas;
+- __temperature.psm1__: defining the temperature Powershell class to encapsulate and manage temperature datas;
+- __ultraviolet.psm1__: defining the ultraviolet Powershell class to encapsulate uv datas;
+- __weatherDescription.psm1__: defining the weatherDescription Powershell class to encapsulate and manage weather datas;
+- __weatherError.psm1__: defining the weatherError Powershell class to manage possible occured HTTP/HTTPS errors;
+- __wind.psm1__: defining the wind Powershell class to encapsulate and manage wind parameters.
 
 The [samples](https://github.com/Vicken-Ghoubiguian/UniversalWeatherPowershell/tree/master/samples) contains 2 other directories:
 

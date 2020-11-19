@@ -1,4 +1,4 @@
-﻿# Definition of the weatherError Powershell class to manage dates and times together
+﻿# Definition of the weatherError Powershell class to manage possible occured HTTP/HTTPS errors
 class weatherError
 {
     hidden [string]$type

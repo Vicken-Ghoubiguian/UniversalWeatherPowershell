@@ -1,4 +1,4 @@
-﻿# Definition of the temperature Powershell class to encapsulate coordinates datas (latitude and longitude)
+﻿# Definition of the coordinates Powershell class to encapsulate coordinates datas (latitude and longitude)
 class coordinates
 {
     
