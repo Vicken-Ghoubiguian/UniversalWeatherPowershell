@@ -305,6 +305,14 @@ class pressure
 
             # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
 
+        } ElseIf($this.pressureUnitId -eq [pressureMeasurementUnit]::torr) {
+            
+            $this.pressureValue = $this.pressureValue/51,715
+            $this.pressureUnitId = [pressureMeasurementUnit]::poundsPerSquareInc
+            $this.pressureUnitSymbol = "psi"
+
+            # Message to display : "Pressure converted to Pounds per square inch (psi) successfully."
+
         } Else {
 
             # Message to display : "Pressure already in Pounds per square inch (psi)."
