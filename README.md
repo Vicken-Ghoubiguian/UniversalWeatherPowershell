@@ -107,9 +107,9 @@ Now is the time for you to have some fun...
 <a name="what_used"/></a>
 ## What is used in this project ?
 
-Nothing very specific is used in this project. All classes used were developed by the author of this API. The only element used from the .Net framework, `System.Windows.Forms` and `PresentationFramework` is used to develop and then use forms and MessagesBoxes respectively.
+Nothing very specific is used in this project. All classes used were developed by the author of this API. The only element used from the .Net framework, [`System.Windows.Forms`](https://docs.microsoft.com/fr-fr/dotnet/api/system.windows.forms?view=net-5.0) and [`PresentationFramework`](https://referencesource.microsoft.com/#PresentationFramework) is used to develop and then use forms and MessagesBoxes respectively.
 
 <a name="conclusion"/></a>
 ## Conclusion
 
-It has been an exciting project, easily usable by anyone in any other project written i PowerShell regardless of its size (large or small) and which has broadened my knowledge in PowerShell language development as potentially every other beginner or confirmed developer.
+It has been an exciting project, easily usable by anyone in any other project written in PowerShell regardless of its size (large or small) and which has broadened my knowledge in PowerShell language development as potentially every other beginner or confirmed developer.
