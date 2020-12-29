@@ -107,6 +107,8 @@ Now is the time for you to have some fun...
 <a name="what_used"/></a>
 ## What is used in this project ?
 
+Nothing very specific is used in this project. All classes used were developed by the author of this API. The only element used from the .Net framework, `System.Windows.Forms` and `PresentationFramework` is used to develop and then use forms and MessagesBoxes respectively.
+
 <a name="conclusion"/></a>
 ## Conclusion
 
