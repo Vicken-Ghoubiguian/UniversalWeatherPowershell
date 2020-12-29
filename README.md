@@ -109,3 +109,5 @@ Now is the time for you to have some fun...
 
 <a name="conclusion"/></a>
 ## Conclusion
+
+It has been an exciting project, easily usable by anyone in any other project written i PowerShell regardless of its size (large or small) and which has broadened my knowledge in PowerShell language development as potentially every other beginner or confirmed developer.
