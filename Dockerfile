@@ -16,4 +16,4 @@ ARG fromExecMode
 ENV execMode=$fromExecMode
 
 #
-CMD ["pwsh",  "-Command", "$ENV:PSModulePath"]
+CMD ["pwsh", "-Command", "$ENV:PSModulePath"]
