@@ -4,11 +4,13 @@ FROM mcr.microsoft.com/powershell
 #
 LABEL maintainer="ericghoubiguian@live.fr"
 
+#Change work directory for the PowerShell's modules one
+WORKDIR /usr/local/share/powershell/Modules
+
 #Copy all the files and directories in the newly created directory githubConsultationModule
 COPY . /githubConsultationModule
 
-#Change work directory for the githubConsultationModule one
-WORKDIR /githubConsultationModule
+
 
 #Define the Dockerfile argument 'fromExecMode' to specify if the githubConsultationModule will be installed in OS or not 
 ARG fromExecMode
