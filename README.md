@@ -1,6 +1,6 @@
 # UniversalWeatherPowershell
 
-Powershell package to return current weather in a wished city.
+Powershell package to return current weather in a wished city or/and in a wished country identified by its country code.
 
 ## Contents
 
