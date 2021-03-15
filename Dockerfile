@@ -16,6 +16,5 @@ ARG fromExecMode
 #Define the environment variable 'execMode' to take the 'fromExecMode' argument value and put it to run the app
 ENV execMode=$fromExecMode
 
-
-
-CMD [ "ls" ]
+#
+CMD [ "pwsh",  "-Command", "$ENV:PSModulePath"]
