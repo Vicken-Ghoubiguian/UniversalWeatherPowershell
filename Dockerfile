@@ -7,7 +7,11 @@ LABEL maintainer="ericghoubiguian@live.fr"
 #Copy all the files and directories in the newly created directory githubConsultationModule
 COPY . /usr/local/share/powershell/Modules/githubConsultationModule
 
+#
+COPY ./samples/simpleSamples samples
 
+#
+WORKDIR samples
 
 #Define the Dockerfile argument 'fromExecMode' to specify if the githubConsultationModule will be installed in OS or not 
 ARG fromExecMode
