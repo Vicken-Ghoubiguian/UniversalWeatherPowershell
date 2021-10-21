@@ -93,10 +93,10 @@ Secondly, you must move the Powershell module to one of the directory displayed 
 About the first step command there will be 2 main paths in results :
 
 ```powershell 
-- C:\Users\<User Name>\Documents\WindowsPowerShell\modules
+C:\Users\<User Name>\Documents\WindowsPowerShell\modules
 ```
 ```powershell 
-- C:\program files\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
+C:\program files\WindowsPowerShell\Modules\<Module Folder>\<Module Files>
 ```
 	
 If you want the module to be available for a specific user, move the Powershell module to the directory indicated by the first path.
